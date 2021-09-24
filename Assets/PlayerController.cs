@@ -12,8 +12,12 @@ public class PlayerController : MonoBehaviour
     
     [Header("Movement Stats:")]
     [SerializeField] float moveSpeed = 5f;
-    [SerializeField] float friction = 0.99f;
+    [SerializeField] float moveDeaccel = 0.99f;
+    [SerializeField] float airControl = 0.3f;
     [SerializeField] float max_Speed = 10f;
+    [SerializeField] float max_Accel = 10f;
+    [SerializeField] float jumpHeight = 4f;
+    [SerializeField] float gravity = 3f;
 
     public void Awake()
     {
@@ -23,7 +27,20 @@ public class PlayerController : MonoBehaviour
 
     public void Update()
     {
-        UpdateVelocityGround();
+        if (charController.isGrounded)
+        {
+            UpdateVelocityGround();
+            if (Input.GetKey(KeyCode.Space))
+            {
+                velocity.y = jumpHeight;
+            }
+        }
+        else
+        {
+            UpdateVelocityAir();
+            velocity.y -= gravity * Time.deltaTime;
+        }
+        
 
         charController.Move(velocity);
     }
@@ -33,13 +50,22 @@ public class PlayerController : MonoBehaviour
         velocity = Friction(velocity);
 
         current_Speed = Vector3.Dot(velocity, input.inputVector);
-        float add_Speed = Mathf.Clamp(max_Speed - current_Speed * moveSpeed, 0, max_Speed); //Replace that final max-Speed with a real max-accel variable, also that moveSpeed variable is ill placed
+        float add_Speed = Mathf.Clamp(max_Speed - current_Speed * moveSpeed, 0, max_Accel); //Replace that final max-Speed with a real max-accel variable, also that moveSpeed variable is ill placed
+        velocity = velocity + add_Speed * input.inputVector * Time.deltaTime;
+    }
+
+    public void UpdateVelocityAir()
+    {
+        //velocity = Friction(velocity);
+
+        current_Speed = Vector3.Dot(velocity, input.inputVector);
+        float add_Speed = Mathf.Clamp(max_Speed - current_Speed * moveSpeed, 0, max_Accel); //Replace that final max-Speed with a real max-accel variable, also that moveSpeed variable is ill placed
         velocity = velocity + add_Speed * input.inputVector * Time.deltaTime;
     }
 
     public Vector3 Friction(Vector3 _velocity)
     {
-        _velocity -= _velocity * friction * Time.deltaTime;
+        _velocity -= _velocity * moveDeaccel * Time.deltaTime;
         return _velocity;
     }
 
