@@ -6,9 +6,11 @@ public class PlayerController : MonoBehaviour
 {
     InputManager input;
     CharacterController charController;
+    public Camera cam;
 
     public Vector3 velocity;
     public float current_Speed;
+    private float xRotation;
     
     [Header("Movement Stats:")]
     [SerializeField] float moveSpeed = 5f;
@@ -18,6 +20,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float max_Accel = 10f;
     [SerializeField] float jumpHeight = 4f;
     [SerializeField] float gravity = 3f;
+
+    [Header("Control Settings:")]
+    [SerializeField] float mouseSensitivity = 1f;
 
     public void Awake()
     {
@@ -40,9 +45,26 @@ public class PlayerController : MonoBehaviour
             UpdateVelocityAir();
             velocity.y -= gravity * Time.deltaTime;
         }
-        
+
+        RotateCamera();
 
         charController.Move(velocity);
+    }
+
+    public void RotateCamera()
+    {
+        float mouseX = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+
+        xRotation -= mouseY;
+        //xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+
+
+        transform.localRotation = Quaternion.Euler(0f, xRotation * -1, 0f);
+        transform.Rotate(Vector3.up * mouseX);
+
+        cam.transform.position = gameObject.transform.position;
+        cam.transform.rotation = gameObject.transform.rotation;
     }
 
     public void UpdateVelocityGround()
