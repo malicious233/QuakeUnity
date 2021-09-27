@@ -462,7 +462,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 90
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -521,15 +521,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1108917309}
   m_LocalRotation: {x: -0, y: 0.12111859, z: -0, w: 0.99263805}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 13}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 174974349}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 13.913, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -313, y: 40}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 123, y: -54}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1108917311
@@ -696,12 +696,16 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   current_Speed: 0
   moveSpeed: 8
-  moveDeaccel: 3
-  airControl: 0.3
+  moveDeaccel: 6
   max_Speed: 10
+  accel_Speed: 7.5
   max_Accel: 10
   jumpHeight: 1
+  airSpeed: 2
+  max_AirSpeed: 2
+  max_AirAccel: 1
   gravity: 3.5
+  airControl: 0.3
   mouseSensitivity: 500
 --- !u!143 &1524761784
 CharacterController:
@@ -714,7 +718,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
+  m_Height: 4.5
   m_Radius: 0.5
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -792,7 +796,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1524761781}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.37, z: 0}
+  m_LocalPosition: {x: 0, y: 60, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 963194228}

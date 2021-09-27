@@ -12,14 +12,23 @@ public class PlayerController : MonoBehaviour
     public float current_Speed;
     private float xRotation;
     
-    [Header("Movement Stats:")]
+    [Header("Ground Stats:")]
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float moveDeaccel = 0.99f;
-    [SerializeField] float airControl = 0.3f;
+    
     [SerializeField] float max_Speed = 10f;
+    [SerializeField] float accel_Speed = 7.5f;
     [SerializeField] float max_Accel = 10f;
     [SerializeField] float jumpHeight = 4f;
+
+    [Header("Air Stats:")]
+    [SerializeField] float airSpeed = 5f;
+
+    [SerializeField] float max_AirSpeed = 9f;
+    [SerializeField] float max_AirAccel = 8f;
     [SerializeField] float gravity = 3f;
+
+    [SerializeField] float airControl = 0.3f;
 
     [Header("Control Settings:")]
     [SerializeField] float mouseSensitivity = 1f;
@@ -81,7 +90,8 @@ public class PlayerController : MonoBehaviour
         //velocity = Friction(velocity);
 
         current_Speed = Vector3.Dot(velocity, input.inputVector);
-        float add_Speed = Mathf.Clamp(max_Speed - current_Speed * moveSpeed, 0, max_Accel); //Replace that final max-Speed with a real max-accel variable, also that moveSpeed variable is ill placed
+
+        float add_Speed = Mathf.Clamp(max_AirSpeed - current_Speed * airSpeed, 0, max_AirAccel); //Replace that final max-Speed with a real max-accel variable, also that moveSpeed variable is ill placed
         velocity = velocity + add_Speed * input.inputVector * Time.deltaTime;
     }
 
