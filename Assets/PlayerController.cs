@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
     public float current_Speed;
     private float xRotation;
     private float yRotation;
+    private Vector3 rotOfCamera;
+
     
     [Header("Ground Stats:")]
     [SerializeField] float moveSpeed = 5f;
@@ -66,7 +68,7 @@ public class PlayerController : MonoBehaviour
     {
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-
+        /*
         xRotation -= mouseX;
 
 
@@ -75,8 +77,19 @@ public class PlayerController : MonoBehaviour
 
         //eyePoint.Rotate(Vector3.right * mouseY);
 
-        cam.transform.position = eyePoint.transform.position;
-        cam.transform.rotation = eyePoint.transform.rotation;
+        
+        */
+        rotOfCamera.x -= mouseY;
+        rotOfCamera.x = Mathf.Clamp(rotOfCamera.x, -90, 90);
+        rotOfCamera.y += mouseX;
+        rotOfCamera.z = 0;
+
+        eyePoint.rotation = Quaternion.Euler(rotOfCamera);
+        transform.localRotation = Quaternion.Euler(0, rotOfCamera.y, 0);
+
+        //cam.transform.position = eyePoint.transform.position;
+        //cam.transform.rotation = eyePoint.transform.rotation;
+
     }
 
     public void UpdateVelocityGround()
