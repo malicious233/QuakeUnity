@@ -6,11 +6,13 @@ public class PlayerController : MonoBehaviour
 {
     InputManager input;
     CharacterController charController;
-    public Camera cam;
+    [SerializeField] Camera cam;
+    [SerializeField] Transform eyePoint;
 
     public Vector3 velocity;
     public float current_Speed;
     private float xRotation;
+    private float yRotation;
     
     [Header("Ground Stats:")]
     [SerializeField] float moveSpeed = 5f;
@@ -62,18 +64,19 @@ public class PlayerController : MonoBehaviour
 
     public void RotateCamera()
     {
-        float mouseX = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-        float mouseY = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
 
-        xRotation -= mouseY;
-        //xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        xRotation -= mouseX;
 
 
         transform.localRotation = Quaternion.Euler(0f, xRotation * -1, 0f);
         transform.Rotate(Vector3.up * mouseX);
 
-        cam.transform.position = gameObject.transform.position;
-        cam.transform.rotation = gameObject.transform.rotation;
+        //eyePoint.Rotate(Vector3.right * mouseY);
+
+        cam.transform.position = eyePoint.transform.position;
+        cam.transform.rotation = eyePoint.transform.rotation;
     }
 
     public void UpdateVelocityGround()
