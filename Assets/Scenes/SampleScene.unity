@@ -409,7 +409,7 @@ Transform:
   m_GameObject: {fileID: 203923333}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 995.4901, y: 1, z: 79.18914}
+  m_LocalScale: {x: 995.4901, y: 1, z: 439.13547}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -519,7 +519,7 @@ GameObject:
   - component: {fileID: 883605021}
   - component: {fileID: 883605020}
   - component: {fileID: 883605019}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FlatGunMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -708,7 +708,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -795,7 +795,7 @@ GameObject:
   - component: {fileID: 1052908443}
   - component: {fileID: 1052908446}
   - component: {fileID: 1052908447}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FlatGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -848,7 +848,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 119
   pref: {fileID: 6924419279753149450, guid: f4d96b240a938b740a30954b5ef1a5af, type: 3}
-  shotDamage: {fileID: 0}
+  shotDamage: {fileID: 1052908447}
   range: 30
 --- !u!114 &1052908445
 MonoBehaviour:
@@ -875,7 +875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canFire: 0
-  fireRate: 0
+  fireRate: 1
 --- !u!114 &1052908447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -888,7 +888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7c482e59a4329b46bb9c0ea76ab0834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageValue: 0
+  damageValue: 4
 --- !u!1 &1108917309
 GameObject:
   m_ObjectHideFlags: 0
@@ -1147,7 +1147,7 @@ GameObject:
   - component: {fileID: 1524761784}
   - component: {fileID: 1524761783}
   - component: {fileID: 1524761782}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1186,13 +1186,13 @@ MonoBehaviour:
   eyePoint: {fileID: 1920069876}
   velocity: {x: 0, y: 0, z: 0}
   current_Speed: 0
-  moveSpeed: 2
+  moveSpeed: 1
   moveDeaccel: 10
   max_Speed: 2
   accel_Speed: 1
   max_Accel: 2
   jumpHeight: 0.08
-  airSpeed: 2.5
+  airSpeed: 5
   max_AirSpeed: 0.35
   max_AirAccel: 0.5
   gravity: 0.3
@@ -1378,7 +1378,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1920069876}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: EyePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

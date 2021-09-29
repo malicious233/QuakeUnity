@@ -66,27 +66,30 @@ public class PlayerController : MonoBehaviour
 
     public void RotateCamera()
     {
-        float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
-        float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        /*
-        xRotation -= mouseX;
-
-
-        transform.localRotation = Quaternion.Euler(0f, xRotation * -1, 0f);
-        transform.Rotate(Vector3.up * mouseX);
-
-        //eyePoint.Rotate(Vector3.right * mouseY);
-
         
-        */
+        
+        
+        xRotation += Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
+        yRotation += Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        yRotation = Mathf.Clamp(yRotation, -90f, 90f);
+
+        //eyePoint.localRotation = Quaternion.AngleAxis(xRotation, Vector3.up);
+        eyePoint.localRotation = Quaternion.AngleAxis(yRotation, Vector3.left);
+
+        Quaternion combOffset = Quaternion.AngleAxis(xRotation, Vector3.up);
+
+        transform.localRotation = combOffset;
+        
+
+        /*
         rotOfCamera.x -= mouseY;
         rotOfCamera.x = Mathf.Clamp(rotOfCamera.x, -90, 90);
         rotOfCamera.y += mouseX;
         rotOfCamera.z = 0;
 
         eyePoint.rotation = Quaternion.Euler(rotOfCamera);
-        transform.localRotation = Quaternion.Euler(0, rotOfCamera.y, 0);
-
+        transform.localRotation = Quaternion.Euler(0, rotOfCamera.y, 0); //Gross! Euler
+        */
         //cam.transform.position = eyePoint.transform.position;
         //cam.transform.rotation = eyePoint.transform.rotation;
 
