@@ -6,14 +6,12 @@ public class PlayerController : MonoBehaviour
 {
     InputManager input;
     CharacterController charController;
-    [SerializeField] Camera cam;
     [SerializeField] Transform eyePoint;
 
     public Vector3 velocity;
     public float current_Speed;
     private float xRotation;
     private float yRotation;
-    private Vector3 rotOfCamera;
 
     
     [Header("Ground Stats:")]
@@ -66,19 +64,15 @@ public class PlayerController : MonoBehaviour
 
     public void RotateCamera()
     {
-        
-        
-        
         xRotation += Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         yRotation += Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
         yRotation = Mathf.Clamp(yRotation, -90f, 90f);
 
-        //eyePoint.localRotation = Quaternion.AngleAxis(xRotation, Vector3.up);
         eyePoint.localRotation = Quaternion.AngleAxis(yRotation, Vector3.left);
 
-        Quaternion combOffset = Quaternion.AngleAxis(xRotation, Vector3.up);
+        //Quaternion combOffset = 
 
-        transform.localRotation = combOffset;
+        transform.localRotation = Quaternion.AngleAxis(xRotation, Vector3.up);
         
 
         /*

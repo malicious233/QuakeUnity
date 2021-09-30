@@ -7,6 +7,8 @@ public class GunHitscan : GunFire
     public LayerMask layerMask;
     public GameObject pref;
 
+    
+
     [SerializeField] GunDamage shotDamage;
 
     public float range;
@@ -14,8 +16,6 @@ public class GunHitscan : GunFire
     public override void Shoot()
     {
         base.Shoot();
-
-        Debug.Log("bang!");
         RaycastHit hit;
         Physics.Raycast(transform.position, transform.forward, out hit, range, layerMask);
 
