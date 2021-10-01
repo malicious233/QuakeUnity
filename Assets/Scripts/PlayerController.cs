@@ -59,7 +59,7 @@ public class PlayerController : MonoBehaviour
 
         RotateCamera();
 
-        charController.Move(velocity);
+        charController.Move(velocity * Time.deltaTime * 60);
     }
 
     public void RotateCamera()
@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
         velocity = Friction(velocity);
 
         current_Speed = Vector3.Dot(velocity, input.inputVector);
-        float add_Speed = Mathf.Clamp(max_Speed - current_Speed * moveSpeed, 0, max_Accel); //Replace that final max-Speed with a real max-accel variable, also that moveSpeed variable is ill placed
+        float add_Speed = Mathf.Clamp(moveSpeed - current_Speed, 0, max_Accel); //Replace that final max-Speed with a real max-accel variable, also that moveSpeed variable is ill placed
         velocity = velocity + add_Speed * input.inputVector * Time.deltaTime;
     }
 
@@ -104,7 +104,7 @@ public class PlayerController : MonoBehaviour
 
         current_Speed = Vector3.Dot(velocity, input.inputVector);
 
-        float add_Speed = Mathf.Clamp(max_AirSpeed - current_Speed * airSpeed, 0, max_AirAccel); //Replace that final max-Speed with a real max-accel variable, also that moveSpeed variable is ill placed
+        float add_Speed = Mathf.Clamp(airSpeed - current_Speed, 0, max_AirAccel); //Replace that final max-Speed with a real max-accel variable, also that moveSpeed variable is ill placed
         velocity = velocity + add_Speed * input.inputVector * Time.deltaTime;
     }
 

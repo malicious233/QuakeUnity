@@ -17,6 +17,9 @@ public class GunRecoil : MonoBehaviour
     [Range(0,1)]
     public float recoilRecoveryTime;
 
+    [Tooltip("How long it takes for the camera to react to recoil")]
+    public float recoilReactionTime = 0.3f;
+
     [Tooltip("Recoil pattern cap")]
     public float recoilPatternDuration;
 
@@ -24,6 +27,10 @@ public class GunRecoil : MonoBehaviour
     public AnimationCurve horizontalRecoilPattern;
     [Tooltip("Amplify all horizontal recoil by this multiplier")]
     public float horizontalRecoilMultiplier;
+
+    [Header("Random Horizontal Recoil:")]
+    public AnimationCurve randomHoriRecoil;
+    public float randomHoriRecoilMultiplier;
 
     [Header("Vertical Recoil:")]
     public AnimationCurve verticalRecoilPattern;
@@ -44,8 +51,9 @@ public class GunRecoil : MonoBehaviour
     {
         patternTime += recoilPerShot;
         patternTime = Mathf.Min(patternTime, recoilPatternDuration);
+        float horiRecoilAmount = horizontalRecoilPattern.Evaluate(patternTime) * horizontalRecoilMultiplier + Random.Range(-randomHoriRecoil.Evaluate(patternTime), randomHoriRecoil.Evaluate(patternTime)) * randomHoriRecoilMultiplier;
         
-        recoilRotation = Quaternion.AngleAxis(horizontalRecoilPattern.Evaluate(patternTime) * horizontalRecoilMultiplier * Mathf.Deg2Rad, Vector3.up);
+        recoilRotation = Quaternion.AngleAxis(horiRecoilAmount * Mathf.Deg2Rad, Vector3.up);
         recoilRotation *= Quaternion.AngleAxis(verticalRecoilPattern.Evaluate(patternTime) * verticalRecoilMultiplier * Mathf.Deg2Rad, -Vector3.right);
 
         //camTransform.localRotation *= recoilRotation;
@@ -53,24 +61,15 @@ public class GunRecoil : MonoBehaviour
 
 
 
-    private void GetRecoilFromPattern(out float _hori, out float _verti)
-    {
-        _hori = horizontalRecoilPattern.Evaluate(patternTime);
-        _verti = verticalRecoilPattern.Evaluate(patternTime);
-    }
 
-    public void Awake()
-    {
 
-    }
 
     public void Update()
     {
         patternTime -= patternRecoveryTime * Time.deltaTime;
         patternTime = Mathf.Max(0, patternTime);
-        camTransform.localRotation = Quaternion.Lerp(camTransform.localRotation, recoilRotation, 0.3f);
+        camTransform.localRotation = Quaternion.Lerp(camTransform.localRotation, recoilRotation, recoilReactionTime);
         recoilRotation = Quaternion.Lerp(recoilRotation, Quaternion.Euler(0, 0, 0), recoilRecoveryTime);
-        //camTransform.localRotation = Quaternion.Lerp(camTransform.localRotation, Quaternion.Euler(0, 0, 0), 0.01f);
     }
 
     
