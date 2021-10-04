@@ -108,7 +108,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
+    agentSlope: 43.8
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -1042,7 +1042,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canFire: 0
   isAutomatic: 1
-  fireRate: 0.09
+  fireRate: 0.07
 --- !u!114 &1052908447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1085,9 +1085,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camTransform: {fileID: 963194228}
-  recoilPerShot: 0.3
+  recoilPerShot: 0.25
   patternRecoveryTime: 2
-  recoilRecoveryTime: 0.02
+  recoilRecoveryTime: 0.015
   recoilReactionTime: 0.07
   recoilPatternDuration: 1.5
   horizontalRecoilPattern:
@@ -1096,15 +1096,15 @@ MonoBehaviour:
     - serializedVersion: 3
       time: -0.00002670288
       value: 0.2
-      inSlope: 3.3243535
-      outSlope: 3.3243535
+      inSlope: -10.275728
+      outSlope: -10.275728
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.05522734
+      outWeight: 0.11086815
     - serializedVersion: 3
-      time: 0.23142248
-      value: 0.9989533
+      time: 0.41584596
+      value: 0.6818451
       inSlope: -0.07648416
       outSlope: -0.07648416
       tangentMode: 0
@@ -1112,17 +1112,17 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.9048739
-      value: -0.7760737
-      inSlope: 0.37482506
-      outSlope: 0.37482506
+      time: 1.0852767
+      value: -0.9780453
+      inSlope: -0.11661059
+      outSlope: -0.11661059
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.045708537
-      outWeight: 0.2096947
+      outWeight: 0.26811334
     - serializedVersion: 3
-      time: 1.3319228
-      value: -0.103131175
+      time: 1.4561903
+      value: -0.0015381575
       inSlope: 0.5741909
       outSlope: 0.5741909
       tangentMode: 0
@@ -1141,7 +1141,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  horizontalRecoilMultiplier: 200
+  horizontalRecoilMultiplier: 150
   randomHoriRecoil:
     serializedVersion: 2
     m_Curve:
@@ -1155,17 +1155,17 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1.3146397
-      value: 0.4841239
-      inSlope: 0.43282595
-      outSlope: 0.43282595
+      time: 1.3004795
+      value: 0.39528722
+      inSlope: 0.030214563
+      outSlope: 0.030214563
       tangentMode: 136
       weightedMode: 0
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1.5161731
-      value: 0.6562391
+      time: 1.5200794
+      value: 0.40676934
       inSlope: 0
       outSlope: 0
       tangentMode: 136
@@ -1180,45 +1180,36 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0.017788887
-      value: -0.017231226
-      inSlope: 1.1663866
-      outSlope: 1.1663866
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
       tangentMode: 0
       weightedMode: 0
       inWeight: 0
-      outWeight: 0.028795553
+      outWeight: 0
     - serializedVersion: 3
-      time: 0.5329814
-      value: 0.39076996
-      inSlope: 0.01998247
-      outSlope: 0.01998247
+      time: 0.13586439
+      value: 0.34458822
+      inSlope: 0.2374543
+      outSlope: 0.2374543
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.33333334
+      outWeight: 0.067619346
     - serializedVersion: 3
-      time: 0.99005175
-      value: 0.9946269
-      inSlope: 0.63243127
-      outSlope: 0.63243127
+      time: 1.5003611
+      value: 2.0162654
+      inSlope: 2.6869535
+      outSlope: 2.6869535
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.1857162
-    - serializedVersion: 3
-      time: 1.5135384
-      value: 1.7744908
-      inSlope: 0.9501884
-      outSlope: 0.9501884
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.03426609
+      inWeight: 0.042652942
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  verticalRecoilMultiplier: 300
+  verticalRecoilMultiplier: 400
   patternTime: 0
 --- !u!1 &1092551547
 GameObject:
@@ -6389,7 +6380,7 @@ MonoBehaviour:
   max_AirAccel: 18
   gravity: 1.2
   airControl: 0.3
-  mouseSensitivity: 300
+  mouseSensitivity: 250
 --- !u!143 &1524761784
 CharacterController:
   m_ObjectHideFlags: 0
@@ -6500,7 +6491,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 0
-  maxHealth: 30
+  maxHealth: 999
   health: 0
 --- !u!114 &1524761790
 MonoBehaviour:
@@ -6626,26 +6617,17 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 0.68669736
-      value: 0.5319034
-      inSlope: -0.015234058
-      outSlope: -0.015234058
+      time: 0.89973056
+      value: -0.3138661
+      inSlope: 0.25970733
+      outSlope: 0.25970733
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
-      outWeight: 0.33333334
+      outWeight: 0.16435191
     - serializedVersion: 3
-      time: 1.1001341
-      value: 0.85054386
-      inSlope: 0.87507266
-      outSlope: 0.87507266
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1.5035706
-      value: 0.60925674
+      time: 1.5075378
+      value: 0.42082596
       inSlope: 0.113900475
       outSlope: 0.113900475
       tangentMode: 0
@@ -6655,7 +6637,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  horizontalRecoilMultiplier: 100
+  horizontalRecoilMultiplier: 300
   randomHoriRecoil:
     serializedVersion: 2
     m_Curve:
@@ -6694,8 +6676,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.028795553
     - serializedVersion: 3
-      time: -0.007853989
-      value: 1.006313
+      time: -0.00034666434
+      value: 1.2271076
       inSlope: 0.01998247
       outSlope: 0.01998247
       tangentMode: 0
@@ -6723,7 +6705,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  verticalRecoilMultiplier: 400
+  verticalRecoilMultiplier: 600
   patternTime: 0
 --- !u!114 &1778911717
 MonoBehaviour:
@@ -6753,7 +6735,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7c482e59a4329b46bb9c0ea76ab0834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageValue: 4
+  damageValue: 8
 --- !u!114 &1778911719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6870,7 +6852,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1830297938}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.098, y: -0.899, z: 1.014}
+  m_LocalPosition: {x: 1, y: -0.899, z: 1.014}
   m_LocalScale: {x: 0.24056008, y: 0.61786145, z: 0.85816634}
   m_Children:
   - {fileID: 1907268988}
@@ -12130,6 +12112,7 @@ GameObject:
   - component: {fileID: 2012330353}
   - component: {fileID: 2012330357}
   - component: {fileID: 2012330356}
+  - component: {fileID: 2012330358}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
@@ -12241,8 +12224,30 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   team: 0
-  maxHealth: 30
+  maxHealth: 999
   health: 0
+--- !u!195 &2012330358
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012330351}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1.0000001
+  m_BaseOffset: 0.50000006
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &2099671253
 GameObject:
   m_ObjectHideFlags: 0
