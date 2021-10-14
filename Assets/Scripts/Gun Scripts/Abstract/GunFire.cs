@@ -7,6 +7,7 @@ public abstract class GunFire : MonoBehaviour
     private GunClip clip;
     private GunFireRate gunFireRate;
     private GunRecoil recoil;
+    private CharacterEvents events;
     protected Transform camTransform;
 
 
@@ -16,6 +17,7 @@ public abstract class GunFire : MonoBehaviour
         clip.AffectClip();
         gunFireRate.StartFireInterval();
         recoil.AddRecoil();
+        events.Invoke_OnShoot("Shoot");
 
         
         
@@ -27,5 +29,6 @@ public abstract class GunFire : MonoBehaviour
         gunFireRate = GetComponent<GunFireRate>();
         recoil = GetComponent<GunRecoil>();
         camTransform = Camera.main.transform;
+        events = GetComponentInParent<CharacterEvents>();
     }
 }
