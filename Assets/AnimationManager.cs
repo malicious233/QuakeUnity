@@ -16,10 +16,16 @@ public class AnimationManager : MonoBehaviour
         events = GetComponent<CharacterEvents>();
         inventory = GetComponent<CharacterInventory>();
     }
-    public void PlayAnim(string _anim)
+    public void PlayAnimUninterrupted(string _anim)
     {
         rigAnimator.Play(_anim, 0, 0);
         gunAnimator.Play(_anim, 0, 0);
+    }
+
+    public void PlayAnim(string _anim)
+    {
+        rigAnimator.Play(_anim);
+        gunAnimator.Play(_anim);
     }
 
     public void UpdateAnimators(List<Transform> _weaponList)
@@ -50,11 +56,11 @@ public class AnimationManager : MonoBehaviour
 
     public void OnEnable()
     {
-        events.OnShoot += PlayAnim;
+        events.OnShoot += PlayAnimUninterrupted;
     }
 
     public void OnDisable()
     {
-        events.OnShoot -= PlayAnim;
+        events.OnShoot -= PlayAnimUninterrupted;
     }
 }

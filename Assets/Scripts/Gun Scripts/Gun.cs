@@ -43,10 +43,11 @@ public class Gun : MonoBehaviour
         }
         
         
-
+        /*
         if (Input.GetKeyDown(KeyCode.R))
         {
             clip.ReloadClip();
         }
+        */
     }
 }

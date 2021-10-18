@@ -109,6 +109,7 @@ public class PlayerController : MonoBehaviour
     }
 
     public Vector3 Friction(Vector3 _velocity)
+        ///Returns a frictioned value of inputted velocity dhaakd
     {
         _velocity -= _velocity * moveDeaccel * Time.deltaTime;
         return _velocity;

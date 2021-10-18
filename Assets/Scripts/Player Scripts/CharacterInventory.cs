@@ -7,6 +7,8 @@ public class CharacterInventory : MonoBehaviour
     #region References
     InputManager input;
     AnimationManager animManager;
+    RigAnimEvents rigAnimEvents;
+    CharacterEvents events;
     #endregion
     ///Handle Weapon Switching and track what weapons you got
 
@@ -22,8 +24,16 @@ public class CharacterInventory : MonoBehaviour
     {
         input = GetComponent<InputManager>();
         animManager = GetComponent<AnimationManager>();
+        rigAnimEvents = GetComponentInChildren<RigAnimEvents>();
+        events = GetComponent<CharacterEvents>();
 
         UpdateWeaponList();
+        //SwitchWeapon(0);
+    }
+
+    private void Start()
+    {
+        SwitchWeapon(0);
     }
 
     private void Update()
@@ -62,7 +72,14 @@ public class CharacterInventory : MonoBehaviour
             }
             weaponList[_index].gameObject.SetActive(true);
             animManager.SwitchAnimator(_index);
+            rigAnimEvents.SwitchGun(weaponList[_index].gameObject);
+
+            GunClip clip = weaponList[_index].GetComponent<GunClip>();
+            events.Invoke_OnWeaponSwitch(clip.magazineSize);
+            events.Invoke_OnMagazineChange(clip.ShotsInMag);
+            
         }
+        weaponIndex = _index;
     }
 
     #endregion
