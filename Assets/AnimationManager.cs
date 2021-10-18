@@ -7,11 +7,14 @@ public class AnimationManager : MonoBehaviour
     CharacterEvents events;
     public Animator rigAnimator;
     public Animator gunAnimator;
+    CharacterInventory inventory;
 
-    //Somehow do that it will add the respective gun name to the end of the name of the string that rigAnimator will play, once we get to adding more guns
+    public List<RuntimeAnimatorController> rigAnimators;
+
     public void Awake()
     {
         events = GetComponent<CharacterEvents>();
+        inventory = GetComponent<CharacterInventory>();
     }
     public void PlayAnim(string _anim)
     {
@@ -19,15 +22,23 @@ public class AnimationManager : MonoBehaviour
         gunAnimator.Play(_anim, 0, 0);
     }
 
+    public void UpdateAnimators(List<Transform> _weaponList)
+    {
+        rigAnimators.Clear();
+        for (int i = 0; i < _weaponList.Count; i++)
+        {
+            rigAnimators.Add(_weaponList[i].GetComponentInChildren<GunAnimatorManager>().rigAnim);
+        }
+    }
+
+    public void SwitchAnimator(int _index)
+    {
+        rigAnimator.runtimeAnimatorController = rigAnimators[_index];
+        gunAnimator = inventory.weaponList[_index].GetComponentInChildren<Animator>();
+    }
+
     public void Update()
     {
-        /*
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            events.Invoke_OnShoot("Shoot");
-            //PlayAnim("Shoot");
-        }
-        */
 
         if (Input.GetKeyDown(KeyCode.R))
         {
@@ -40,5 +51,10 @@ public class AnimationManager : MonoBehaviour
     public void OnEnable()
     {
         events.OnShoot += PlayAnim;
+    }
+
+    public void OnDisable()
+    {
+        events.OnShoot -= PlayAnim;
     }
 }

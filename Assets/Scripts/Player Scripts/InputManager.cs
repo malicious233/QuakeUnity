@@ -8,15 +8,17 @@ public class InputManager : MonoBehaviour
 
     public float horizontalInputAxis;
     public float verticalInputAxis;
-
     public float mouseHorizontalInputAxis;
+    public bool reloadDown;
+    public bool switchDown;
 
     public Vector3 inputVector;
     public void Update()
     {
         horizontalInputAxis = Input.GetAxisRaw("Horizontal");
         verticalInputAxis = Input.GetAxisRaw("Vertical");
-
+        reloadDown = Input.GetKeyDown(KeyCode.R);
+        switchDown = Input.GetKeyDown(KeyCode.F);
         mouseHorizontalInputAxis = Input.GetAxis("Mouse X");
 
         //inputVector = new Vector3(horizontalInputAxis, 0, verticalInputAxis);

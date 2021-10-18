@@ -8,11 +8,14 @@ public class Gun : MonoBehaviour
     GunClip clip;
     GunFireRate fireRateComp;
 
+    public Animator animator;
+
     private void Awake()
     {
         fire = GetComponent<GunFire>();
         clip = GetComponent<GunClip>();
         fireRateComp = GetComponent<GunFireRate>();
+        animator = GetComponentInChildren<Animator>();
     }
 
     public void Update()
