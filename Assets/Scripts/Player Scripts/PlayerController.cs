@@ -70,23 +70,8 @@ public class PlayerController : MonoBehaviour
 
         eyePoint.localRotation = Quaternion.AngleAxis(yRotation, Vector3.left);
 
-        //Quaternion combOffset = 
-
         transform.localRotation = Quaternion.AngleAxis(xRotation, Vector3.up);
         
-
-        /*
-        rotOfCamera.x -= mouseY;
-        rotOfCamera.x = Mathf.Clamp(rotOfCamera.x, -90, 90);
-        rotOfCamera.y += mouseX;
-        rotOfCamera.z = 0;
-
-        eyePoint.rotation = Quaternion.Euler(rotOfCamera);
-        transform.localRotation = Quaternion.Euler(0, rotOfCamera.y, 0); //Gross! Euler
-        */
-        //cam.transform.position = eyePoint.transform.position;
-        //cam.transform.rotation = eyePoint.transform.rotation;
-
     }
 
     public void UpdateVelocityGround()
