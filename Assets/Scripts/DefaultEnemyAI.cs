@@ -34,6 +34,7 @@ public class DefaultEnemyAI : MonoBehaviour
     {
 
     }
+    
 
     private void State_Wander()
     {
