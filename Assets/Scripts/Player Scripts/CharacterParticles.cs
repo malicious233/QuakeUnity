@@ -5,7 +5,7 @@ using UnityEngine;
 public class CharacterParticles : MonoBehaviour
 {
     [SerializeField] ParticleSystem hitEffect;
-    [SerializeField] ParticleSystem deathEffect;
+    [SerializeField] GameObject deathEffect;
 
     public void EmitHitEffect()
     {
@@ -14,6 +14,6 @@ public class CharacterParticles : MonoBehaviour
 
     public void DeathParticle()
     {
-
+        Instantiate(deathEffect, transform.position, Quaternion.Euler(-90, 0, 0));
     }
 }

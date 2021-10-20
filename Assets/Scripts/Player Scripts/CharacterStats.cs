@@ -48,8 +48,8 @@ public class CharacterStats : MonoBehaviour
 
     private void Die()
     {
-        
 
+        particles.DeathParticle();
         Destroy(gameObject);
     }
 }
