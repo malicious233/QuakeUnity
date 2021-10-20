@@ -39,6 +39,7 @@ public class PlayerController : MonoBehaviour
     {
         input = GetComponent<InputManager>();
         charController = GetComponent<CharacterController>();
+        Application.targetFrameRate = 120;
     }
 
     public void Update()

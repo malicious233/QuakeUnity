@@ -2230,7 +2230,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Goto_AfterWander: {fileID: 2012330360}
-  wanderTime: 1
+  wanderTime: 3
+  wanderRadius: 7
+  wanderSpeed: 20
+  acceleration: 20
+  moveDirection: {x: 0, y: 0, z: 0}
 --- !u!114 &2012330360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2244,7 +2248,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Goto_AfterIdle: {fileID: 2012330359}
-  idleTime: 1
+  idleTime: 5
 --- !u!114 &2012330361
 MonoBehaviour:
   m_ObjectHideFlags: 0

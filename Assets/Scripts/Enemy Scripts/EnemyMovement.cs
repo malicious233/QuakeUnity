@@ -15,10 +15,4 @@ public class EnemyMovement : MonoBehaviour
     }
     #endregion
 
-    #region Methods
-    public void MoveToDestination(Vector3 _destination)
-    {
-        agent.SetDestination(_destination);
-    }
-    #endregion
 }

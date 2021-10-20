@@ -7,7 +7,7 @@ public abstract class State : MonoBehaviour
 {
     EnemyAI AI;
 
-    public void Awake()
+    public virtual void Awake()
     {
         AI = GetComponent<EnemyAI>();
     }
@@ -15,10 +15,16 @@ public abstract class State : MonoBehaviour
     public void ChangeState(State _state)
     {
         AI.currentState = _state;
+        _state.SetState();
     }
 
     public virtual void StateLoop()
         //Method which will loop in Update inside EnemyAI once it is said state
+    {
+
+    }
+
+    public virtual void SetState()
     {
 
     }
