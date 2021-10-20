@@ -3,20 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(EnemyMovement))]
 public class State_Wander : State
 {
-    EnemyMovement movement;
     NavMeshAgent agent;
 
 
     [Header("State Transition:")]
     [SerializeField] State Goto_AfterWander;
+    [SerializeField] State Goto_EnemyDetected;
 
     [Header("State Properties:")]
     [SerializeField] float wanderTime = 1f;
     [SerializeField] float wanderRadius = 3f;
     float currWanderTime;
+    [SerializeField] float detectRefreshRate = 0.2f;
+    float timeTillDetect;
+    [SerializeField] float enemyDetectRange = 3f;
+    [SerializeField] LayerMask layerMask;
 
     [Header("Movement Speeds:")]
     [SerializeField] float wanderSpeed = 1f;
@@ -28,7 +31,6 @@ public class State_Wander : State
     public override void Awake()
     {
         base.Awake();
-        movement = GetComponent<EnemyMovement>();
         agent = GetComponent<NavMeshAgent>();
     }
     public override void StateLoop()
@@ -42,30 +44,33 @@ public class State_Wander : State
         }
         currWanderTime -= Time.deltaTime;
 
-        NavMeshPathStatus status = agent.pathStatus;
-        if (status == NavMeshPathStatus.PathComplete)
+        if (timeTillDetect < 0)
         {
-            ChangeState(Goto_AfterWander);
+            timeTillDetect = detectRefreshRate;
+            DetectEnemiesInRange();
         }
+        timeTillDetect -= Time.deltaTime;
+
     }
 
     public override void SetState()
     {
         base.SetState();
+        currWanderTime = wanderTime;
         agent.SetDestination(RandomNavMeshLocation());
-        /*
-        agent.speed = wanderSpeed;
-        agent.acceleration = acceleration;
-        Vector2 dir = Random.insideUnitCircle.normalized;
-        moveDirection.x = dir.x;
-        moveDirection.z = dir.y;
-        moveDirection.Normalize();
-        */
-        
-        
-        
-        
 
+    }
+
+
+    private void DetectEnemiesInRange()
+    {
+        Collider[] cols = Physics.OverlapSphere(transform.position, enemyDetectRange, layerMask);
+        foreach (Collider col in cols)
+        {
+            AI.target = col.transform;
+            ChangeState(Goto_EnemyDetected);
+            Debug.Log("BWEEEOOEEEOO");
+        }
         
     }
 
@@ -79,6 +84,11 @@ public class State_Wander : State
             finalPosition = hit.position;
         }
         return finalPosition;
+    }
+
+    public void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, enemyDetectRange);
     }
 }
 

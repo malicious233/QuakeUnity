@@ -5,7 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(EnemyAI))]
 public abstract class State : MonoBehaviour
 {
-    EnemyAI AI;
+    protected EnemyAI AI;
+
 
     public virtual void Awake()
     {
@@ -21,7 +22,7 @@ public abstract class State : MonoBehaviour
     public virtual void StateLoop()
         //Method which will loop in Update inside EnemyAI once it is said state
     {
-
+        //Debug.Log(this);
     }
 
     public virtual void SetState()
