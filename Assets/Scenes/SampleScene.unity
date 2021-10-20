@@ -2782,8 +2782,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5130019060628906032, guid: 4875dc4ed98418b4ebaf046db0b08b6e, type: 3}
+      propertyPath: m_Name
+      value: BLSTGun (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130019060628906032, guid: 4875dc4ed98418b4ebaf046db0b08b6e, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130019060628906036, guid: 4875dc4ed98418b4ebaf046db0b08b6e, type: 3}
+      propertyPath: damageValue
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130019060628906037, guid: 4875dc4ed98418b4ebaf046db0b08b6e, type: 3}
+      propertyPath: fireRate
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130019060628906037, guid: 4875dc4ed98418b4ebaf046db0b08b6e, type: 3}
+      propertyPath: isAutomatic
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5130019060628906042, guid: 4875dc4ed98418b4ebaf046db0b08b6e, type: 3}
       propertyPath: magazineSize
@@ -2795,7 +2811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5130019060628906043, guid: 4875dc4ed98418b4ebaf046db0b08b6e, type: 3}
       propertyPath: pelletSpread.Array.data[0].spreadX
-      value: -1
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5130019060628906043, guid: 4875dc4ed98418b4ebaf046db0b08b6e, type: 3}
       propertyPath: pelletSpread.Array.data[0].spreadY
@@ -2803,7 +2819,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5130019060628906043, guid: 4875dc4ed98418b4ebaf046db0b08b6e, type: 3}
       propertyPath: pelletSpread.Array.data[1].spreadX
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5130019060628906043, guid: 4875dc4ed98418b4ebaf046db0b08b6e, type: 3}
       propertyPath: pelletSpread.Array.data[1].spreadY
@@ -2815,11 +2831,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5130019060628906043, guid: 4875dc4ed98418b4ebaf046db0b08b6e, type: 3}
       propertyPath: pelletSpread.Array.data[2].spreadY
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5130019060628906043, guid: 4875dc4ed98418b4ebaf046db0b08b6e, type: 3}
       propertyPath: pelletSpread.Array.data[3].spreadY
-      value: -1.5
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 5130019060887514471, guid: 4875dc4ed98418b4ebaf046db0b08b6e, type: 3}
       propertyPath: m_Name

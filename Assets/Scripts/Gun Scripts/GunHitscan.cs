@@ -41,7 +41,7 @@ public class GunHitscan : GunFire
     void SpawnShot(Vector3 _shootDirection)
     {
         Vector3 tracerPoint;
-        RaycastHit hit = GetHitPoint();
+        RaycastHit hit = GetHitPoint(_shootDirection);
         if (Physics.Raycast(camTransform.position, _shootDirection, out hit, range, layerMask))
         {
             var bulletHit = Instantiate(Instantiate(particles.bulletHitEffect, hit.point, Quaternion.identity));
@@ -57,10 +57,10 @@ public class GunHitscan : GunFire
         particles.CreateTracer(tracerPoint);
     }
 
-    public RaycastHit GetHitPoint()
+    public RaycastHit GetHitPoint(Vector3 _shotDirection)
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, range, layerMask))
+        if (Physics.Raycast(transform.position, _shotDirection, out hit, range, layerMask))
         {
             CharacterStats _stats = hit.transform.GetComponent<CharacterStats>();
             if (_stats != null)
