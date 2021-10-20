@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class DefaultEnemyAI : MonoBehaviour
 {
     private Transform targetTransform;
+    private NavMeshAgent agent;
+
+    
 
     public enum State 
     {
@@ -29,6 +33,7 @@ public class DefaultEnemyAI : MonoBehaviour
     [Header("Agitated State properties:")]
     [SerializeField] private float chasePathUpdateRate = 0.1f;
 
+    #region State Methods
 
     private void State_Idle()
     {
@@ -45,4 +50,21 @@ public class DefaultEnemyAI : MonoBehaviour
     {
 
     }
+
+    #endregion
+
+    #region Unity Methods
+    public void Awake()
+    {
+        agent = GetComponent<NavMeshAgent>();
+    }
+
+    public void Update()
+    {
+
+    }
+
+    #endregion
+
+
 }
