@@ -170,7 +170,7 @@ MonoBehaviour:
   Goto_AfterWander: {fileID: 2012330360}
   Goto_EnemyDetected: {fileID: 2012330363}
   wanderTime: 3
-  wanderRadius: 20
+  wanderRadius: 90
   detectRefreshRate: 0.2
   enemyDetectRange: 50
   layerMask:
