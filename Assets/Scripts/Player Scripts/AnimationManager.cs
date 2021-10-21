@@ -40,6 +40,7 @@ public class AnimationManager : MonoBehaviour
     public void SetTriggers(string _boolName)
         //Sets triggers for both rig and gun
     {
+
         rigAnimator.SetTrigger(_boolName);
         gunAnimator.SetTrigger(_boolName);
     }

@@ -18,9 +18,10 @@ public class GunHitscan : GunFire
     public override void Shoot()
     {
         base.Shoot();
-        
 
-        particles.muzzleFlash.Emit(1);
+
+        //particles.muzzleFlash.Emit(1);
+        particles.muzzleFlash.Play();
         SpawnShot(camTransform.forward);
         foreach (var item in pelletSpread)
         {

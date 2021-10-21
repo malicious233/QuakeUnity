@@ -10,6 +10,9 @@ public abstract class GunClip : MonoBehaviour
 
     public int magazineSize;
 
+    [Tooltip("Wether or not this gun reloads bullets one by one")]
+    [SerializeField] bool slugReload;
+
     public int shotsInMag;
     public int ShotsInMag
     {
@@ -24,10 +27,9 @@ public abstract class GunClip : MonoBehaviour
             {
                 canFire = true;
             }
-            if (h >= magazineSize)
+            if (slugReload && h >= magazineSize)
             {
                 events.Invoke_OnFullMagazine();
-                Debug.Log("Full");
             }
             events.Invoke_OnMagazineChange(h);
             shotsInMag = h;
