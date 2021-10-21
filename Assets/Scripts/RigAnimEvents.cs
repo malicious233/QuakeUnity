@@ -20,4 +20,9 @@ public class RigAnimEvents : MonoBehaviour
     {
         clip.ReloadClip();
     }
+
+    public void ReloadAmount(int _amount)
+    {
+        clip.ReloadAmount(_amount);
+    }
 }

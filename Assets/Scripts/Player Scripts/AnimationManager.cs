@@ -37,6 +37,13 @@ public class AnimationManager : MonoBehaviour
         }
     }
 
+    public void SetTriggers(string _boolName)
+        //Sets triggers for both rig and gun
+    {
+        rigAnimator.SetTrigger(_boolName);
+        gunAnimator.SetTrigger(_boolName);
+    }
+
     public void SwitchAnimator(int _index)
     {
         rigAnimator.runtimeAnimatorController = rigAnimators[_index];
@@ -51,16 +58,24 @@ public class AnimationManager : MonoBehaviour
             PlayAnim("Reload");
         }
 
-
     }
+
+    #region Dumb Methods
+    void SetReloadDoneTriggers()
+    {
+        SetTriggers("ReloadDone");
+    }
+    #endregion
 
     public void OnEnable()
     {
         events.OnShoot += PlayAnimUninterrupted;
+        events.OnFullMagazine += SetReloadDoneTriggers;
     }
 
     public void OnDisable()
     {
         events.OnShoot -= PlayAnimUninterrupted;
+        events.OnFullMagazine -= SetReloadDoneTriggers;
     }
 }

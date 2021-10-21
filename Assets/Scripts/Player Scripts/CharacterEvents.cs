@@ -6,6 +6,7 @@ using UnityEngine;
 public class CharacterEvents : MonoBehaviour
 {
     public event Action<string> OnShoot;
+    public event Action OnFullMagazine;
     public event Action<int> OnMagazineChange;
     public event Action<int> OnWeaponSwitch;
 
@@ -22,6 +23,11 @@ public class CharacterEvents : MonoBehaviour
     public void Invoke_OnWeaponSwitch(int _magSize)
     {
         OnWeaponSwitch?.Invoke(_magSize);
+    }
+
+    public void Invoke_OnFullMagazine()
+    {
+        OnFullMagazine?.Invoke();
     }
 
 }

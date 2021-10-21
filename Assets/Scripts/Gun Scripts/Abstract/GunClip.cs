@@ -24,6 +24,11 @@ public abstract class GunClip : MonoBehaviour
             {
                 canFire = true;
             }
+            if (h >= magazineSize)
+            {
+                events.Invoke_OnFullMagazine();
+                Debug.Log("Full");
+            }
             events.Invoke_OnMagazineChange(h);
             shotsInMag = h;
         }
@@ -43,6 +48,11 @@ public abstract class GunClip : MonoBehaviour
     public void ReloadClip()
     {
         ShotsInMag = magazineSize;
+    }
+
+    public void ReloadAmount(int _amount)
+    {
+        ShotsInMag += _amount;
     }
 
     public void Start()
