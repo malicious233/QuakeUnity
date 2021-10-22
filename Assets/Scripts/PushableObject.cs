@@ -10,7 +10,7 @@ public class PushableObject : MonoBehaviour
     DestroyableObject destroyableObject;
 
     [SerializeField] float knockbackMultiplier = 1;
-
+    
     public void Awake()
     {
         rb = GetComponent<Rigidbody>();

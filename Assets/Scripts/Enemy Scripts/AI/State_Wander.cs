@@ -33,6 +33,7 @@ public class State_Wander : State
         base.Awake();
         agent = GetComponent<NavMeshAgent>();
     }
+    /*
     public override void StateLoop()
     {
         base.StateLoop();
@@ -52,14 +53,34 @@ public class State_Wander : State
         timeTillDetect -= Time.deltaTime;
 
     }
+    */
 
-    public override void SetState()
+    public void Update()
     {
-        base.SetState();
+        agent.Move(moveDirection * Time.deltaTime);
+        if (currWanderTime < 0)
+        {
+            currWanderTime = wanderTime;
+            AI.ChangeState(Goto_AfterWander);
+        }
+        currWanderTime -= Time.deltaTime;
+
+        if (timeTillDetect < 0)
+        {
+            timeTillDetect = detectRefreshRate;
+            DetectEnemiesInRange();
+        }
+        timeTillDetect -= Time.deltaTime;
+    }
+
+    public void OnEnable()
+    {
         currWanderTime = wanderTime;
         agent.SetDestination(RandomNavMeshLocation());
-
     }
+
+
+
 
 
     private void DetectEnemiesInRange()
@@ -68,7 +89,7 @@ public class State_Wander : State
         foreach (Collider col in cols)
         {
             AI.target = col.transform;
-            ChangeState(Goto_EnemyDetected);
+            AI.ChangeState(Goto_EnemyDetected);
             Debug.Log("BWEEEOOEEEOO");
         }
         

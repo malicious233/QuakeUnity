@@ -10,6 +10,7 @@ public class State_Idle : State
     [Header("State Properties:")]
     [SerializeField] float idleTime = 1;
     float currIdleTime;
+    /*
     public override void StateLoop()
     {
         base.StateLoop();
@@ -17,6 +18,17 @@ public class State_Idle : State
         {
             currIdleTime = idleTime;
             ChangeState(Goto_AfterIdle);
+        }
+        currIdleTime -= Time.deltaTime;
+    }
+    */
+
+    public void Update()
+    {
+        if (currIdleTime < 0)
+        {
+            currIdleTime = idleTime;
+            AI.ChangeState(Goto_AfterIdle);
         }
         currIdleTime -= Time.deltaTime;
     }

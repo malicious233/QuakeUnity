@@ -15,10 +15,16 @@ public class State_Agitated : State
         base.Awake();
         agent = GetComponent<NavMeshAgent>();
     }
-
+    /*
     public override void StateLoop()
     {
         base.StateLoop();
+        agent.SetDestination(AI.target.position);
+    }
+    */
+
+    public void Update()
+    {
         agent.SetDestination(AI.target.position);
     }
 }

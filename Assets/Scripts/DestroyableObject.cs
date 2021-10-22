@@ -25,7 +25,6 @@ public class DestroyableObject : MonoBehaviour, IDamageable
         }
     }
     
-
     private void DestroyObject()
     {
         Destroy(gameObject);

@@ -5,7 +5,9 @@ using UnityEngine;
 
 public class EnemyStats : MonoBehaviour, IDamageable
 {
-    private CharacterParticles particles;
+    CharacterParticles particles;
+    EnemyEvents events;
+
     public enum Team
     {
         player,
@@ -32,6 +34,7 @@ public class EnemyStats : MonoBehaviour, IDamageable
     public void Awake()
     {
         particles = GetComponent<CharacterParticles>();
+        events = GetComponent<EnemyEvents>();
 
         health = maxHealth;
     }
@@ -42,6 +45,7 @@ public class EnemyStats : MonoBehaviour, IDamageable
     {
         health -= _damage.damageValue;
         particles.EmitHitEffect();
+        events.Invoke_OnHit();
         if (health <= 0)
         {
             Die();
