@@ -55,6 +55,7 @@ public class CharacterStats : MonoBehaviour, IDamageable
     {
         health -= _damage.damageValue;
         particles.EmitHitEffect();
+        Debug.Log("DAMAGE");
         if (health <= 0)
         {
             Debug.Log("Owowowow I am dead! Play death sequence");

@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 2012330362}
   - component: {fileID: 7569468313886119459}
   - component: {fileID: 4740069407602214887}
+  - component: {fileID: 6580798094590812419}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
@@ -175,7 +176,7 @@ MonoBehaviour:
   wanderRadius: 90
   detectRefreshRate: 0.2
   enemyDetectRange: 100
-  onHitAggroRange: 1000
+  onHitAggroRange: 600
   wanderSpeed: 20
   acceleration: 20
   moveDirection: {x: 0, y: 0, z: 0}
@@ -249,6 +250,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fadb98a28f2beda40aa58ea56d8fc32f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6580798094590812419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459614434374078556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1794291a4bf565145b977a623cb4718f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 10
+  attackDamage: 5
+  attackCooldown: 0.6
 --- !u!1001 &4459614434728001488
 PrefabInstance:
   m_ObjectHideFlags: 0
