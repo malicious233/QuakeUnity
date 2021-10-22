@@ -156,7 +156,7 @@ MonoBehaviour:
   Goto_AfterIdle: {fileID: 2012330359}
   Goto_AfterHit: {fileID: 2012330363}
   idleTime: 2.5
-  onHitAggroRange: 10000
+  onHitAggroRange: 1000
 --- !u!114 &2012330359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,11 +174,8 @@ MonoBehaviour:
   wanderTime: 3
   wanderRadius: 90
   detectRefreshRate: 0.2
-  enemyDetectRange: 50
-  onHitAggroRange: 100000
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 8
+  enemyDetectRange: 100
+  onHitAggroRange: 1000
   wanderSpeed: 20
   acceleration: 20
   moveDirection: {x: 0, y: 0, z: 0}
