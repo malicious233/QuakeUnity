@@ -75,8 +75,10 @@ public class CharacterInventory : MonoBehaviour
             rigAnimEvents.SwitchGun(weaponList[_index].gameObject);
 
             GunClip clip = weaponList[_index].GetComponent<GunClip>();
-            events.Invoke_OnWeaponSwitch(clip.magazineSize);
-            events.Invoke_OnMagazineChange(clip.ShotsInMag);
+            //events.Invoke_OnWeaponSwitch(clip.magazineSize);
+            events.OnWeaponSwitch(clip.magazineSize);
+            //events.Invoke_OnMagazineChange(clip.ShotsInMag);
+            events.OnMagazineChange(clip.ShotsInMag);
             
         }
         weaponIndex = _index;

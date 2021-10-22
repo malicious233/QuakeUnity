@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class CharacterEvents : MonoBehaviour
 {
-    public event Action<string> OnShoot;
-    public event Action OnFullMagazine;
-    public event Action<int> OnMagazineChange;
-    public event Action<int> OnWeaponSwitch;
+    public Action OnShoot;
+    public Action OnFullMagazine;
+    public Action<int> OnMagazineChange;
+    public Action<int> OnWeaponSwitch;
 
+    /*
     public void Invoke_OnShoot(string _anim)
     {
         OnShoot?.Invoke(_anim);
@@ -29,5 +30,6 @@ public class CharacterEvents : MonoBehaviour
     {
         OnFullMagazine?.Invoke();
     }
+    */
 
 }

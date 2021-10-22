@@ -29,9 +29,10 @@ public abstract class GunClip : MonoBehaviour
             }
             if (slugReload && h >= magazineSize)
             {
-                events.Invoke_OnFullMagazine();
+                //events.Invoke_OnFullMagazine();
+                events.OnFullMagazine.Invoke();
             }
-            events.Invoke_OnMagazineChange(h);
+            events.OnMagazineChange.Invoke(h);
             shotsInMag = h;
         }
     }

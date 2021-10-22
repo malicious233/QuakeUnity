@@ -38,18 +38,7 @@ public class CharacterStats : MonoBehaviour, IDamageable
 
         health = maxHealth;
     }
-    /*
-    public void InflictDamage(float damageValue)
-    {
-        health -= damageValue;
-        particles.EmitHitEffect();
-        if (health <= 0)
-        {
-            Die();
-        }
 
-    }
-    */
 
     public void InflictDamage(Damage _damage)
     {

@@ -17,7 +17,7 @@ public abstract class GunFire : MonoBehaviour
         clip.AffectClip();
         gunFireRate.StartFireInterval();
         recoil.AddRecoil();
-        events.Invoke_OnShoot("Shoot");
+        events.OnShoot.Invoke();
 
         
         

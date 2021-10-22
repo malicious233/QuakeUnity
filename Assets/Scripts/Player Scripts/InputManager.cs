@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class InputManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class InputManager : MonoBehaviour
     public bool switchDown;
 
     public Vector3 inputVector;
+
     public void Update()
     {
         horizontalInputAxis = Input.GetAxisRaw("Horizontal");
@@ -24,6 +26,7 @@ public class InputManager : MonoBehaviour
         //inputVector = new Vector3(horizontalInputAxis, 0, verticalInputAxis);
         inputVector = transform.right * horizontalInputAxis + transform.forward * verticalInputAxis;
         inputVector.Normalize();
+
     }
 
 

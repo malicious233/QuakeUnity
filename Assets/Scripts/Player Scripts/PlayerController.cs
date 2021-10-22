@@ -32,8 +32,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float gravity = 3f;
 
     [SerializeField] float airControl = 0.3f;
-    [SerializeField] UnityEvent<Vector2> inputCallback;
-    [SerializeField] UnityEvent inpootCallback;
+    
 
     [Header("Control Settings:")]
     [SerializeField] float mouseSensitivity = 1f;
@@ -47,6 +46,7 @@ public class PlayerController : MonoBehaviour
 
     public void FixedUpdate()
     {
+        
         if (charController.isGrounded)
         {
             UpdateVelocityGround();

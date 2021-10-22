@@ -68,15 +68,20 @@ public class AnimationManager : MonoBehaviour
     }
     #endregion
 
+    void PlayShootAnim()
+    {
+        PlayAnimUninterrupted("Shoot");
+    }
+
     public void OnEnable()
     {
-        events.OnShoot += PlayAnimUninterrupted;
+        events.OnShoot += PlayShootAnim;
         events.OnFullMagazine += SetReloadDoneTriggers;
     }
 
     public void OnDisable()
     {
-        events.OnShoot -= PlayAnimUninterrupted;
+        events.OnShoot -= PlayShootAnim;
         events.OnFullMagazine -= SetReloadDoneTriggers;
     }
 }
