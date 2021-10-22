@@ -22,10 +22,16 @@ public class PushableObject : MonoBehaviour
         destroyableObject.OnHit += ApplyKnockback;
     }
 
-    
+    public void OnDisable()
+    {
+        destroyableObject.OnHit -= ApplyKnockback;
+    }
+
+
 
     private void ApplyKnockback(Damage _damage)
     {
+        
         rb.AddForce(_damage.knockbackDir * _damage.damageValue * knockbackMultiplier, ForceMode.Impulse);
     }
 }

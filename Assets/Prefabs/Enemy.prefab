@@ -154,7 +154,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Goto_AfterIdle: {fileID: 2012330359}
+  Goto_AfterHit: {fileID: 2012330363}
   idleTime: 2.5
+  onHitAggroRange: 10000
 --- !u!114 &2012330359
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -173,6 +175,7 @@ MonoBehaviour:
   wanderRadius: 90
   detectRefreshRate: 0.2
   enemyDetectRange: 50
+  onHitAggroRange: 100000
   layerMask:
     serializedVersion: 2
     m_Bits: 8
@@ -207,6 +210,9 @@ MonoBehaviour:
   currentState: {fileID: 2012330360}
   target: {fileID: 0}
   states: []
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!114 &2012330362
 MonoBehaviour:
   m_ObjectHideFlags: 0

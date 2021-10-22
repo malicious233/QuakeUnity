@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class State_Wander : State
 {
     NavMeshAgent agent;
+    EnemyEvents events;
 
 
     [Header("State Transition:")]
@@ -19,7 +20,7 @@ public class State_Wander : State
     [SerializeField] float detectRefreshRate = 0.2f;
     float timeTillDetect;
     [SerializeField] float enemyDetectRange = 3f;
-    [SerializeField] LayerMask layerMask;
+    [SerializeField] float onHitAggroRange = 1000;
 
     [Header("Movement Speeds:")]
     [SerializeField] float wanderSpeed = 1f;
@@ -32,28 +33,9 @@ public class State_Wander : State
     {
         base.Awake();
         agent = GetComponent<NavMeshAgent>();
+        events = GetComponent<EnemyEvents>();
     }
-    /*
-    public override void StateLoop()
-    {
-        base.StateLoop();
-        agent.Move(moveDirection * Time.deltaTime);
-        if (currWanderTime < 0)
-        {
-            currWanderTime = wanderTime;
-            ChangeState(Goto_AfterWander);
-        }
-        currWanderTime -= Time.deltaTime;
 
-        if (timeTillDetect < 0)
-        {
-            timeTillDetect = detectRefreshRate;
-            DetectEnemiesInRange();
-        }
-        timeTillDetect -= Time.deltaTime;
-
-    }
-    */
 
     public void Update()
     {
@@ -73,10 +55,22 @@ public class State_Wander : State
         timeTillDetect -= Time.deltaTime;
     }
 
+
     public void OnEnable()
     {
         currWanderTime = wanderTime;
         agent.SetDestination(RandomNavMeshLocation());
+        events.OnHit += AggroRange;
+    }
+
+    public void OnDisable()
+    {
+        events.OnHit -= AggroRange;
+    }
+
+    private void AggroRange()
+    {
+        AI.AggroAOE(onHitAggroRange, Goto_EnemyDetected);
     }
 
 
@@ -85,7 +79,7 @@ public class State_Wander : State
 
     private void DetectEnemiesInRange()
     {
-        Collider[] cols = Physics.OverlapSphere(transform.position, enemyDetectRange, layerMask);
+        Collider[] cols = Physics.OverlapSphere(transform.position, enemyDetectRange, AI.enemyMask);
         foreach (Collider col in cols)
         {
             AI.target = col.transform;
