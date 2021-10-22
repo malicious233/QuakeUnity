@@ -63,10 +63,11 @@ public class GunHitscan : GunFire
         RaycastHit hit;
         if (Physics.Raycast(transform.position, _shotDirection, out hit, range, layerMask))
         {
-            CharacterStats _stats = hit.transform.GetComponent<CharacterStats>();
+            IDamageable _stats = hit.transform.GetComponent<IDamageable>();
+            Damage damage = new Damage(shotDamage.damageValue, camTransform.forward);
             if (_stats != null)
             {
-                _stats.InflictDamage(shotDamage.damageValue);
+                _stats.InflictDamage(damage);
             }
             return hit;
         }

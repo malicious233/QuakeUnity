@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 4459614434374078528}
   - component: {fileID: 4459614434374078529}
   - component: {fileID: 4459614434374078530}
-  - component: {fileID: 4459614434374078534}
   - component: {fileID: 4459614434374078535}
   - component: {fileID: 4459614434374078533}
   - component: {fileID: 2012330359}
@@ -20,6 +19,7 @@ GameObject:
   - component: {fileID: 2012330361}
   - component: {fileID: 2012330362}
   - component: {fileID: 2012330363}
+  - component: {fileID: 7569468313886119459}
   m_Layer: 7
   m_Name: Enemy
   m_TagString: Untagged
@@ -104,21 +104,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4459614434374078534
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4459614434374078556}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aae929523088d1746ac206e68dd2a24e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  team: 1
-  maxHealth: 30
-  health: 0
 --- !u!114 &4459614434374078535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,6 +217,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Goto_TargetGone: {fileID: 2012330360}
+--- !u!114 &7569468313886119459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4459614434374078556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4a1e47a474f54a428c7c41ffae7af9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  team: 1
+  maxHealth: 30
+  health: 0
 --- !u!1001 &4459614434728001488
 PrefabInstance:
   m_ObjectHideFlags: 0

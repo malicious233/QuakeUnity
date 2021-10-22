@@ -5198,9 +5198,9 @@ MonoBehaviour:
   shotDamage: {fileID: 8717865700630283019}
   range: 1000
   pelletSpread:
-  - spreadX: -1.5
+  - spreadX: -2
     spreadY: 0
-  - spreadX: 1.5
+  - spreadX: 2
     spreadY: 0
   - spreadX: 0
     spreadY: 2
@@ -5220,6 +5220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canFire: 0
   magazineSize: 6
+  slugReload: 0
   shotsInMag: 0
 --- !u!114 &8717865700630283018
 MonoBehaviour:
@@ -5235,7 +5236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canFire: 0
   isAutomatic: 0
-  fireRate: 0.6
+  fireRate: 0.5
 --- !u!114 &8717865700630283019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5248,7 +5249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7c482e59a4329b46bb9c0ea76ab0834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageValue: 5
+  damageValue: 4
 --- !u!114 &8717865700630283016
 MonoBehaviour:
   m_ObjectHideFlags: 0

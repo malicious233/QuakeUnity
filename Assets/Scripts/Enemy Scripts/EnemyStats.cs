@@ -3,10 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterStats : MonoBehaviour, IDamageable
+public class EnemyStats : MonoBehaviour, IDamageable
 {
     private CharacterParticles particles;
-
     public enum Team
     {
         player,
@@ -14,9 +13,7 @@ public class CharacterStats : MonoBehaviour, IDamageable
     }
     public Team team = new Team();
 
-    public event Action OnHit;
-
-    public float maxHealth; 
+    public float maxHealth;
     public float health;
     public float Health
     {
@@ -38,18 +35,8 @@ public class CharacterStats : MonoBehaviour, IDamageable
 
         health = maxHealth;
     }
-    /*
-    public void InflictDamage(float damageValue)
-    {
-        health -= damageValue;
-        particles.EmitHitEffect();
-        if (health <= 0)
-        {
-            Die();
-        }
 
-    }
-    */
+    public event Action OnHit;
 
     public void InflictDamage(Damage _damage)
     {
@@ -57,8 +44,14 @@ public class CharacterStats : MonoBehaviour, IDamageable
         particles.EmitHitEffect();
         if (health <= 0)
         {
-            Debug.Log("Owowowow I am dead! Play death sequence");
+            Die();
         }
     }
 
+    private void Die()
+    {
+
+        particles.DeathParticle();
+        Destroy(gameObject);
+    }
 }

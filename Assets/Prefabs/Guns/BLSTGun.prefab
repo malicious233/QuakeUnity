@@ -218,14 +218,14 @@ MonoBehaviour:
   shotDamage: {fileID: 3103280172725259993}
   range: 1000
   pelletSpread:
-  - spreadX: -1.5
+  - spreadX: -2
     spreadY: 0
-  - spreadX: 1.5
+  - spreadX: 2
     spreadY: 0
   - spreadX: 0
-    spreadY: 2
+    spreadY: 2.5
   - spreadX: 0
-    spreadY: -2
+    spreadY: -2.5
 --- !u!114 &3103280172725259991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -240,6 +240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canFire: 0
   magazineSize: 999
+  slugReload: 0
   shotsInMag: 0
 --- !u!114 &3103280172725259992
 MonoBehaviour:
