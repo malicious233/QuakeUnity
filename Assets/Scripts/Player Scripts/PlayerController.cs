@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerController : MonoBehaviour
 {
@@ -31,6 +32,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float gravity = 3f;
 
     [SerializeField] float airControl = 0.3f;
+    [SerializeField] UnityEvent<Vector2> inputCallback;
+    [SerializeField] UnityEvent inpootCallback;
 
     [Header("Control Settings:")]
     [SerializeField] float mouseSensitivity = 1f;
@@ -42,7 +45,7 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    public void Update()
+    public void FixedUpdate()
     {
         if (charController.isGrounded)
         {
