@@ -7,8 +7,6 @@ public abstract class GunFireRate : MonoBehaviour
     public bool canFire;
     public bool isAutomatic;
 
-    public virtual void StartFireInterval()
-    {
+    public abstract void StartFireInterval();
 
-    }
 }

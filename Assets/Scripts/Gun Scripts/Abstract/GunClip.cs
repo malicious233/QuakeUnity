@@ -8,6 +8,7 @@ public abstract class GunClip : MonoBehaviour
 
     CharacterEvents events;
 
+
     public int magazineSize;
 
     [Tooltip("Wether or not this gun reloads bullets one by one")]
