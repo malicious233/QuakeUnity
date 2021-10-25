@@ -4979,6 +4979,7 @@ GameObject:
   - component: {fileID: 2210394856287074538}
   - component: {fileID: 8620102145035147187}
   - component: {fileID: 6873894265713673847}
+  - component: {fileID: 4459614434345145204}
   m_Layer: 7
   m_Name: Shooter
   m_TagString: Untagged
@@ -5113,7 +5114,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Goto_AfterIdle: {fileID: 2210394856287074535}
-  Goto_AfterHit: {fileID: 0}
+  Goto_AfterHit: {fileID: 2544355506943988173}
   idleTime: 2.5
   onHitAggroRange: 1000
 --- !u!114 &2210394856287074535
@@ -5133,7 +5134,7 @@ MonoBehaviour:
   wanderTime: 3
   wanderRadius: 90
   detectRefreshRate: 0.2
-  enemyDetectRange: 100
+  enemyDetectRange: 150
   onHitAggroRange: 600
   wanderSpeed: 20
   acceleration: 20
@@ -5168,7 +5169,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c4fb006872c3647ac486a41fe7e99f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aimDistance: 100
+  aimDistance: 150
+  fireCooldown: 1
+  curFireCooldown: 0
   groundLayerMask:
     serializedVersion: 2
     m_Bits: 64
@@ -5211,3 +5214,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fadb98a28f2beda40aa58ea56d8fc32f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4459614434345145204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2544355506943988172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a74f43f8e2c7afd4a99a8f5c98522991, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 6642035338384133997, guid: 1c699a80ca78d7148892e5d76fa6407b, type: 3}
