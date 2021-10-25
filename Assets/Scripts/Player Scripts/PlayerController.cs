@@ -41,7 +41,6 @@ public class PlayerController : MonoBehaviour
     {
         input = GetComponent<InputManager>();
         charController = GetComponent<CharacterController>();
-        
     }
 
     public void FixedUpdate()

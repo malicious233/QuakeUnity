@@ -82,7 +82,8 @@ public class State_Wander : State
         Collider[] cols = Physics.OverlapSphere(transform.position, enemyDetectRange, AI.enemyMask);
         foreach (Collider col in cols)
         {
-            AI.target = col.transform;
+            AI.SetTarget(col.transform);
+            //AI.target = col.transform;
             AI.ChangeState(Goto_EnemyDetected);
             Debug.Log("BWEEEOOEEEOO");
         }

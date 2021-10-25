@@ -12,7 +12,7 @@ public class State_Agitated : State
     [Header("State Transition:")]
     [SerializeField] State Goto_TargetGone;
 
-
+    
 
     public override void Awake()
     {
@@ -20,10 +20,12 @@ public class State_Agitated : State
         agent = GetComponent<NavMeshAgent>();
         events = GetComponent<EnemyEvents>();
         combat = GetComponent<EnemyCombat>();
+
+
     }
 
 
-    public void Update()
+    public void FixedUpdate()
     {
         Vector3 targetPos = AI.target.position;
         agent.SetDestination(targetPos);

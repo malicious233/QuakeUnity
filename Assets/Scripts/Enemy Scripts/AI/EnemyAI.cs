@@ -6,6 +6,7 @@ public class EnemyAI : MonoBehaviour
 {
     public State currentState;
     public Transform target;
+    private float targetHeight;
 
     public State[] states;
 
@@ -43,8 +44,20 @@ public class EnemyAI : MonoBehaviour
         if (cols.Length != 0)
         {
             Debug.Log("Bruh");
-            target = cols[0].GetComponent<Transform>();
+            SetTarget(cols[0].GetComponent<Transform>());
             ChangeState(_gotoState);
         }
+    }
+
+    public void SetTarget(Transform _targetTrans)
+    {
+        target = _targetTrans;
+        Collider col = target.GetComponent<Collider>();
+        targetHeight = (target.position - col.bounds.center).magnitude;
+    }
+
+    public Vector3 PositionToAim()
+    {
+        return target.position + new Vector3(0, targetHeight);
     }
 }
