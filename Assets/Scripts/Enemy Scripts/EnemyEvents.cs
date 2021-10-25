@@ -5,16 +5,9 @@ using System;
 
 public class EnemyEvents : MonoBehaviour
 {
-    public event Action OnHit;
-    public event Action OnAttack;
+    public Action OnHit;
+    public Action<Vector3> WillAttack;
+    public Action OnAttack;
 
-    public void Invoke_OnHit()
-    {
-        OnHit?.Invoke();
-    }
 
-    public void Invoke_OnAttack()
-    {
-        OnAttack?.Invoke();
-    }
 }

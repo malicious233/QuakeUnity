@@ -7,12 +7,14 @@ public class D0GAnimator : MonoBehaviour
 {
     Animator anim;
     NavMeshAgent agent;
+    EnemyEvents events;
 
 
     public void Awake()
     {
         anim = GetComponentInChildren<Animator>();
         agent = GetComponent<NavMeshAgent>();
+        events = GetComponent<EnemyEvents>();
     }
 
     public void Update()
@@ -27,5 +29,20 @@ public class D0GAnimator : MonoBehaviour
         }
     }
 
-    
+    public void OnEnable()
+    {
+        events.OnAttack += Play_AttackAnim;
+    }
+
+    public void OnDisable()
+    {
+        events.OnAttack -= Play_AttackAnim;
+    }
+
+    private void Play_AttackAnim()
+    {
+        anim.Play("Attack", 0, 0);
+    }
+
+
 }

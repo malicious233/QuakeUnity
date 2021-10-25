@@ -7,6 +7,7 @@ public class State_Agitated : State
 {
     EnemyEvents events;
     NavMeshAgent agent;
+    EnemyCombat combat;
 
     [Header("State Transition:")]
     [SerializeField] State Goto_TargetGone;
@@ -18,14 +19,22 @@ public class State_Agitated : State
         base.Awake();
         agent = GetComponent<NavMeshAgent>();
         events = GetComponent<EnemyEvents>();
+        combat = GetComponent<EnemyCombat>();
     }
 
 
     public void Update()
     {
-        agent.SetDestination(AI.target.position);
+        Vector3 targetPos = AI.target.position;
+        agent.SetDestination(targetPos);
+        //Improve attack detection here
 
-        events.Invoke_OnAttack();
+        float targetDist = Vector3.Distance(transform.position, targetPos);
+        if (targetDist < combat.attackRange)
+        {
+            events.WillAttack?.Invoke(targetPos);
+        }
+        
         
     }
 }

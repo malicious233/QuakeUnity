@@ -45,7 +45,7 @@ public class EnemyStats : MonoBehaviour, IDamageable
     {
         health -= _damage.damageValue;
         particles.EmitHitEffect();
-        events.Invoke_OnHit();
+        events.OnHit?.Invoke();
         if (health <= 0)
         {
             Die();
