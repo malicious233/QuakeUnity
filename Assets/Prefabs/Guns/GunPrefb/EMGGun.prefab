@@ -5080,9 +5080,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b27eff4422bb9041bb48323eb1e112f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 192
   shotDamage: {fileID: 5946718578057886903}
   range: 1000
   pelletSpread: []
@@ -5100,6 +5097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canFire: 0
   magazineSize: 30
+  slugReload: 0
   shotsInMag: 0
 --- !u!114 &5946718578057886902
 MonoBehaviour:
@@ -5128,7 +5126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7c482e59a4329b46bb9c0ea76ab0834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageValue: 6
+  damageValue: 8
 --- !u!114 &5946718578057886856
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5160,8 +5158,8 @@ MonoBehaviour:
   camTransform: {fileID: 0}
   recoilPerShot: 0.3
   patternRecoveryTime: 2
-  recoilRecoveryTime: 0.015
-  recoilReactionTime: 0.07
+  recoilRecoveryTime: 0.05
+  recoilReactionTime: 0.15
   recoilPatternDuration: 1.5
   horizontalRecoilPattern:
     serializedVersion: 2

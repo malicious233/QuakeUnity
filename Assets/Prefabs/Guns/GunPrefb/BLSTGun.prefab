@@ -5192,9 +5192,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b27eff4422bb9041bb48323eb1e112f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 192
   shotDamage: {fileID: 8717865700630283019}
   range: 1000
   pelletSpread:
@@ -5281,8 +5278,8 @@ MonoBehaviour:
   camTransform: {fileID: 0}
   recoilPerShot: 0.6
   patternRecoveryTime: 1.2
-  recoilRecoveryTime: 0.02
-  recoilReactionTime: 0.08
+  recoilRecoveryTime: 0.09
+  recoilReactionTime: 0.1
   recoilPatternDuration: 1.5
   horizontalRecoilPattern:
     serializedVersion: 2
