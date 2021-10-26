@@ -6,6 +6,7 @@ public class BulletMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 3;
     [SerializeField] float lifeTime = 3;
+    [SerializeField] LayerMask groundLayer;
     public Vector3 moveDirection;
 
     public void FixedUpdate()
@@ -13,6 +14,32 @@ public class BulletMovement : MonoBehaviour
         Vector3 movDir = moveDirection * moveSpeed;
 
         transform.position += movDir * Time.deltaTime;
+
+        if (Physics.CheckSphere(transform.position, 0.1f, groundLayer))
+        {
+            EndBullet();
+        }
+    }
+
+    public void Update()
+    {
+        lifeTime -= Time.deltaTime;
+        if (lifeTime <= 0)
+        {
+            EndBullet();
+        }
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        EndBullet();
+    }
+
+    private void EndBullet()
+    //Destroys the bullet. Might fit more advanced behavior in the future
+    {
+        Debug.Log("*vineboom*");
+        Destroy(gameObject);
     }
 
 
