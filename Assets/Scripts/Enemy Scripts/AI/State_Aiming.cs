@@ -11,7 +11,6 @@ public class State_Aiming : State
     [SerializeField] float aimDistance = 10f;
     [SerializeField] float fireCooldown = 1f;
     public float curFireCooldown;
-    [SerializeField] LayerMask groundLayerMask;
 
     public override void Awake()
     {
@@ -31,7 +30,7 @@ public class State_Aiming : State
         RaycastHit hit;
         if (curFireCooldown < 0 && Physics.Raycast(aimRay.origin, aimRay.direction, out hit, aimDistance, AI.enemyMask))
         {
-            if (!Physics.Raycast(aimRay.origin, aimRay.direction, hit.distance, groundLayerMask))
+            if (!Physics.Raycast(aimRay.origin, aimRay.direction, hit.distance, StaticVariables.groundMask))
             {
                 //Add shoot logic here
                 curFireCooldown = fireCooldown;

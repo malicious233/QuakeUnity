@@ -27,7 +27,7 @@ public class State_Wander : State
     [SerializeField] float acceleration = 1f;
     
 
-    public Vector3 moveDirection;
+    private Vector3 moveDirection;
 
     public override void Awake()
     {

@@ -6,16 +6,14 @@ public class BulletMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 3;
     [SerializeField] float lifeTime = 3;
-    [SerializeField] LayerMask groundLayer;
     public Vector3 moveDirection;
 
     public void FixedUpdate()
     {
         Vector3 movDir = moveDirection * moveSpeed;
-
         transform.position += movDir * Time.deltaTime;
 
-        if (Physics.CheckSphere(transform.position, 0.1f, groundLayer))
+        if (Physics.CheckSphere(transform.position, 0.1f, StaticVariables.groundMask))
         {
             EndBullet();
         }

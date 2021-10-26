@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GunHitscan : GunFire
 {
-    public LayerMask layerMask;
+    //public LayerMask layerMask;
     private GunParticles particles;
 
     [SerializeField] GunDamage shotDamage;
@@ -43,7 +43,7 @@ public class GunHitscan : GunFire
     {
         Vector3 tracerPoint;
         RaycastHit hit = GetHitPoint(_shootDirection);
-        if (Physics.Raycast(camTransform.position, _shootDirection, out hit, range, layerMask))
+        if (Physics.Raycast(camTransform.position, _shootDirection, out hit, range, hittableMask))
         {
             var bulletHit = Instantiate(Instantiate(particles.bulletHitEffect, hit.point, Quaternion.identity));
             bulletHit.transform.forward = hit.normal;
@@ -61,7 +61,7 @@ public class GunHitscan : GunFire
     public RaycastHit GetHitPoint(Vector3 _shotDirection)
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, _shotDirection, out hit, range, layerMask))
+        if (Physics.Raycast(transform.position, _shotDirection, out hit, range, hittableMask))
         {
             IDamageable _stats = hit.transform.GetComponent<IDamageable>();
             Damage damage = new Damage(shotDamage.damageValue, camTransform.forward);

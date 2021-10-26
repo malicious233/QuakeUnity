@@ -64,12 +64,12 @@ public class GunRecoil : MonoBehaviour
 
 
 
-    public void Update()
+    public void FixedUpdate()
     {
         patternTime -= patternRecoveryTime * Time.deltaTime;
         patternTime = Mathf.Max(0, patternTime);
-        camTransform.localRotation = Quaternion.Lerp(camTransform.localRotation, recoilRotation, recoilReactionTime);
-        recoilRotation = Quaternion.Lerp(recoilRotation, Quaternion.Euler(0, 0, 0), recoilRecoveryTime);
+        camTransform.localRotation = Quaternion.Lerp(camTransform.localRotation, recoilRotation, recoilReactionTime * Time.deltaTime);
+        recoilRotation = Quaternion.Lerp(recoilRotation, Quaternion.Euler(0, 0, 0), recoilRecoveryTime * Time.deltaTime);
 
     }
 

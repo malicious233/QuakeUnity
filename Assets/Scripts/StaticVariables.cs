@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StaticVariables
+public static class StaticVariables
 {
-    
+    //LayerMasks
+    public const int groundMask = (1 << 6);
+    public const int enemyMask = (1 << 7);
+    public const int playerMask = (1 << 3);
 }
