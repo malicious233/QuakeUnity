@@ -60,15 +60,20 @@ public class PlayerController : MonoBehaviour
             velocity.y -= gravity * Time.deltaTime;
         }
 
-        RotateCamera();
+        
 
         charController.Move(velocity * Time.deltaTime * 60);
     }
 
+    public void Update()
+    {
+        RotateCamera();
+    }
+
     public void RotateCamera()
     {
-        xRotation += Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
-        yRotation += Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
+        xRotation += input.mouseHorizontalInputAxis * mouseSensitivity ;
+        yRotation += input.mouseVerticalInputAxis * mouseSensitivity;
         yRotation = Mathf.Clamp(yRotation, -90f, 90f);
 
         eyePoint.localRotation = Quaternion.AngleAxis(yRotation, Vector3.left);
