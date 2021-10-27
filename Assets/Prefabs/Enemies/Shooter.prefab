@@ -4976,6 +4976,7 @@ GameObject:
   - component: {fileID: 2210394856287074535}
   - component: {fileID: 2210394856287074537}
   - component: {fileID: 2544355506943988173}
+  - component: {fileID: 5666572647334889536}
   - component: {fileID: 2210394856287074538}
   - component: {fileID: 8620102145035147187}
   - component: {fileID: 6873894265713673847}
@@ -5138,7 +5139,6 @@ MonoBehaviour:
   onHitAggroRange: 600
   wanderSpeed: 20
   acceleration: 20
-  moveDirection: {x: 0, y: 0, z: 0}
 --- !u!114 &2210394856287074537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5169,12 +5169,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02c4fb006872c3647ac486a41fe7e99f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aimDistance: 150
+  Goto_EnemyGone: {fileID: 5666572647334889536}
+  aimDistance: 350
   fireCooldown: 1
   curFireCooldown: 0
-  groundLayerMask:
-    serializedVersion: 2
-    m_Bits: 64
+--- !u!114 &5666572647334889536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2544355506943988172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b370ad51832abe408e3aba04f660e63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Goto_TargetFound: {fileID: 2544355506943988173}
+  detectRange: 600
 --- !u!114 &2210394856287074538
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -7,6 +7,9 @@ public class State_Aiming : State
     EnemyEvents events;
     Ray aimRay;
 
+    [Header("State Transitions:")]
+    [SerializeField] State Goto_EnemyGone;
+
     [Header("Aim Stats:")]
     [SerializeField] float aimDistance = 10f;
     [SerializeField] float fireCooldown = 1f;
@@ -18,7 +21,7 @@ public class State_Aiming : State
         events = GetComponent<EnemyEvents>();
     }
 
-    public void FixedUpdate()
+    public void Update()
     {
         //Create aim Vector
         //Vector3 targetPos = AI.target.position;
@@ -35,6 +38,10 @@ public class State_Aiming : State
                 //Add shoot logic here
                 curFireCooldown = fireCooldown;
                 events.Shoot.Invoke(aimRay.direction);
+            }
+            else
+            {
+                AI.ChangeState(Goto_EnemyGone);
             }
         }
         curFireCooldown -= Time.deltaTime;

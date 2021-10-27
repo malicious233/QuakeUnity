@@ -48,7 +48,7 @@ public class PlayerController : MonoBehaviour
         
         if (charController.isGrounded)
         {
-            UpdateVelocityGround();
+            velocity = UpdateVelocityGround();
             if (Input.GetKey(KeyCode.Space))
             {
                 velocity.y = jumpHeight;
@@ -56,7 +56,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            UpdateVelocityAir();
+            velocity = UpdateVelocityAir();
             velocity.y -= gravity * Time.deltaTime;
         }
 
@@ -82,23 +82,23 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    public void UpdateVelocityGround()
+    public Vector3 UpdateVelocityGround()
     {
         velocity = Friction(velocity);
 
         current_Speed = Vector3.Dot(velocity, input.inputVector);
         float add_Speed = Mathf.Clamp(moveSpeed - current_Speed, 0, max_Accel); //Replace that final max-Speed with a real max-accel variable, also that moveSpeed variable is ill placed
-        velocity = velocity + add_Speed * input.inputVector * Time.deltaTime;
+        return velocity + add_Speed * input.inputVector * Time.deltaTime;
     }
 
-    public void UpdateVelocityAir()
+    public Vector3 UpdateVelocityAir()
     {
         //velocity = Friction(velocity);
 
         current_Speed = Vector3.Dot(velocity, input.inputVector);
 
         float add_Speed = Mathf.Clamp(airSpeed - current_Speed, 0, max_AirAccel); //Replace that final max-Speed with a real max-accel variable, also that moveSpeed variable is ill placed
-        velocity = velocity + add_Speed * input.inputVector * Time.deltaTime;
+        return velocity + add_Speed * input.inputVector * Time.deltaTime;
     }
 
     public Vector3 Friction(Vector3 _velocity)
