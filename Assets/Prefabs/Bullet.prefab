@@ -109,11 +109,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a7bfa38d1d2d145a83e3ec93454359, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 60
+  moveSpeed: 90
   lifeTime: 3
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 64
   moveDirection: {x: 0, y: 0, z: 0}
 --- !u!114 &3070133321159107574
 MonoBehaviour:
