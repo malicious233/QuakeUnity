@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -12,6 +13,8 @@ public class EnemyAI : MonoBehaviour
 
     public LayerMask enemyMask;
 
+    NavMeshAgent agent;
+
     public void Update()
     {
         //currentState.StateLoop();
@@ -20,6 +23,7 @@ public class EnemyAI : MonoBehaviour
     public void Awake()
     {
         states = GetComponents<State>();
+        agent = GetComponent<NavMeshAgent>();    
     }
 
     public void Start()
@@ -36,6 +40,7 @@ public class EnemyAI : MonoBehaviour
         }
         currentState = _state;
         currentState.enabled = true;
+        agent.SetDestination(transform.position);
     }
 
     public void AggroAOE(float _range, State _gotoState)
