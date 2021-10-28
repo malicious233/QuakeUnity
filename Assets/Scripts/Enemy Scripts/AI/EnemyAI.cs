@@ -38,9 +38,10 @@ public class EnemyAI : MonoBehaviour
         {
             state.enabled = false;
         }
+        agent.SetDestination(transform.position);
         currentState = _state;
         currentState.enabled = true;
-        agent.SetDestination(transform.position);
+        
     }
 
     public void AggroAOE(float _range, State _gotoState)
