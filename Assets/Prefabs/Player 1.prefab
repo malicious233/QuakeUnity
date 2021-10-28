@@ -10946,9 +10946,9 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 8.82
-  m_Radius: 0.5
+  m_Radius: 0.78
   m_SlopeLimit: 45
-  m_StepOffset: 0.3
+  m_StepOffset: 0.6
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 3.29, z: 0}
@@ -10978,7 +10978,7 @@ MonoBehaviour:
   max_AirAccel: 18
   gravity: 1.2
   airControl: 0.3
-  mouseSensitivity: 2
+  mouseSensitivity: 1.6
 --- !u!114 &5452668427885624666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26858,6 +26858,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5452668428413768848}
     - target: {fileID: 5946718578057886857, guid: 7cc22e90d0f812c4f8a04c2b77b15e90, type: 3}
+      propertyPath: recoilReactionTime
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5946718578057886857, guid: 7cc22e90d0f812c4f8a04c2b77b15e90, type: 3}
+      propertyPath: recoilRecoveryTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5946718578057886857, guid: 7cc22e90d0f812c4f8a04c2b77b15e90, type: 3}
       propertyPath: horizontalRecoilPattern.m_Curve.Array.data[1].time
       value: 0.5621929
       objectReference: {fileID: 0}
@@ -26968,6 +26976,18 @@ PrefabInstance:
       propertyPath: camTransform
       value: 
       objectReference: {fileID: 5452668428413768848}
+    - target: {fileID: 8717865700630283017, guid: cbd5f6b84cfb36b4b9da4591b84ae0c8, type: 3}
+      propertyPath: recoilReactionTime
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 8717865700630283017, guid: cbd5f6b84cfb36b4b9da4591b84ae0c8, type: 3}
+      propertyPath: recoilRecoveryTime
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8717865700630283017, guid: cbd5f6b84cfb36b4b9da4591b84ae0c8, type: 3}
+      propertyPath: verticalRecoilMultiplier
+      value: 3000
+      objectReference: {fileID: 0}
     - target: {fileID: 8717865700630283022, guid: cbd5f6b84cfb36b4b9da4591b84ae0c8, type: 3}
       propertyPath: m_RootOrder
       value: 1

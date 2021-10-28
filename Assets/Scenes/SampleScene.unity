@@ -3548,25 +3548,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2099671254}
     m_Modifications:
-    - target: {fileID: 5452668427094601728, guid: c0d3bc88cdb40a74c98ec31d8bae4ff4, type: 3}
-      propertyPath: recoilReactionTime
-      value: 0.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 5452668427094601728, guid: c0d3bc88cdb40a74c98ec31d8bae4ff4, type: 3}
-      propertyPath: recoilRecoveryTime
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5452668427094601728, guid: c0d3bc88cdb40a74c98ec31d8bae4ff4, type: 3}
-      propertyPath: verticalRecoilMultiplier
-      value: 3000
-      objectReference: {fileID: 0}
     - target: {fileID: 5452668427885624657, guid: c0d3bc88cdb40a74c98ec31d8bae4ff4, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 5452668427885624659, guid: c0d3bc88cdb40a74c98ec31d8bae4ff4, type: 3}
-      propertyPath: mouseSensitivity
-      value: 1.6
       objectReference: {fileID: 0}
     - target: {fileID: 5452668427885624664, guid: c0d3bc88cdb40a74c98ec31d8bae4ff4, type: 3}
       propertyPath: m_RootOrder
@@ -3611,18 +3595,6 @@ PrefabInstance:
     - target: {fileID: 5452668427885624664, guid: c0d3bc88cdb40a74c98ec31d8bae4ff4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5452668427885624668, guid: c0d3bc88cdb40a74c98ec31d8bae4ff4, type: 3}
-      propertyPath: m_Radius
-      value: 0.78
-      objectReference: {fileID: 0}
-    - target: {fileID: 5452668428491694661, guid: c0d3bc88cdb40a74c98ec31d8bae4ff4, type: 3}
-      propertyPath: recoilReactionTime
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5452668428491694661, guid: c0d3bc88cdb40a74c98ec31d8bae4ff4, type: 3}
-      propertyPath: recoilRecoveryTime
-      value: 0.1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0d3bc88cdb40a74c98ec31d8bae4ff4, type: 3}
