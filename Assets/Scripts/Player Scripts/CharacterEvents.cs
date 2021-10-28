@@ -7,6 +7,8 @@ public class CharacterEvents : MonoBehaviour
 {
     public Action OnShoot;
     public Action OnFullMagazine;
+    public Action<float> OnHealthChange; //Returns the amount of health you got left
+    public Action<float> OnHealthChangePercentage; //Returns the percentage of health you have left
     public Action<int> OnMagazineChange;
     public Action<int> OnWeaponSwitch;
 

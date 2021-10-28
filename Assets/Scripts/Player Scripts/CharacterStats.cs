@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class CharacterStats : MonoBehaviour, IDamageable
 {
-    private CharacterParticles particles;
+    CharacterParticles particles;
+    CharacterEvents events;
 
     public enum Team
     {
@@ -28,6 +29,7 @@ public class CharacterStats : MonoBehaviour, IDamageable
         {
             health -= value;
             health = Mathf.Clamp(health, 0, maxHealth);
+            
         }
 
     }
@@ -35,20 +37,32 @@ public class CharacterStats : MonoBehaviour, IDamageable
     public void Awake()
     {
         particles = GetComponent<CharacterParticles>();
+        events = GetComponent<CharacterEvents>();
 
-        health = maxHealth;
+        InitializeStats();
     }
 
 
     public void InflictDamage(Damage _damage)
     {
         health -= _damage.damageValue;
+        events.OnHealthChange?.Invoke(health);
+        events.OnHealthChangePercentage?.Invoke(health / maxHealth);
         particles.EmitHitEffect();
+        
         Debug.Log("DAMAGE");
         if (health <= 0)
         {
             Debug.Log("Owowowow I am dead! Play death sequence");
         }
+    }
+
+    private void InitializeStats()
+    {
+        health = maxHealth;
+
+        events.OnHealthChange?.Invoke(health);
+        events.OnHealthChangePercentage?.Invoke(health / maxHealth);
     }
 
 }
