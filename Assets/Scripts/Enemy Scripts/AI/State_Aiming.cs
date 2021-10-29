@@ -7,10 +7,11 @@ public class State_Aiming : State
     EnemyEvents events;
     Ray aimRay;
 
-    [Header("State Transitions:")]
+    [Header("STATE TRANSITIONS:")]
+    [Tooltip("After target gets obstructed or out of range")]
     [SerializeField] State Goto_EnemyGone;
 
-    [Header("Aim Stats:")]
+    [Header("STATE PROPERTIES:")]
     [SerializeField] float aimDistance = 10f;
     [SerializeField] float fireCooldown = 1f;
     public float curFireCooldown;

@@ -33,14 +33,17 @@ public class EnemyAI : MonoBehaviour
 
     public void ChangeState(State _state)
     {
-        
-        foreach (State state in states)
+        if (_state != null)
         {
-            state.enabled = false;
+            foreach (State state in states)
+            {
+                state.enabled = false;
+            }
+            agent.SetDestination(transform.position);
+            currentState = _state;
+            currentState.enabled = true;
         }
-        agent.SetDestination(transform.position);
-        currentState = _state;
-        currentState.enabled = true;
+        
         
     }
 

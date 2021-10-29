@@ -9,11 +9,15 @@ public class State_Wander : State
     EnemyEvents events;
 
 
-    [Header("State Transition:")]
+    [Header("STATE TRANSITIONS:")]
+    [Tooltip("After wandered for 'wanderTime'")]
     [SerializeField] State Goto_AfterWander;
+    [Tooltip("After a target goes into 'wanderRadius'")]
     [SerializeField] State Goto_EnemyDetected;
+    [Tooltip("After taking damage")]
+    [SerializeField] State Goto_EnemyRetaliate;
 
-    [Header("State Properties:")]
+    [Header("STATE PROPERTIES:")]
     [SerializeField] float wanderTime = 1f;
     [SerializeField] float wanderRadius = 3f;
     float currWanderTime;
@@ -70,7 +74,7 @@ public class State_Wander : State
 
     private void AggroRange()
     {
-        AI.AggroAOE(onHitAggroRange, Goto_EnemyDetected);
+        AI.AggroAOE(onHitAggroRange, Goto_EnemyRetaliate);
     }
 
 

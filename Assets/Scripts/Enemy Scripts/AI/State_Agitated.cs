@@ -9,7 +9,7 @@ public class State_Agitated : State
     NavMeshAgent agent;
     EnemyCombat combat;
 
-    [Header("State Transition:")]
+    [Header("STATE TRANSITIONS:")]
     [SerializeField] State Goto_TargetGone;
 
     

@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class State_Idle : State
 {
-    [Header("State Transition:")]
+    [Header("STATE TRANSITIONS:")]
+    [Tooltip("After idling for 'idleTime'")]
     [SerializeField] State Goto_AfterIdle;
+    [Tooltip("After recieving damage")]
     [SerializeField] State Goto_AfterHit;
     
 
-    [Header("State Properties:")]
+    [Header("STATE PROPERTIES:")]
     [SerializeField] float idleTime = 1;
     float currIdleTime;
     [SerializeField] float onHitAggroRange = 1000;

@@ -7,6 +7,8 @@ public class State_SeekTarget : State
 {
     [Header("STATE TRANSITIONS:")]
     [SerializeField] State Goto_TargetFound;
+
+    [Header("STATE PROPERTIES:")]
     [Tooltip("How far away this character will find the target from")]
     [SerializeField] float detectRange = 100f;
     [Tooltip("How often this character will check for the enemy")]
@@ -21,15 +23,7 @@ public class State_SeekTarget : State
         agent = GetComponent<NavMeshAgent>();
     }
 
-    public void OnEnable()
-    {
-        
-    }
 
-    public void OnDisable()
-    {
-        //agent.SetDestination(transform.position);
-    }
 
     public void Update()
     {
@@ -48,13 +42,5 @@ public class State_SeekTarget : State
                 AI.ChangeState(Goto_TargetFound);
             }
         }
-        /*
-        Vector3 vecDir = transform.position - AI.PositionToAim();
-        vecDir.Normalize();
-        if (!Physics.Raycast(transform.position, vecDir, detectRange, StaticVariables.groundMask))
-        {
-            AI.ChangeState(Goto_TargetFound);
-        }
-        */
     }
 }
