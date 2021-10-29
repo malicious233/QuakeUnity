@@ -5187,6 +5187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Goto_TargetFound: {fileID: 2544355506943988173}
   detectRange: 600
+  detectRate: 0.5
 --- !u!114 &2210394856287074538
 MonoBehaviour:
   m_ObjectHideFlags: 0

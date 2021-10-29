@@ -13,6 +13,7 @@ public class HUD_HealthDisplay : MonoBehaviour
     {
         slider = GetComponent<Slider>();
         playerevents = FindObjectOfType<CharacterEvents>();
+        //This part sucks dick, use like some serialized slot or event or something
     }
 
     public void OnEnable()

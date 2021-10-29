@@ -26,6 +26,7 @@ public class AnimationManager : MonoBehaviour
     {
         rigAnimator.Play(_anim);
         gunAnimator.Play(_anim);
+        //Reduce the dependencies with this method
     }
 
     public void UpdateAnimators(List<Transform> _weaponList)

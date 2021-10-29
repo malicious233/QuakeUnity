@@ -5195,14 +5195,14 @@ MonoBehaviour:
   shotDamage: {fileID: 8717865700630283019}
   range: 1000
   pelletSpread:
-  - spreadX: -2
+  - spreadX: -3
     spreadY: 0
-  - spreadX: 2
+  - spreadX: 3
     spreadY: 0
   - spreadX: 0
-    spreadY: 2
+    spreadY: 3
   - spreadX: 0
-    spreadY: -2
+    spreadY: -3
 --- !u!114 &8717865700630283013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5246,7 +5246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7c482e59a4329b46bb9c0ea76ab0834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageValue: 4
+  damageValue: 7
 --- !u!114 &8717865700630283016
 MonoBehaviour:
   m_ObjectHideFlags: 0

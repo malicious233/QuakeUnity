@@ -2046,6 +2046,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2544355506943988179, guid: 915813302aee76347bbc08f53b5d7350, type: 3}
   m_PrefabInstance: {fileID: 1398398551}
   m_PrefabAsset: {fileID: 0}
+--- !u!224 &1503593439 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7403298391826694472, guid: ebb598bf49bc60343a482d58ca73fd68, type: 3}
+  m_PrefabInstance: {fileID: 7403298392489722519}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1524761783 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5452668427885624659, guid: c0d3bc88cdb40a74c98ec31d8bae4ff4, type: 3}
@@ -2780,6 +2785,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7403298391035231069, guid: ebb598bf49bc60343a482d58ca73fd68, type: 3}
+      propertyPath: m_Value
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7403298391035231069, guid: ebb598bf49bc60343a482d58ca73fd68, type: 3}
+      propertyPath: m_FillRect
+      value: 
+      objectReference: {fileID: 1503593439}
     - target: {fileID: 7403298391381950120, guid: ebb598bf49bc60343a482d58ca73fd68, type: 3}
       propertyPath: player
       value: 
@@ -2791,6 +2804,10 @@ PrefabInstance:
     - target: {fileID: 7403298391826694472, guid: ebb598bf49bc60343a482d58ca73fd68, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7403298391826694472, guid: ebb598bf49bc60343a482d58ca73fd68, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.000015258789
       objectReference: {fileID: 0}
     - target: {fileID: 7403298392597587738, guid: ebb598bf49bc60343a482d58ca73fd68, type: 3}
       propertyPath: m_Pivot.x

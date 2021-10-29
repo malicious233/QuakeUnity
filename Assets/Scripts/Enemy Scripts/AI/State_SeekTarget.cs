@@ -5,9 +5,13 @@ using UnityEngine.AI;
 
 public class State_SeekTarget : State
 {
-    [Header("State Transitions:")]
+    [Header("STATE TRANSITIONS:")]
     [SerializeField] State Goto_TargetFound;
+    [Tooltip("How far away this character will find the target from")]
     [SerializeField] float detectRange = 100f;
+    [Tooltip("How often this character will check for the enemy")]
+    [SerializeField] float detectRate = 0.3f;
+    float currDetectRate;
 
     NavMeshAgent agent;
     Ray aimRay;
@@ -35,8 +39,10 @@ public class State_SeekTarget : State
         Vector3 tr = transform.position;
         aimRay = new Ray(tr, targetPos - tr);
         RaycastHit hit;
-        if (Physics.Raycast(aimRay.origin, aimRay.direction, out hit, detectRange, AI.enemyMask))
+        currDetectRate -= Time.deltaTime;
+        if (currDetectRate <= 0 && Physics.Raycast(aimRay.origin, aimRay.direction, out hit, detectRange, AI.enemyMask))
         {
+            currDetectRate = detectRate;
             if (!Physics.Raycast(aimRay.origin, aimRay.direction, hit.distance, StaticVariables.groundMask))
             {
                 AI.ChangeState(Goto_TargetFound);
