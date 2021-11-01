@@ -31,7 +31,7 @@ public abstract class GunFire : MonoBehaviour
         recoil = GetComponent<GunRecoil>();
         camTransform = Camera.main.transform;
         events = GetComponentInParent<CharacterEvents>();
-        hittableMask = StaticVariables.groundMask | StaticVariables.enemyMask;
+        hittableMask = StaticVariables.groundMask | StaticVariables.hurtboxMask;
 
     }
 }

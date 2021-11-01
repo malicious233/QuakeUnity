@@ -39,13 +39,29 @@ public class EnemyStats : MonoBehaviour, IDamageable
         health = maxHealth;
     }
 
-    public event Action OnHit;
+    //public event Action OnHit;
 
     public void InflictDamage(Damage _damage)
-    {
+    {/*
         health -= _damage.damageValue;
         particles.EmitHitEffect();
         events.OnHit?.Invoke();
+        if (health <= 0)
+        {
+            Die();
+        }
+        */
+    }
+
+    public void CauseHitEffects(float _damageMultiplier)
+    {
+        particles.EmitHitEffect();
+        events.OnHit?.Invoke();
+        if (_damageMultiplier != 1)
+        {
+            events.OnCrit?.Invoke(_damageMultiplier);
+            particles.CritParticle(_damageMultiplier);
+        }
         if (health <= 0)
         {
             Die();
