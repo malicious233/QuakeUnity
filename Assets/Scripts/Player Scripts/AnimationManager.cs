@@ -59,8 +59,13 @@ public class AnimationManager : MonoBehaviour
         {
             PlayAnim("Reload");
         }
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            PlayAnimUninterrupted("Unholster");
+        }
 
     }
+
 
     #region Dumb Methods
     void SetReloadDoneTriggers()

@@ -1,14 +1,23 @@
 fileFormatVersion: 2
-guid: b2b4a78941c54644badb490e5297b63f
+guid: d6c787c0dd2af5841b345f5c3e01dabe
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable:
   - first:
-      74: -5614788475911884893
-    second: Rig_EMG_Unholster_Baked
-  - first:
       74: -530848140797115950
     second: Gun_Unholster_Baked
+  - first:
+      74: 626403671429287385
+    second: EMG_Unholster_baked2
+  - first:
+      74: -3540668741442253717
+    second: Gun_Shoot
+  - first:
+      74: -6652999473094392505
+    second: Action.003
+  - first:
+      74: -2889085019725202202
+    second: Action.001
   externalObjects: {}
   materials:
     materialImportMode: 2

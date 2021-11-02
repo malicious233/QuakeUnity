@@ -11041,6 +11041,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 5452668428921679014}
+  critEffect: {fileID: 0}
   deathEffect: {fileID: 0}
 --- !u!114 &5452668427885624612
 MonoBehaviour:
@@ -20856,8 +20857,8 @@ Transform:
   m_Children:
   - {fileID: 5452668428491694718}
   - {fileID: 5452668427094601735}
-  - {fileID: 5452668428481776271}
   - {fileID: 452276857133608884}
+  - {fileID: 5452668428481776271}
   - {fileID: 5452668428219796893}
   m_Father: {fileID: 5452668427490543888}
   m_RootOrder: 0
@@ -21099,7 +21100,7 @@ Transform:
   m_Children:
   - {fileID: 5452668428441276321}
   m_Father: {fileID: 5452668428413768848}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5452668428481776278
 MonoBehaviour:
@@ -27071,7 +27072,7 @@ PrefabInstance:
       objectReference: {fileID: 5452668428413768848}
     - target: {fileID: 7977733965274013486, guid: d4edb908d2a038045ad8496e956e9265, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7977733965274013486, guid: d4edb908d2a038045ad8496e956e9265, type: 3}
       propertyPath: m_LocalPosition.x

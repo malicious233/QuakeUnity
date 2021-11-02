@@ -212,7 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canFire: 0
   isAutomatic: 0
-  fireRate: 0.75
+  fireRate: 1
 --- !u!114 &7977733965274013483
 MonoBehaviour:
   m_ObjectHideFlags: 0

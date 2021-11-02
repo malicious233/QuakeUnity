@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RigEMG_Unholster
+  m_Name: Rig_EMG_Unholster_Baked
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -61,7 +61,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1
+    path: HiVeloArmature/Root
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -86,7 +86,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001
+    path: HiVeloArmature/Root/Spine.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -111,7 +111,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -190,7 +190,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -269,7 +269,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -348,7 +348,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -373,7 +373,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -398,7 +398,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L/IndexFinger.L.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L/IndexFinger.L.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -423,7 +423,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L/IndexFinger.L.001/IndexFinger.L.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L/IndexFinger.L.001/IndexFinger.L.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -448,7 +448,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/MiddleFinger.L
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/MiddleFinger.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -473,7 +473,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/MiddleFinger.L/MiddleFinger.L.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/MiddleFinger.L/MiddleFinger.L.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -498,7 +498,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/MiddleFinger.L/MiddleFinger.L.001/MiddleFinger.L.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/MiddleFinger.L/MiddleFinger.L.001/MiddleFinger.L.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -523,7 +523,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/RingFinger.L
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/RingFinger.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -548,7 +548,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/RingFinger.L/RingFinger.L.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/RingFinger.L/RingFinger.L.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -573,7 +573,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/RingFinger.L/RingFinger.L.001/RingFinger.L.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/RingFinger.L/RingFinger.L.001/RingFinger.L.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -598,7 +598,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/LittleFinger.L
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/LittleFinger.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -623,7 +623,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/LittleFinger.L/LittleFinger.L.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/LittleFinger.L/LittleFinger.L.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -648,7 +648,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/LittleFinger.L/LittleFinger.L.001/LittleFinger.L.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/LittleFinger.L/LittleFinger.L.001/LittleFinger.L.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -673,7 +673,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L.003
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L.003
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -698,7 +698,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L.003/IndexFinger.L.004
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L.003/IndexFinger.L.004
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -723,7 +723,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L.003/IndexFinger.L.004/IndexFinger.L.005
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L.003/IndexFinger.L.004/IndexFinger.L.005
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -802,7 +802,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -872,7 +872,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -960,7 +960,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -985,7 +985,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1010,7 +1010,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R/IndexFinger.R.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R/IndexFinger.R.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1035,7 +1035,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R/IndexFinger.R.001/IndexFinger.R.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R/IndexFinger.R.001/IndexFinger.R.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1060,7 +1060,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/MiddleFinger.R
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/MiddleFinger.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1085,7 +1085,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/MiddleFinger.R/MiddleFinger.R.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/MiddleFinger.R/MiddleFinger.R.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1110,7 +1110,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/MiddleFinger.R/MiddleFinger.R.001/MiddleFinger.R.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/MiddleFinger.R/MiddleFinger.R.001/MiddleFinger.R.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1135,7 +1135,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/RingFinger.R
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/RingFinger.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1160,7 +1160,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/RingFinger.R/RingFinger.R.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/RingFinger.R/RingFinger.R.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1185,7 +1185,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/RingFinger.R/RingFinger.R.001/RingFinger.R.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/RingFinger.R/RingFinger.R.001/RingFinger.R.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1210,7 +1210,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/LittleFinger.R
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/LittleFinger.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1235,7 +1235,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/LittleFinger.R/LittleFinger.R.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/LittleFinger.R/LittleFinger.R.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1260,7 +1260,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/LittleFinger.R/LittleFinger.R.001/LittleFinger.R.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/LittleFinger.R/LittleFinger.R.001/LittleFinger.R.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1285,7 +1285,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R.003
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R.003
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1310,7 +1310,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R.003/IndexFinger.R.004
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R.003/IndexFinger.R.004
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1335,7 +1335,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R.003/IndexFinger.R.004/IndexFinger.R.005
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R.003/IndexFinger.R.004/IndexFinger.R.005
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1360,7 +1360,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.L
+    path: HiVeloArmature/Root/UpperLeg.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1385,7 +1385,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.L/LowerLeg.L
+    path: HiVeloArmature/Root/UpperLeg.L/LowerLeg.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1410,7 +1410,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.L/LowerLeg.L/Foot.L
+    path: HiVeloArmature/Root/UpperLeg.L/LowerLeg.L/Foot.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1435,7 +1435,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.L/LowerLeg.L/Foot.L/Foot.L.001
+    path: HiVeloArmature/Root/UpperLeg.L/LowerLeg.L/Foot.L/Foot.L.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1460,7 +1460,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.R
+    path: HiVeloArmature/Root/UpperLeg.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1485,7 +1485,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.R/LowerLeg.R
+    path: HiVeloArmature/Root/UpperLeg.R/LowerLeg.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1510,7 +1510,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.R/LowerLeg.R/Foot.R
+    path: HiVeloArmature/Root/UpperLeg.R/LowerLeg.R/Foot.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1535,107 +1535,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.R/LowerLeg.R/Foot.R/Foot.R.001
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-        inSlope: {x: 0, y: 0, z: 0, w: 0}
-        outSlope: {x: 0, y: 0, z: 0, w: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
-      - serializedVersion: 3
-        time: 0.5833334
-        value: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-        inSlope: {x: 0, y: 0, z: 0, w: 0}
-        outSlope: {x: 0, y: 0, z: 0, w: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: EMGRig
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
-        inSlope: {x: 0, y: 0, z: 0, w: 0}
-        outSlope: {x: 0, y: 0, z: 0, w: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
-      - serializedVersion: 3
-        time: 0.5833334
-        value: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
-        inSlope: {x: 0, y: 0, z: 0, w: 0}
-        outSlope: {x: 0, y: 0, z: 0, w: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: EMGRig/Root
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: 0.7071067, y: 0.7071068, z: 0.00000018968889, w: -0.0000000013749776}
-        inSlope: {x: 0, y: 0, z: 0, w: 0}
-        outSlope: {x: 0, y: 0, z: 0, w: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
-      - serializedVersion: 3
-        time: 0.5833334
-        value: {x: 0.7071067, y: 0.7071068, z: 0.00000018968889, w: -0.0000000013749776}
-        inSlope: {x: 0, y: 0, z: 0, w: 0}
-        outSlope: {x: 0, y: 0, z: 0, w: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: EMGRig/Magazinebone
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: 0.70173556, y: -0.08698949, z: 0.08698955, w: 0.7017356}
-        inSlope: {x: 0, y: 0, z: 0, w: 0}
-        outSlope: {x: 0, y: 0, z: 0, w: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
-      - serializedVersion: 3
-        time: 0.5833334
-        value: {x: 0.70173556, y: -0.08698949, z: 0.08698955, w: 0.7017356}
-        inSlope: {x: 0, y: 0, z: 0, w: 0}
-        outSlope: {x: 0, y: 0, z: 0, w: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334, w: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: EMGRig/Leverbone
+    path: HiVeloArmature/Root/UpperLeg.R/LowerLeg.R/Foot.R/Foot.R.001
   m_CompressedRotationCurves: []
   m_EulerCurves: []
   m_PositionCurves:
@@ -1688,7 +1588,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1
+    path: HiVeloArmature/Root
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1713,7 +1613,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001
+    path: HiVeloArmature/Root/Spine.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1738,7 +1638,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1763,7 +1663,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1788,7 +1688,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1813,7 +1713,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1838,7 +1738,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1863,7 +1763,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L/IndexFinger.L.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L/IndexFinger.L.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1888,7 +1788,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L/IndexFinger.L.001/IndexFinger.L.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L/IndexFinger.L.001/IndexFinger.L.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1913,7 +1813,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/MiddleFinger.L
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/MiddleFinger.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1938,7 +1838,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/MiddleFinger.L/MiddleFinger.L.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/MiddleFinger.L/MiddleFinger.L.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1963,7 +1863,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/MiddleFinger.L/MiddleFinger.L.001/MiddleFinger.L.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/MiddleFinger.L/MiddleFinger.L.001/MiddleFinger.L.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -1988,7 +1888,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/RingFinger.L
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/RingFinger.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2013,7 +1913,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/RingFinger.L/RingFinger.L.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/RingFinger.L/RingFinger.L.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2038,7 +1938,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/RingFinger.L/RingFinger.L.001/RingFinger.L.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/RingFinger.L/RingFinger.L.001/RingFinger.L.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2063,7 +1963,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/LittleFinger.L
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/LittleFinger.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2088,7 +1988,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/LittleFinger.L/LittleFinger.L.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/LittleFinger.L/LittleFinger.L.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2113,7 +2013,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/LittleFinger.L/LittleFinger.L.001/LittleFinger.L.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/LittleFinger.L/LittleFinger.L.001/LittleFinger.L.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2138,7 +2038,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L.003
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L.003
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2163,7 +2063,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L.003/IndexFinger.L.004
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L.003/IndexFinger.L.004
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2188,7 +2088,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L.003/IndexFinger.L.004/IndexFinger.L.005
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L.003/IndexFinger.L.004/IndexFinger.L.005
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2213,7 +2113,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2238,7 +2138,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2263,7 +2163,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2288,7 +2188,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2313,7 +2213,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R/IndexFinger.R.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R/IndexFinger.R.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2338,7 +2238,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R/IndexFinger.R.001/IndexFinger.R.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R/IndexFinger.R.001/IndexFinger.R.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2363,7 +2263,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/MiddleFinger.R
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/MiddleFinger.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2388,7 +2288,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/MiddleFinger.R/MiddleFinger.R.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/MiddleFinger.R/MiddleFinger.R.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2413,7 +2313,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/MiddleFinger.R/MiddleFinger.R.001/MiddleFinger.R.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/MiddleFinger.R/MiddleFinger.R.001/MiddleFinger.R.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2438,7 +2338,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/RingFinger.R
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/RingFinger.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2463,7 +2363,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/RingFinger.R/RingFinger.R.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/RingFinger.R/RingFinger.R.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2488,7 +2388,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/RingFinger.R/RingFinger.R.001/RingFinger.R.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/RingFinger.R/RingFinger.R.001/RingFinger.R.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2513,7 +2413,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/LittleFinger.R
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/LittleFinger.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2538,7 +2438,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/LittleFinger.R/LittleFinger.R.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/LittleFinger.R/LittleFinger.R.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2563,7 +2463,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/LittleFinger.R/LittleFinger.R.001/LittleFinger.R.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/LittleFinger.R/LittleFinger.R.001/LittleFinger.R.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2588,7 +2488,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R.003
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R.003
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2613,7 +2513,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R.003/IndexFinger.R.004
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R.003/IndexFinger.R.004
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2638,7 +2538,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R.003/IndexFinger.R.004/IndexFinger.R.005
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R.003/IndexFinger.R.004/IndexFinger.R.005
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2663,7 +2563,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.L
+    path: HiVeloArmature/Root/UpperLeg.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2688,7 +2588,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.L/LowerLeg.L
+    path: HiVeloArmature/Root/UpperLeg.L/LowerLeg.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2713,7 +2613,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.L/LowerLeg.L/Foot.L
+    path: HiVeloArmature/Root/UpperLeg.L/LowerLeg.L/Foot.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2738,7 +2638,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.L/LowerLeg.L/Foot.L/Foot.L.001
+    path: HiVeloArmature/Root/UpperLeg.L/LowerLeg.L/Foot.L/Foot.L.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2763,7 +2663,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.R
+    path: HiVeloArmature/Root/UpperLeg.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2788,7 +2688,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.R/LowerLeg.R
+    path: HiVeloArmature/Root/UpperLeg.R/LowerLeg.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2813,7 +2713,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.R/LowerLeg.R/Foot.R
+    path: HiVeloArmature/Root/UpperLeg.R/LowerLeg.R/Foot.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -2838,107 +2738,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.R/LowerLeg.R/Foot.R/Foot.R.001
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: -0, y: 0, z: 0}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
-        time: 0.5833333
-        value: {x: -0, y: 0, z: 0}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: EMGRig
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: 0.004317173, y: 0, z: -0.014370017}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
-        time: 0.5833333
-        value: {x: 0.004317173, y: 0, z: -0.014370017}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: EMGRig/Root
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: 0.02035825, y: 5.8730115e-17, z: 0.0047944193}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
-        time: 0.5833333
-        value: {x: 0.02035825, y: 5.8730115e-17, z: 0.0047944193}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: EMGRig/Magazinebone
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: -0.0015040451, y: 0, z: 0.011184268}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
-        time: 0.5833333
-        value: {x: -0.0015040451, y: 0, z: 0.011184268}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: EMGRig/Leverbone
+    path: HiVeloArmature/Root/UpperLeg.R/LowerLeg.R/Foot.R/Foot.R.001
   m_ScaleCurves:
   - curve:
       serializedVersion: 2
@@ -2989,7 +2789,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1
+    path: HiVeloArmature/Root
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3014,7 +2814,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001
+    path: HiVeloArmature/Root/Spine.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3039,7 +2839,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3064,7 +2864,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3089,7 +2889,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3114,7 +2914,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3139,7 +2939,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3164,7 +2964,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L/IndexFinger.L.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L/IndexFinger.L.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3189,7 +2989,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L/IndexFinger.L.001/IndexFinger.L.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L/IndexFinger.L.001/IndexFinger.L.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3214,7 +3014,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/MiddleFinger.L
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/MiddleFinger.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3239,7 +3039,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/MiddleFinger.L/MiddleFinger.L.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/MiddleFinger.L/MiddleFinger.L.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3264,7 +3064,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/MiddleFinger.L/MiddleFinger.L.001/MiddleFinger.L.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/MiddleFinger.L/MiddleFinger.L.001/MiddleFinger.L.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3289,7 +3089,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/RingFinger.L
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/RingFinger.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3314,7 +3114,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/RingFinger.L/RingFinger.L.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/RingFinger.L/RingFinger.L.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3339,7 +3139,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/RingFinger.L/RingFinger.L.001/RingFinger.L.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/RingFinger.L/RingFinger.L.001/RingFinger.L.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3364,7 +3164,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/LittleFinger.L
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/LittleFinger.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3389,7 +3189,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/LittleFinger.L/LittleFinger.L.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/LittleFinger.L/LittleFinger.L.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3414,7 +3214,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/LittleFinger.L/LittleFinger.L.001/LittleFinger.L.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/LittleFinger.L/LittleFinger.L.001/LittleFinger.L.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3439,7 +3239,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L.003
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L.003
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3464,7 +3264,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L.003/IndexFinger.L.004
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L.003/IndexFinger.L.004
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3489,7 +3289,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L.003/IndexFinger.L.004/IndexFinger.L.005
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.L/LowerArm.L/Hand.L/IndexFinger.L.003/IndexFinger.L.004/IndexFinger.L.005
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3514,7 +3314,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3539,7 +3339,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3564,7 +3364,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3589,7 +3389,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3614,7 +3414,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R/IndexFinger.R.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R/IndexFinger.R.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3639,7 +3439,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R/IndexFinger.R.001/IndexFinger.R.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R/IndexFinger.R.001/IndexFinger.R.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3664,7 +3464,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/MiddleFinger.R
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/MiddleFinger.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3689,7 +3489,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/MiddleFinger.R/MiddleFinger.R.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/MiddleFinger.R/MiddleFinger.R.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3714,7 +3514,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/MiddleFinger.R/MiddleFinger.R.001/MiddleFinger.R.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/MiddleFinger.R/MiddleFinger.R.001/MiddleFinger.R.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3739,7 +3539,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/RingFinger.R
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/RingFinger.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3764,7 +3564,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/RingFinger.R/RingFinger.R.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/RingFinger.R/RingFinger.R.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3789,7 +3589,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/RingFinger.R/RingFinger.R.001/RingFinger.R.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/RingFinger.R/RingFinger.R.001/RingFinger.R.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3814,7 +3614,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/LittleFinger.R
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/LittleFinger.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3839,7 +3639,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/LittleFinger.R/LittleFinger.R.001
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/LittleFinger.R/LittleFinger.R.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3864,7 +3664,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/LittleFinger.R/LittleFinger.R.001/LittleFinger.R.002
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/LittleFinger.R/LittleFinger.R.001/LittleFinger.R.002
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3889,7 +3689,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R.003
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R.003
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3914,7 +3714,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R.003/IndexFinger.R.004
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R.003/IndexFinger.R.004
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3939,7 +3739,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R.003/IndexFinger.R.004/IndexFinger.R.005
+    path: HiVeloArmature/Root/Spine.001/Spine.002/UpperArm.R/LowerArm.R/Hand.R/IndexFinger.R.003/IndexFinger.R.004/IndexFinger.R.005
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3964,7 +3764,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.L
+    path: HiVeloArmature/Root/UpperLeg.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -3989,7 +3789,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.L/LowerLeg.L
+    path: HiVeloArmature/Root/UpperLeg.L/LowerLeg.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4014,7 +3814,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.L/LowerLeg.L/Foot.L
+    path: HiVeloArmature/Root/UpperLeg.L/LowerLeg.L/Foot.L
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4039,7 +3839,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.L/LowerLeg.L/Foot.L/Foot.L.001
+    path: HiVeloArmature/Root/UpperLeg.L/LowerLeg.L/Foot.L/Foot.L.001
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4064,7 +3864,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.R
+    path: HiVeloArmature/Root/UpperLeg.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4089,7 +3889,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.R/LowerLeg.R
+    path: HiVeloArmature/Root/UpperLeg.R/LowerLeg.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4114,7 +3914,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.R/LowerLeg.R/Foot.R
+    path: HiVeloArmature/Root/UpperLeg.R/LowerLeg.R/Foot.R
   - curve:
       serializedVersion: 2
       m_Curve:
@@ -4139,107 +3939,7 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    path: HiVeloArmature/Root 1/UpperLeg.R/LowerLeg.R/Foot.R/Foot.R.001
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: 100, y: 100, z: 100}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
-        time: 0.5833334
-        value: {x: 100, y: 100, z: 100}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: EMGRig
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: 1, y: 1, z: 1}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
-        time: 0.5833334
-        value: {x: 1, y: 1, z: 1}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: EMGRig/Root
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: 1, y: 1, z: 1}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
-        time: 0.5833334
-        value: {x: 1, y: 1, z: 1}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: EMGRig/Magazinebone
-  - curve:
-      serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: {x: 1, y: 0.99999994, z: 1}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      - serializedVersion: 3
-        time: 0.5833334
-        value: {x: 1, y: 0.99999994, z: 1}
-        inSlope: {x: 0, y: 0, z: 0}
-        outSlope: {x: 0, y: 0, z: 0}
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-        outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
-      m_PreInfinity: 2
-      m_PostInfinity: 2
-      m_RotationOrder: 4
-    path: EMGRig/Leverbone
+    path: HiVeloArmature/Root/UpperLeg.R/LowerLeg.R/Foot.R/Foot.R.001
   m_FloatCurves: []
   m_PPtrCurves: []
   m_SampleRate: 24

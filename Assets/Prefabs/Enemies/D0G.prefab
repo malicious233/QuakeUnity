@@ -175,7 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Goto_AfterWander: {fileID: 6967821608056590255}
   Goto_EnemyDetected: {fileID: 6967821608056590252}
-  Goto_EnemyRetaliate: {fileID: 0}
+  Goto_EnemyRetaliate: {fileID: 6967821608056590252}
   wanderTime: 3
   wanderRadius: 90
   detectRefreshRate: 0.2
