@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.Animations.Rigging;
 
 public class S0ldierAnimator : MonoBehaviour
@@ -8,19 +9,23 @@ public class S0ldierAnimator : MonoBehaviour
     [SerializeField] Transform aimTarget;
     [SerializeField] Animator anim;
     [SerializeField] Rig rig;
+    NavMeshAgent agent;
     EnemyAI AI;
+
     
     
 
     private void Awake()
     {
         AI = GetComponent<EnemyAI>();
-        aimTarget.parent = null;
+        agent = GetComponent<NavMeshAgent>();
+        //aimTarget.parent = null;
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
         UpdateAimTargetPosition();
+        SetWalkingParameters();
     }
 
     private void UpdateAimTargetPosition()
@@ -33,9 +38,22 @@ public class S0ldierAnimator : MonoBehaviour
         else
         {
             SetRigWeights(true);
-            aimTarget.position = AI.target.position;
+            //aimTarget.position = AI.target.position;
+            aimTarget.position = aimTarget.TransformDirection(AI.target.position);
         }
         
+    }
+
+    private void SetWalkingParameters()
+    {
+        if (agent.velocity.magnitude > 0.01)
+        {
+            anim.SetBool("IsMoving", true);
+        }
+        else
+        {
+            anim.SetBool("IsMoving", false);
+        }
     }
 
     private void SetRigWeights(bool _trueOrFalse)
