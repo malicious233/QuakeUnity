@@ -5158,7 +5158,7 @@ MonoBehaviour:
   camTransform: {fileID: 0}
   recoilPerShot: 0.3
   patternRecoveryTime: 2
-  recoilRecoveryTime: 0.05
+  recoilRecoveryTime: 0.07
   recoilReactionTime: 0.15
   recoilPatternDuration: 1.5
   horizontalRecoilPattern:
@@ -5269,8 +5269,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.067619346
     - serializedVersion: 3
-      time: 1.507258
-      value: 3.0160975
+      time: 1.5092722
+      value: 2.4825892
       inSlope: 2.6869535
       outSlope: 2.6869535
       tangentMode: 0

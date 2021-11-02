@@ -264,8 +264,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0.00002670288
-      value: 0.2
+      time: -0.03980255
+      value: 0.9720337
       inSlope: 3.3243535
       outSlope: 3.3243535
       tangentMode: 0
@@ -302,7 +302,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  horizontalRecoilMultiplier: 300
+  horizontalRecoilMultiplier: 4000
   randomHoriRecoil:
     serializedVersion: 2
     m_Curve:

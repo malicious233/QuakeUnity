@@ -12,6 +12,10 @@ public class CharacterInventory : MonoBehaviour
     #endregion
     ///Handle Weapon Switching and track what weapons you got
 
+    [SerializeField] float weaponEquipDepth = -6f;
+    [SerializeField] float weaponEquipTime = 0.2f;
+    float currWeaponEquipTime = 0.2f;
+
     [SerializeField] Transform weaponFolder; //Transform which has all the weapon prefabs as children
 
     public List<Transform> weaponList = new List<Transform>();
@@ -44,6 +48,12 @@ public class CharacterInventory : MonoBehaviour
             weaponIndex = weaponIndex % weaponList.Count;
             SwitchWeapon(weaponIndex);
         }
+
+        currWeaponEquipTime += Time.deltaTime;
+        float currMovPos = Mathf.Lerp(weaponEquipDepth, 0, currWeaponEquipTime/weaponEquipTime);
+        
+        Vector3 movPos = new Vector3(0, currMovPos, 0);
+        weaponFolder.transform.localPosition = movPos;
     }
     #endregion
 
@@ -79,9 +89,15 @@ public class CharacterInventory : MonoBehaviour
             events.OnWeaponSwitch(clip.magazineSize);
             //events.Invoke_OnMagazineChange(clip.ShotsInMag);
             events.OnMagazineChange(clip.ShotsInMag);
+            PlayWeaponEquipAnimation();
             
         }
         weaponIndex = _index;
+    }
+
+    private void PlayWeaponEquipAnimation()
+    {
+        currWeaponEquipTime = 0;
     }
 
     #endregion

@@ -40,7 +40,6 @@ public class S0ldierAnimator : MonoBehaviour
         {
             SetRigWeights(true);
             aimTarget.position = AI.PositionToAim();
-            //aimTarget.position = aimTarget.TransformDirection(AI.target.position);
         }
         
     }
