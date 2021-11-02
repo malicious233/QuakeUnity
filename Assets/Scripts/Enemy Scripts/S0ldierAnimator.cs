@@ -19,8 +19,9 @@ public class S0ldierAnimator : MonoBehaviour
     {
         AI = GetComponent<EnemyAI>();
         agent = GetComponent<NavMeshAgent>();
-        //aimTarget.parent = null;
+        
     }
+
 
     private void Update()
     {
@@ -38,8 +39,8 @@ public class S0ldierAnimator : MonoBehaviour
         else
         {
             SetRigWeights(true);
-            //aimTarget.position = AI.target.position;
-            aimTarget.position = aimTarget.TransformDirection(AI.target.position);
+            aimTarget.position = AI.PositionToAim();
+            //aimTarget.position = aimTarget.TransformDirection(AI.target.position);
         }
         
     }
