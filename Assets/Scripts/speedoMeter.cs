@@ -15,8 +15,9 @@ public class speedoMeter : MonoBehaviour
 
     public void Update()
     {
+        Vector3 newVector = new Vector3(player.velocity.x, 0, player.velocity.z);
         float absVelocity;
-        absVelocity = player.velocity.magnitude;
+        absVelocity = newVector.magnitude;
         absVelocity = Mathf.Abs(absVelocity);
         text.text = absVelocity.ToString();
     }

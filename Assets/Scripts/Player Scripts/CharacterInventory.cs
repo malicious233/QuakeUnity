@@ -50,7 +50,7 @@ public class CharacterInventory : MonoBehaviour
         }
 
         currWeaponEquipTime += Time.deltaTime;
-        float currMovPos = Mathf.Lerp(weaponEquipDepth, 0, currWeaponEquipTime/weaponEquipTime);
+        float currMovPos = Mathf.Lerp(weaponEquipDepth, 0, currWeaponEquipTime * 0.8f /weaponEquipTime);
         
         Vector3 movPos = new Vector3(0, currMovPos, 0);
         weaponFolder.transform.localPosition = movPos;

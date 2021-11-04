@@ -19,19 +19,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float moveDeaccel = 0.99f;
     
-    [SerializeField] float max_Speed = 10f;
-    [SerializeField] float accel_Speed = 7.5f;
     [SerializeField] float max_Accel = 10f;
     [SerializeField] float jumpHeight = 4f;
 
     [Header("Air Stats:")]
     [SerializeField] float airSpeed = 5f;
 
-    [SerializeField] float max_AirSpeed = 9f;
     [SerializeField] float max_AirAccel = 8f;
     [SerializeField] float gravity = 3f;
 
-    [SerializeField] float airControl = 0.3f;
     
 
     [Header("Control Settings:")]
@@ -48,7 +44,7 @@ public class PlayerController : MonoBehaviour
         
         if (charController.isGrounded)
         {
-            velocity = UpdateVelocityGround();
+            velocity = UpdateVelocityGround(velocity);
             if (Input.GetKey(KeyCode.Space))
             {
                 velocity.y = jumpHeight;
@@ -56,7 +52,7 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
-            velocity = UpdateVelocityAir();
+            velocity = UpdateVelocityAir(velocity);
             velocity.y -= gravity * Time.deltaTime;
         }
 
@@ -82,23 +78,23 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    public Vector3 UpdateVelocityGround()
+    public Vector3 UpdateVelocityGround(Vector3 _velocity)
     {
-        velocity = Friction(velocity);
+        _velocity = Friction(_velocity);
 
-        current_Speed = Vector3.Dot(velocity, input.inputVector);
-        float add_Speed = Mathf.Clamp(moveSpeed - current_Speed, 0, max_Accel); //Replace that final max-Speed with a real max-accel variable, also that moveSpeed variable is ill placed
-        return velocity + add_Speed * input.inputVector * Time.deltaTime;
+        current_Speed = Vector3.Dot(_velocity, input.inputVector);
+        float add_Speed = Mathf.Clamp(moveSpeed - current_Speed, 0, max_Accel * Time.deltaTime);; //Replace that final max-Speed with a real max-accel variable, also that moveSpeed variable is ill placed
+        return _velocity + add_Speed * input.inputVector;
     }
 
-    public Vector3 UpdateVelocityAir()
+    public Vector3 UpdateVelocityAir(Vector3 _velocity)
     {
         //velocity = Friction(velocity);
 
-        current_Speed = Vector3.Dot(velocity, input.inputVector);
+        current_Speed = Vector3.Dot(_velocity, input.inputVector);
 
-        float add_Speed = Mathf.Clamp(airSpeed - current_Speed, 0, max_AirAccel); //Replace that final max-Speed with a real max-accel variable, also that moveSpeed variable is ill placed
-        return velocity + add_Speed * input.inputVector * Time.deltaTime;
+        float add_Speed = Mathf.Clamp(airSpeed - current_Speed, 0, max_AirAccel * Time.deltaTime); //Replace that final max-Speed with a real max-accel variable, also that moveSpeed variable is ill placed
+        return _velocity + add_Speed * input.inputVector;
     }
 
     public Vector3 Friction(Vector3 _velocity)
