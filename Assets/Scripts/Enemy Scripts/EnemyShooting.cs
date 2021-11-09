@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyShooting : MonoBehaviour
 {
     [SerializeField] GameObject bulletPrefab;
+    [SerializeField] Transform _bulletSpawnTransform;
 
     EnemyEvents events;
 
