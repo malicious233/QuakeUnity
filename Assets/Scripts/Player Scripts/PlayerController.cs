@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : MonoBehaviour, IMoveable
 {
     InputManager input;
     CharacterController charController;
@@ -32,6 +32,19 @@ public class PlayerController : MonoBehaviour
 
     [Header("Control Settings:")]
     [SerializeField] float mouseSensitivity = 1f;
+
+    public Vector3 Velocity
+    {
+        get
+        {
+            return velocity;
+        }
+    
+        set
+        {
+            value = velocity;
+        }
+    }
 
     public void Awake()
     {

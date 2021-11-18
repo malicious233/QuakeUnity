@@ -22,7 +22,7 @@ public class Gun : MonoBehaviour
     {
         if (!fireRateComp.isAutomatic)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (Input.GetKeyDown(KeyCode.Mouse0)) 
             {
                 if (fireRateComp.canFire && clip.canFire)
                 {
