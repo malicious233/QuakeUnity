@@ -25,10 +25,10 @@ public class GunHitscan : GunFire
         SpawnShot(camTransform.forward);
         foreach (var item in pelletSpread)
         {
+            
             Vector3 shootDir = camTransform.forward;
             Quaternion thingX = Quaternion.AngleAxis(item.spreadX, camTransform.up);
             Quaternion thingY = Quaternion.AngleAxis(item.spreadY, camTransform.right);
-
             Vector3 result = thingX * thingY * shootDir;
 
             
