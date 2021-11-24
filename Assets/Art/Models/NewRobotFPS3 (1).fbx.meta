@@ -9,6 +9,30 @@ ModelImporter:
   - first:
       74: -530848140797115950
     second: Gun_Unholster_Baked
+  - first:
+      74: -4851490224827116120
+    second: Rig_Eagle_Idlebaked
+  - first:
+      74: -4028750268509334407
+    second: Rig_Eagle_Shoot_Baked
+  - first:
+      74: 9018368524470109010
+    second: Rig_Eagle_Reload_Baked
+  - first:
+      74: 242271733177277873
+    second: Gun_Reload.001
+  - first:
+      74: 5588678333028066114
+    second: BLST_ShootBaked
+  - first:
+      74: -1171490981657946937
+    second: Eagle_Reload_Baked
+  - first:
+      74: -1828429071397883137
+    second: Eagle_IdleBaked
+  - first:
+      74: -4467208601098701445
+    second: Eagle_Shoot_Baked
   externalObjects: {}
   materials:
     materialImportMode: 2
