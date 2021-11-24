@@ -19,6 +19,8 @@ public class D0GAnimator : MonoBehaviour
 
     public void Update()
     {
+        //Dumb!
+        /*
         if (agent.velocity.sqrMagnitude > 0.05f)
         {
             anim.SetBool("IsRunning", true);
@@ -27,6 +29,7 @@ public class D0GAnimator : MonoBehaviour
         {
             anim.SetBool("IsRunning", false);
         }
+        */
     }
 
     public void OnEnable()

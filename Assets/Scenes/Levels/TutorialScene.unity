@@ -25500,8 +25500,8 @@ GameObject:
   - component: {fileID: 6724181447904278140}
   - component: {fileID: 6724181447904278143}
   - component: {fileID: 6724181447904278138}
-  - component: {fileID: 6724181447904278136}
   - component: {fileID: 6967821607754063685}
+  - component: {fileID: 6724181447904278114}
   - component: {fileID: 6967821607754063690}
   - component: {fileID: 6967821607754063686}
   - component: {fileID: 6967821607754063684}
@@ -25517,28 +25517,24 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!195 &6724181447904278136
-NavMeshAgent:
+--- !u!143 &6724181447904278114
+CharacterController:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6724181447904278113}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.5
-  m_Speed: 60
-  m_Acceleration: 60
-  avoidancePriority: 50
-  m_AngularSpeed: 240
-  m_StoppingDistance: 0
-  m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 1
-  m_AutoRepath: 1
-  m_Height: 1.0000001
-  m_BaseOffset: 0.50000006
-  m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  serializedVersion: 2
+  m_Height: 9.61
+  m_Radius: 5.01
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 5, z: 0}
 --- !u!114 &6724181447904278138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25611,7 +25607,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6724181447904278113}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 28.411503, y: 24.6, z: 41.522938}
+  m_LocalPosition: {x: 28.411503, y: 35.3, z: 41.522938}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7932314595255627653}
@@ -25717,6 +25713,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14d030f2812e654baefc41139da167e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0, z: 0}
+  inputVector: {x: 0, y: 0, z: 0}
+  gravity: 1
+  movementSpeed: 0
+  deaccelSpeed: 0.9
 --- !u!114 &6967821607754063690
 MonoBehaviour:
   m_ObjectHideFlags: 0
