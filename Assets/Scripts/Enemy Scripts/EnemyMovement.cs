@@ -29,14 +29,16 @@ public class EnemyMovement : MonoBehaviour, IMoveable
     #region Custom Methods
     public Vector3 UpdateVelocityGround(Vector3 _currentVelocity)
     {
+        _currentVelocity = ApplyMovement(_currentVelocity, inputVector);
         _currentVelocity = Friction(_currentVelocity);
-        //_currentVelocity.y = 0;
+        _currentVelocity.y = 0;
+
         return _currentVelocity;
     }
     
     public Vector3 UpdateVelocityAir(Vector3 _currentVelocity)
     {
-        
+        _currentVelocity = ApplyGravity(_currentVelocity);
         return _currentVelocity;
     }
 
@@ -48,7 +50,14 @@ public class EnemyMovement : MonoBehaviour, IMoveable
 
     Vector3 ApplyGravity(Vector3 _currentVelocity)
     {
-        _currentVelocity.y -= gravity;
+        _currentVelocity.y -= gravity * Time.deltaTime;
+        return _currentVelocity;
+    }
+
+    Vector3 ApplyMovement(Vector3 _currentVelocity, Vector3 _inputVector)
+    {
+        Vector3 speed2Add = _inputVector * movementSpeed ;
+        _currentVelocity += speed2Add * Time.deltaTime;
         return _currentVelocity;
     }
     #endregion
@@ -69,7 +78,7 @@ public class EnemyMovement : MonoBehaviour, IMoveable
         }
         else
         {
-            velocity = ApplyGravity(velocity);
+            
             velocity = UpdateVelocityAir(velocity);
         }
 
