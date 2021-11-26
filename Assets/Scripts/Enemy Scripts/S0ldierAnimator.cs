@@ -9,7 +9,7 @@ public class S0ldierAnimator : MonoBehaviour
     [SerializeField] Transform aimTarget;
     [SerializeField] Animator anim;
     [SerializeField] Rig rig;
-    NavMeshAgent agent;
+    EnemyMovement movement;
     EnemyAI AI;
 
     
@@ -18,7 +18,7 @@ public class S0ldierAnimator : MonoBehaviour
     private void Awake()
     {
         AI = GetComponent<EnemyAI>();
-        agent = GetComponent<NavMeshAgent>();
+        movement = GetComponent<EnemyMovement>();
         
     }
 
@@ -46,7 +46,9 @@ public class S0ldierAnimator : MonoBehaviour
 
     private void SetWalkingParameters()
     {
-        if (agent.velocity.magnitude > 0.01)
+        Vector3 noYVelocity = movement.Velocity;
+        noYVelocity.y = 0;
+        if (noYVelocity.sqrMagnitude > 0.05f)
         {
             anim.SetBool("IsMoving", true);
         }

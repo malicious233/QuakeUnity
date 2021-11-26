@@ -15,19 +15,21 @@ public class State_SeekTarget : State
     [SerializeField] float detectRate = 0.3f;
     float currDetectRate;
 
-    NavMeshAgent agent;
+    EnemyPathfinder pathfinder;
+
     Ray aimRay;
     public override void Awake()
     {
         base.Awake();
-        agent = GetComponent<NavMeshAgent>();
+        pathfinder = GetComponent<EnemyPathfinder>();
+        
     }
 
 
 
     public void Update()
     {
-        agent.SetDestination(AI.target.position);
+        pathfinder.SetDestination = AI.target.position;
         Vector3 targetPos = AI.PositionToAim();
 
         Vector3 tr = transform.position;

@@ -36,10 +36,10 @@ public class EnemyPathfinder : MonoBehaviour
     {
         while (1==1)
         {
-            NavMeshHit pathHit;
-            
+           
             yield return new WaitForSeconds(pathRefreshRate);
-            if (NavMesh.SamplePosition(destination, out pathHit, 8, NavMesh.AllAreas) && NavMesh.CalculatePath(transform.position, pathHit.position, NavMesh.AllAreas, path) && path.corners.Length >= 1)
+            NavMeshHit pathHit;
+            if (NavMesh.SamplePosition(destination, out pathHit, 8, NavMesh.AllAreas) && NavMesh.CalculatePath(transform.position, pathHit.position, NavMesh.AllAreas, path) && path.corners.Length >= 2)
             {
                 Debug.Log("Vineboom");
                 moveVector = path.corners[1] - transform.position;

@@ -6,22 +6,23 @@ using UnityEngine.AI;
 public class D0GAnimator : MonoBehaviour
 {
     Animator anim;
-    NavMeshAgent agent;
     EnemyEvents events;
+    EnemyMovement movement;
 
 
     public void Awake()
     {
         anim = GetComponentInChildren<Animator>();
-        agent = GetComponent<NavMeshAgent>();
+        movement = GetComponent<EnemyMovement>();
         events = GetComponent<EnemyEvents>();
     }
 
     public void Update()
     {
         //Dumb!
-        /*
-        if (agent.velocity.sqrMagnitude > 0.05f)
+        Vector3 noYVelocity = movement.Velocity;
+        noYVelocity.y = 0;
+        if (noYVelocity.sqrMagnitude > 0.05f)
         {
             anim.SetBool("IsRunning", true);
         }
@@ -29,7 +30,7 @@ public class D0GAnimator : MonoBehaviour
         {
             anim.SetBool("IsRunning", false);
         }
-        */
+        
     }
 
     public void OnEnable()
