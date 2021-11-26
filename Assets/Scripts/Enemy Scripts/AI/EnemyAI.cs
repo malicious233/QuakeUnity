@@ -23,7 +23,7 @@ public class EnemyAI : MonoBehaviour
     public void Awake()
     {
         states = GetComponents<State>();
-        agent = GetComponent<NavMeshAgent>();    
+        //agent = GetComponent<NavMeshAgent>();    
     }
 
     public void Start()
@@ -39,7 +39,7 @@ public class EnemyAI : MonoBehaviour
             {
                 state.enabled = false;
             }
-            agent.SetDestination(transform.position);
+            //agent.SetDestination(transform.position);
             currentState = _state;
             currentState.enabled = true;
         }

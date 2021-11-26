@@ -6,7 +6,8 @@ using UnityEngine.AI;
 public class State_Agitated : State
 {
     EnemyEvents events;
-    NavMeshAgent agent;
+    //NavMeshAgent agent;
+    EnemyPathfinder pathfinder;
     EnemyCombat combat;
 
     [Header("STATE TRANSITIONS:")]
@@ -17,9 +18,9 @@ public class State_Agitated : State
     public override void Awake()
     {
         base.Awake();
-        agent = GetComponent<NavMeshAgent>();
         events = GetComponent<EnemyEvents>();
         combat = GetComponent<EnemyCombat>();
+        pathfinder = GetComponent<EnemyPathfinder>();
 
 
     }
@@ -28,7 +29,8 @@ public class State_Agitated : State
     public void FixedUpdate()
     {
         Vector3 targetPos = AI.target.position;
-        agent.SetDestination(targetPos);
+        //agent.SetDestination(targetPos);
+        pathfinder.SetDestination = targetPos;
         //Improve attack detection here
 
         float targetDist = Vector3.Distance(transform.position, targetPos);

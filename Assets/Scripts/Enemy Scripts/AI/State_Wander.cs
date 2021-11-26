@@ -5,8 +5,10 @@ using UnityEngine.AI;
 
 public class State_Wander : State
 {
-    NavMeshAgent agent;
+    
     EnemyEvents events;
+    EnemyPathfinder pathfinder;
+
 
 
     [Header("STATE TRANSITIONS:")]
@@ -36,14 +38,16 @@ public class State_Wander : State
     public override void Awake()
     {
         base.Awake();
-        agent = GetComponent<NavMeshAgent>();
+        //agent = GetComponent<NavMeshAgent>();
+        pathfinder = GetComponent<EnemyPathfinder>();
+
         events = GetComponent<EnemyEvents>();
     }
 
 
     public void Update()
     {
-        agent.Move(moveDirection * Time.deltaTime);
+        //agent.Move(moveDirection * Time.deltaTime);
         if (currWanderTime < 0)
         {
             currWanderTime = wanderTime;
@@ -63,7 +67,7 @@ public class State_Wander : State
     public void OnEnable()
     {
         currWanderTime = wanderTime;
-        agent.SetDestination(RandomNavMeshLocation());
+        pathfinder.SetDestination = RandomNavMeshLocation();
         events.OnHit += AggroRange;
     }
 

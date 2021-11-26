@@ -6,6 +6,8 @@ using UnityEngine;
 public class EnemyMovement : MonoBehaviour, IMoveable
 {
     CharacterController controller;
+    EnemyEvents events;
+
     public Vector3 velocity;
     public Vector3 inputVector;
 
@@ -27,6 +29,11 @@ public class EnemyMovement : MonoBehaviour, IMoveable
     }
 
     #region Custom Methods
+
+    private void UpdateInputVector(Vector3 _inputVector)
+    {
+        inputVector = _inputVector;
+    }
     public Vector3 UpdateVelocityGround(Vector3 _currentVelocity)
     {
         _currentVelocity = ApplyMovement(_currentVelocity, inputVector);
@@ -67,6 +74,17 @@ public class EnemyMovement : MonoBehaviour, IMoveable
     private void Awake()
     {
         controller = GetComponent<CharacterController>();
+        events = GetComponent<EnemyEvents>();
+    }
+
+    private void OnEnable()
+    {
+        events.OnUpdateMoveVector += UpdateInputVector; 
+    }
+
+    private void OnDisable()
+    {
+        events.OnUpdateMoveVector -= UpdateInputVector;
     }
 
     private void FixedUpdate()
