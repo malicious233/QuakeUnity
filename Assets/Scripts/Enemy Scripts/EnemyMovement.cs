@@ -67,6 +67,11 @@ public class EnemyMovement : MonoBehaviour, IMoveable
         _currentVelocity += speed2Add * Time.deltaTime;
         return _currentVelocity;
     }
+
+    void RotateTowardsVelocity()
+    {
+        
+    }
     #endregion
 
 

@@ -15,6 +15,8 @@ public class EnemyAI : MonoBehaviour
 
     NavMeshAgent agent;
 
+    [SerializeField] Transform lookFrom;
+
     public void Update()
     {
         //currentState.StateLoop();
@@ -68,5 +70,10 @@ public class EnemyAI : MonoBehaviour
     public Vector3 PositionToAim()
     {
         return target.position + new Vector3(0, targetHeight);
+    }
+
+    public Vector3 LookFromPosition()
+    {
+        return lookFrom.position;
     }
 }

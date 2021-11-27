@@ -24308,14 +24308,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 211711905614218288, guid: 5616d9886c4ef694db97352e6cef8497, type: 3}
-      propertyPath: deaccelSpeed
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 211711905614218288, guid: 5616d9886c4ef694db97352e6cef8497, type: 3}
-      propertyPath: movementSpeed
-      value: 250
-      objectReference: {fileID: 0}
     - target: {fileID: 4545149519003168009, guid: 5616d9886c4ef694db97352e6cef8497, type: 3}
       propertyPath: m_RootOrder
       value: 1

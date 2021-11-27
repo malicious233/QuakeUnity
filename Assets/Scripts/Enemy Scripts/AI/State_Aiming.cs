@@ -28,7 +28,7 @@ public class State_Aiming : State
         //Vector3 targetPos = AI.target.position;
         Vector3 targetPos = AI.PositionToAim();
 
-        Vector3 tr = transform.position;
+        Vector3 tr = AI.LookFromPosition();
         aimRay = new Ray(tr, targetPos - tr);
 
         RaycastHit hit;

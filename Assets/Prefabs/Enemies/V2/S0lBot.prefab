@@ -10420,6 +10420,7 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 8
+  lookFrom: {fileID: 516947958456983763}
 --- !u!114 &4545149519003168023
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10466,8 +10467,8 @@ MonoBehaviour:
   velocity: {x: 0, y: 0, z: 0}
   inputVector: {x: 0, y: 0, z: 0}
   gravity: 20
-  movementSpeed: 200
-  deaccelSpeed: 10
+  movementSpeed: 250
+  deaccelSpeed: 7
 --- !u!114 &7781095942314994537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10508,7 +10509,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6642035338384133997, guid: 1c699a80ca78d7148892e5d76fa6407b, type: 3}
-  _bulletSpawnTransform: {fileID: 0}
+  bulletSpawnTransform: {fileID: 516947958456983763}
 --- !u!114 &4545149519003168027
 MonoBehaviour:
   m_ObjectHideFlags: 0

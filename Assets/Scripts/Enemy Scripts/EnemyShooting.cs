@@ -5,14 +5,14 @@ using UnityEngine;
 public class EnemyShooting : MonoBehaviour
 {
     [SerializeField] GameObject bulletPrefab;
-    [SerializeField] Transform _bulletSpawnTransform;
+    [SerializeField] Transform bulletSpawnTransform;
 
     EnemyEvents events;
 
 
     public void FireBullet(Vector3 _shootDirection)
     {
-        GameObject obj = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
+        GameObject obj = Instantiate(bulletPrefab, bulletSpawnTransform.position, Quaternion.identity);
         BulletMovement bul = obj.GetComponent<BulletMovement>();
         bul.moveDirection = _shootDirection;
 
