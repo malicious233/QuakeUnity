@@ -11,6 +11,7 @@ public class InputManager : MonoBehaviour
     public float verticalInputAxis;
     public float mouseHorizontalInputAxis;
     public float mouseVerticalInputAxis;
+    public bool jumpDown;
     public bool reloadDown;
     public bool switchDown;
     public bool ability1Down;
@@ -22,6 +23,7 @@ public class InputManager : MonoBehaviour
     {
         horizontalInputAxis = Input.GetAxisRaw("Horizontal") * Time.deltaTime;
         verticalInputAxis = Input.GetAxisRaw("Vertical") * Time.deltaTime;
+        jumpDown = Input.GetKeyDown(KeyCode.Space);
         reloadDown = Input.GetKeyDown(KeyCode.R);
         switchDown = Input.GetKeyDown(KeyCode.F);
         ability1Down = Input.GetKeyDown(KeyCode.Q);
