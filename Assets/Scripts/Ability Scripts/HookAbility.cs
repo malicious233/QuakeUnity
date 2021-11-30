@@ -15,6 +15,7 @@ public class HookAbility : MonoBehaviour, IAbility
     [SerializeField] float pullAccel;
     [SerializeField] float hookRange;
     [SerializeField] float velocityReduction = 0.7f;
+    [SerializeField] float hookJumpForce = 0.5f;
     [SerializeField] LayerMask grappleableMask;
     float pullCurrAccel;
 
@@ -33,6 +34,7 @@ public class HookAbility : MonoBehaviour, IAbility
             if (hit.point != null && hit.transform != null)
             {
                 movement.velocity = movement.velocity * velocityReduction;
+                movement.velocity.y = hookJumpForce;
                 isGrappling = true;
                 grappleHitTransform.position = hit.point;
                 grappleHitTransform.parent = hit.transform;
