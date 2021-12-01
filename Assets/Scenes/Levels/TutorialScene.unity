@@ -496,7 +496,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22048
+  m_Name: pb_Mesh22066
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6091,7 +6091,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22062
+  m_Name: pb_Mesh22080
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24638,7 +24638,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3997969472901408627, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
       propertyPath: hookRange
-      value: 10000
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 3997969472901408627, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
       propertyPath: pullAccel
@@ -24663,6 +24663,10 @@ PrefabInstance:
     - target: {fileID: 7785044104742132805, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
       propertyPath: gravity
       value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7785044104742132805, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
+      propertyPath: jumpHeight
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 7785044104742132807, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
       propertyPath: m_Name

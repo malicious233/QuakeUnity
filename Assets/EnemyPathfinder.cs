@@ -41,7 +41,7 @@ public class EnemyPathfinder : MonoBehaviour
             NavMeshHit pathHit;
             if (NavMesh.SamplePosition(destination, out pathHit, 8, NavMesh.AllAreas) && NavMesh.CalculatePath(transform.position, pathHit.position, NavMesh.AllAreas, path) && path.corners.Length >= 2)
             {
-                Debug.Log("Vineboom");
+               
                 moveVector = path.corners[1] - transform.position;
                 moveVector.Normalize();
                 events.OnUpdateMoveVector?.Invoke(moveVector);

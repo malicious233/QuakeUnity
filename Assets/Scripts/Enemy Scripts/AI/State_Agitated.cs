@@ -25,9 +25,12 @@ public class State_Agitated : State
 
     }
 
+    
 
+    
     public void FixedUpdate()
     {
+        
         Vector3 targetPos = AI.target.position;
         //agent.SetDestination(targetPos);
         pathfinder.SetDestination = targetPos;

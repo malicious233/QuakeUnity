@@ -69,9 +69,13 @@ public class PlayerController : MonoBehaviour, IMoveable
             velocity.y -= gravity * Time.deltaTime;
         }
 
+
+        
+        charController.Move(velocity * Time.deltaTime * 60);
+
         
 
-        charController.Move(velocity * Time.deltaTime * 60);
+        
     }
 
     public void Update()
@@ -97,6 +101,7 @@ public class PlayerController : MonoBehaviour, IMoveable
 
         current_Speed = Vector3.Dot(_velocity, input.inputVector);
         float add_Speed = Mathf.Clamp(moveSpeed - current_Speed, 0, max_Accel * Time.deltaTime);; //Replace that final max-Speed with a real max-accel variable, also that moveSpeed variable is ill placed
+        _velocity = ReduceVelocityOnCollision(_velocity);
         return _velocity + add_Speed * input.inputVector;
     }
 
@@ -107,6 +112,7 @@ public class PlayerController : MonoBehaviour, IMoveable
         current_Speed = Vector3.Dot(_velocity, input.inputVector);
 
         float add_Speed = Mathf.Clamp(airSpeed - current_Speed, 0, max_AirAccel * Time.deltaTime); //Replace that final max-Speed with a real max-accel variable, also that moveSpeed variable is ill placed
+        _velocity = ReduceVelocityOnCollision(_velocity);
         return _velocity + add_Speed * input.inputVector;
     }
 
@@ -114,6 +120,12 @@ public class PlayerController : MonoBehaviour, IMoveable
         ///Returns a frictioned value of inputted velocity dhaakd
     {
         _velocity -= _velocity * moveDeaccel * Time.deltaTime;
+        return _velocity;
+    }
+
+    public Vector3 ReduceVelocityOnCollision(Vector3 _velocity)
+        ///Halts velocity incase your collider is colliding with something
+    {
         return _velocity;
     }
 
