@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour, IMoveable
             velocity.y -= gravity * Time.deltaTime;
         }
 
-
+        
         
         charController.Move(velocity * Time.deltaTime * 60);
 
@@ -81,6 +81,11 @@ public class PlayerController : MonoBehaviour, IMoveable
     public void Update()
     {
         RotateCamera();
+    }
+
+    private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        velocity -= hit.normal * Vector3.Dot(velocity, hit.normal);
     }
 
     public void RotateCamera()
