@@ -13,9 +13,12 @@ public class HookAbility : MonoBehaviour, IAbility
     [SerializeField] float cooldown;
     [SerializeField] float pullStrength;
     [SerializeField] float pullAccel;
+    [SerializeField] float swingBoost;
+    [SerializeField] float maxPull;
     [SerializeField] float hookRange;
     [SerializeField] float velocityReduction = 0.7f;
     [SerializeField] float hookJumpForce = 0.5f;
+    [SerializeField] [Range(0,1)] float turnUntilBreak = 0.4f;
     [SerializeField] LayerMask grappleableMask;
     float pullCurrAccel;
 
@@ -33,6 +36,7 @@ public class HookAbility : MonoBehaviour, IAbility
         {
             if (hit.point != null && hit.transform != null)
             {
+
                 movement.velocity = movement.velocity * velocityReduction;
                 movement.velocity.y = hookJumpForce;
                 isGrappling = true;
@@ -42,6 +46,14 @@ public class HookAbility : MonoBehaviour, IAbility
             }
             
         }
+    }
+
+    private void StopGrapple()
+    {
+        isGrappling = false;
+        grappleHitTransform.position = Vector3.zero;
+        rope.UnsetRope();
+        pullCurrAccel = 0;
     }
 
     private void Awake()
@@ -65,10 +77,7 @@ public class HookAbility : MonoBehaviour, IAbility
 
         if (input.jumpDown)
         {
-            isGrappling = false;
-            grappleHitTransform.position = Vector3.zero;
-            rope.UnsetRope();
-            pullCurrAccel = 0;
+            StopGrapple();
         }
 
         if (isGrappling)
@@ -76,11 +85,22 @@ public class HookAbility : MonoBehaviour, IAbility
             pullCurrAccel += pullAccel * Time.deltaTime;
             pullCurrAccel = Mathf.Clamp01(pullCurrAccel);
 
-            Vector3 grapplePullDirection = grappleHitTransform.position - transform.position;
-            grapplePullDirection.Normalize();
-            Vector3 grapplePullForce = grapplePullDirection * pullCurrAccel * pullStrength * Time.deltaTime;
+            Vector3 grappleVector = grappleHitTransform.position - transform.position;
+            grappleVector.Normalize();
 
-            movement.velocity += grapplePullForce;
+            float grapplePullForceMod = Vector3.Dot(grappleVector, transform.forward);
+            Debug.Log(grapplePullForceMod);
+
+            Vector3 grappleSwingBoostExtra = transform.forward * grapplePullForceMod * swingBoost;
+
+            Vector3 grapplePullForce = grappleVector * pullStrength;
+
+            movement.velocity += grapplePullForce  * Time.deltaTime;
+
+            if (grapplePullForceMod < turnUntilBreak)
+            {
+                StopGrapple();
+            }
             
         }
     }
