@@ -95,7 +95,8 @@ public class HookAbility : MonoBehaviour, IAbility
 
             Vector3 grapplePullForce = grappleVector * pullStrength;
 
-            movement.velocity += grapplePullForce  * Time.deltaTime;
+            movement.velocity += grapplePullForce * Time.deltaTime;
+            movement.velocity += grappleSwingBoostExtra * Time.deltaTime;
 
             if (grapplePullForceMod < turnUntilBreak)
             {
