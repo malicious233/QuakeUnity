@@ -12,15 +12,12 @@ public class HookAbility : MonoBehaviour, IAbility
     [Header("ATTRIBUTES:")]
     [SerializeField] float cooldown;
     [SerializeField] float pullStrength;
-    [SerializeField] float pullAccel;
     [SerializeField] float swingBoost;
-    [SerializeField] float maxPull;
     [SerializeField] float hookRange;
     [SerializeField] float velocityReduction = 0.7f;
     [SerializeField] float hookJumpForce = 0.5f;
     [SerializeField] [Range(0,1)] float turnUntilBreak = 0.4f;
     [SerializeField] LayerMask grappleableMask;
-    float pullCurrAccel;
 
     bool isGrappling = false;
     
@@ -49,12 +46,21 @@ public class HookAbility : MonoBehaviour, IAbility
     }
 
     private void StopGrapple()
+        ///Stops the grapple
     {
         isGrappling = false;
         grappleHitTransform.position = Vector3.zero;
         rope.UnsetRope();
-        pullCurrAccel = 0;
     }
+
+    private void CancelGrappleJump()
+        ///Cancels grapple with a jump
+    {
+        movement.velocity.y += hookJumpForce;
+        StopGrapple();
+    }
+
+    
 
     private void Awake()
     {
@@ -75,15 +81,10 @@ public class HookAbility : MonoBehaviour, IAbility
             
         }
 
-        if (input.jumpDown)
-        {
-            StopGrapple();
-        }
+        
 
         if (isGrappling)
         {
-            pullCurrAccel += pullAccel * Time.deltaTime;
-            pullCurrAccel = Mathf.Clamp01(pullCurrAccel);
 
             Vector3 grappleVector = grappleHitTransform.position - transform.position;
             grappleVector.Normalize();
@@ -102,7 +103,17 @@ public class HookAbility : MonoBehaviour, IAbility
             {
                 StopGrapple();
             }
-            
+
+            if (input.jumpDown)
+            {
+                CancelGrappleJump();
+            }
+
+            if (input.crouchHold)
+            {
+                StopGrapple();
+            }
+
         }
     }
 

@@ -85,10 +85,12 @@ public class PlayerController : MonoBehaviour, IMoveable
         RotateCamera();
     }
 
+    
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
         velocity -= hit.normal * Vector3.Dot(velocity, hit.normal);
     }
+    
 
 
     public void RotateCamera()
