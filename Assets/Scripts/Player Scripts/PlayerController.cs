@@ -121,7 +121,6 @@ public class PlayerController : MonoBehaviour, IMoveable
         //velocity = Friction(velocity);
 
         current_Speed = Vector3.Dot(input.inputVector, _velocity);
-        Debug.Log(current_Speed);
         float add_Speed = Mathf.Clamp(maxAirSpeed - current_Speed * airSpeed, 0, maxAirSpeed); //Replace that final max-Speed with a real max-accel variable, also that moveSpeed variable is ill placed
         
         return _velocity + (add_Speed * input.inputVector) * Time.deltaTime;

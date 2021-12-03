@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: b76de243fbb5ebd4c868b1f06577be5e, type: 2}
+--- !u!114 &120472713 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 300817876425709296, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
+  m_PrefabInstance: {fileID: 3997969472751488388}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05323746c3116654c80877a76a44757e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &137696526 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7785044104742132805, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
@@ -496,7 +507,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22066
+  m_Name: pb_Mesh22090
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6323,7 +6334,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22080
+  m_Name: pb_Mesh22104
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24856,6 +24867,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 300817876425709296, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
+      propertyPath: poolStartSize
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 2442923735375629990, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
       propertyPath: fireRate
       value: 0.3
@@ -24886,11 +24901,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3997969472901408627, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
       propertyPath: swingBoost
-      value: 1.25
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 3997969472901408627, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
       propertyPath: pullStrength
-      value: 1.5
+      value: 1.75
       objectReference: {fileID: 0}
     - target: {fileID: 3997969472901408627, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
       propertyPath: velocityReduction
@@ -24904,6 +24919,10 @@ PrefabInstance:
       propertyPath: grappleableMask.m_Bits
       value: 64
       objectReference: {fileID: 0}
+    - target: {fileID: 7785044104136049490, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
+      propertyPath: bulletHitPool
+      value: 
+      objectReference: {fileID: 120472713}
     - target: {fileID: 7785044104742132805, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
       propertyPath: gravity
       value: 1.6

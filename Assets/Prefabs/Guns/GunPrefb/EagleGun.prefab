@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2606750531375911477}
   - component: {fileID: 2606750531375911476}
   - component: {fileID: 2606750531375911479}
+  - component: {fileID: 5758132244402714117}
   - component: {fileID: 2606750531375911478}
   - component: {fileID: 7141711664667845454}
   m_Layer: 3
@@ -124,9 +125,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   muzzleFlash: {fileID: 3652894219140925654}
-  bulletHitEffect: {fileID: 5162435783940333745, guid: 1ddb680a7efb67946bfb8694b5bd5d25, type: 3}
   tracerEffect: {fileID: 7541055312771969282, guid: 4ae7d8741a001e2449b88c377c6740ca, type: 3}
   bulletSpawnPoint: {fileID: 3652894219140925608}
+  bulletHitPool: {fileID: 5758132244402714117}
+--- !u!114 &5758132244402714117
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2606750531375911472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05323746c3116654c80877a76a44757e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolPrefab: {fileID: 2114673111603504757, guid: 1ddb680a7efb67946bfb8694b5bd5d25, type: 3}
+  poolStartSize: 8
 --- !u!114 &2606750531375911478
 MonoBehaviour:
   m_ObjectHideFlags: 0

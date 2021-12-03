@@ -10915,10 +10915,15 @@ MonoBehaviour:
   camTransform: {fileID: 7785044104146875782}
   cooldown: 0
   pullStrength: 0
+  swingBoost: 0
   hookRange: 0
+  velocityReduction: 0.7
+  hookJumpForce: 0.5
+  turnUntilBreak: 0.4
   grappleableMask:
     serializedVersion: 2
     m_Bits: 0
+  grappleHitTransform: {fileID: 0}
 --- !u!1 &3997969473588074091
 GameObject:
   m_ObjectHideFlags: 0
@@ -26509,6 +26514,7 @@ GameObject:
   - component: {fileID: 7785044104078928797}
   - component: {fileID: 7785044104078928796}
   - component: {fileID: 7785044104078928799}
+  - component: {fileID: 3225775777523270847}
   - component: {fileID: 7785044104078928798}
   - component: {fileID: 3115212734673985135}
   m_Layer: 3
@@ -26618,9 +26624,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   muzzleFlash: {fileID: 7785044104848950014}
-  bulletHitEffect: {fileID: 5162435783940333745, guid: 1ddb680a7efb67946bfb8694b5bd5d25, type: 3}
   tracerEffect: {fileID: 7541055312771969282, guid: 4ae7d8741a001e2449b88c377c6740ca, type: 3}
   bulletSpawnPoint: {fileID: 7785044105410370548}
+  bulletHitPool: {fileID: 3225775777523270847}
+--- !u!114 &3225775777523270847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7785044104078928792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05323746c3116654c80877a76a44757e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolPrefab: {fileID: 2114673111603504757, guid: 1ddb680a7efb67946bfb8694b5bd5d25, type: 3}
+  poolStartSize: 40
 --- !u!114 &7785044104078928798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26797,6 +26817,7 @@ GameObject:
   - component: {fileID: 7785044104136049516}
   - component: {fileID: 7785044104136049517}
   - component: {fileID: 7785044104136049490}
+  - component: {fileID: 300817876425709296}
   - component: {fileID: 7785044104136049491}
   - component: {fileID: 5538980276135214764}
   m_Layer: 3
@@ -26906,9 +26927,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   muzzleFlash: {fileID: 7258611787588638840}
-  bulletHitEffect: {fileID: 5162435783940333745, guid: 1ddb680a7efb67946bfb8694b5bd5d25, type: 3}
   tracerEffect: {fileID: 3071744259518169337, guid: c4d03797b8c407448bcf680997fbb52a, type: 3}
   bulletSpawnPoint: {fileID: 7785044105523843232}
+  bulletHitPool: {fileID: 0}
+--- !u!114 &300817876425709296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7785044104136049515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05323746c3116654c80877a76a44757e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolPrefab: {fileID: 2114673111603504757, guid: 1ddb680a7efb67946bfb8694b5bd5d25, type: 3}
+  poolStartSize: 30
 --- !u!114 &7785044104136049491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32314,10 +32349,12 @@ MonoBehaviour:
   eyePoint: {fileID: 7785044105405704198}
   velocity: {x: 0, y: 0, z: 0}
   current_Speed: 0
+  maxGroundSpeed: 5
   moveSpeed: 20
   moveDeaccel: 18
   max_Accel: 20
   jumpHeight: 0.5
+  maxAirSpeed: 5
   airSpeed: 1
   max_AirAccel: 3
   gravity: 1.2
@@ -32338,10 +32375,12 @@ MonoBehaviour:
   verticalInputAxis: 0
   mouseHorizontalInputAxis: 0
   mouseVerticalInputAxis: 0
+  jumpDown: 0
   reloadDown: 0
   switchDown: 0
   ability1Down: 0
   ability2Down: 0
+  crouchHold: 0
   inputVector: {x: 0, y: 0, z: 0}
 --- !u!114 &7785044104742132813
 MonoBehaviour:
@@ -42358,6 +42397,7 @@ GameObject:
   - component: {fileID: 7785044105533149461}
   - component: {fileID: 7785044105533149460}
   - component: {fileID: 7785044105533149463}
+  - component: {fileID: 431436537386670021}
   - component: {fileID: 7785044105533149462}
   - component: {fileID: 3115212735369961582}
   m_Layer: 3
@@ -42475,9 +42515,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   muzzleFlash: {fileID: 7785044105358984588}
-  bulletHitEffect: {fileID: 5162435783940333745, guid: 1ddb680a7efb67946bfb8694b5bd5d25, type: 3}
   tracerEffect: {fileID: 7541055312771969282, guid: 4ae7d8741a001e2449b88c377c6740ca, type: 3}
   bulletSpawnPoint: {fileID: 7785044105566893718}
+  bulletHitPool: {fileID: 431436537386670021}
+--- !u!114 &431436537386670021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7785044105533149456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05323746c3116654c80877a76a44757e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poolPrefab: {fileID: 2114673111603504757, guid: 1ddb680a7efb67946bfb8694b5bd5d25, type: 3}
+  poolStartSize: 20
 --- !u!114 &7785044105533149462
 MonoBehaviour:
   m_ObjectHideFlags: 0

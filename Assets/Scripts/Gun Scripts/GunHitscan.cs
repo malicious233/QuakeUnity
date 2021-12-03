@@ -45,8 +45,11 @@ public class GunHitscan : GunFire
         RaycastHit hit = GetHitPoint(_shootDirection);
         if (Physics.Raycast(camTransform.position, _shootDirection, out hit, range, hittableMask))
         {
-            var bulletHit = Instantiate(Instantiate(particles.bulletHitEffect, hit.point, Quaternion.identity));
-            bulletHit.transform.forward = hit.normal;
+            //var bulletHit = Instantiate(Instantiate(particles.bulletHitEffect, hit.point, Quaternion.identity));
+            //bulletHit.transform.forward = hit.normal;
+
+            Transform transf = particles.CreateBulletHit(hit.point);
+            transf.transform.forward = hit.normal;
             tracerPoint = hit.point;
 
         }
