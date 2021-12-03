@@ -42,6 +42,8 @@ public class PoolManager : MonoBehaviour
             //Maybe try doing that you extend the pool temporarily, somehow.
             Debug.Log("POOL EXCEEDED. CREATING NEW OBJECT");
             GameObject poolObject = Instantiate(poolPrefab);
+            PoolObject poolObjComponent = poolObject.AddComponent<PoolObject>();
+            poolObjComponent.isTrackedByPool = false;
             return poolObject;
         }
     }

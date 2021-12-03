@@ -24869,7 +24869,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 300817876425709296, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
       propertyPath: poolStartSize
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 2442923735375629990, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
       propertyPath: fireRate
