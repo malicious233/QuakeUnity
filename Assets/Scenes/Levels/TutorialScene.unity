@@ -24905,7 +24905,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3997969472901408627, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
       propertyPath: pullStrength
-      value: 1.75
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3997969472901408627, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
       propertyPath: velocityReduction
