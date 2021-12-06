@@ -21,7 +21,6 @@ public class HookAbility : MonoBehaviour, IAbility
     [SerializeField] LayerMask grappleableMask;
     [SerializeField] float hookSpeed = 3f;
 
-    bool isGrappling = false;
     enum GrappleState
     {
         Neutral, //Nothing
@@ -48,8 +47,7 @@ public class HookAbility : MonoBehaviour, IAbility
             {
 
 
-                movement.velocity = movement.velocity * velocityReduction;
-                movement.velocity.y = hookJumpForce;
+                
 
                 grappleState = GrappleState.Moving;
 
@@ -75,7 +73,6 @@ public class HookAbility : MonoBehaviour, IAbility
     private void StopGrapple()
         ///Stops the grapple
     {
-        isGrappling = false;
         grappleState = GrappleState.Neutral;
         hookTransform.position = Vector3.zero;
         rope.UnsetRope();
@@ -88,9 +85,12 @@ public class HookAbility : MonoBehaviour, IAbility
         StopGrapple();
     }
 
-    private void ApplyGrappleForce()
+    private void GrappleHit()
     {
-
+        grappleState = GrappleState.Pulling;
+        movement.velocity = movement.velocity * velocityReduction;
+        movement.velocity.y = hookJumpForce;
+        grappleHit.Invoke();
     }
 
     
@@ -120,8 +120,7 @@ public class HookAbility : MonoBehaviour, IAbility
 
             if (hookTransform.position == hookSpotTransform.position)
             {
-                grappleState = GrappleState.Pulling;
-                grappleHit.Invoke();
+                GrappleHit();
             }
         }
         else if (grappleState == GrappleState.Pulling)
