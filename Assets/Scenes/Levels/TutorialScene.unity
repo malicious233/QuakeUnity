@@ -884,7 +884,7 @@ Light:
     m_Strength: 1
     m_Bias: 0.05
     m_NormalBias: 0.4
-    m_NearPlane: 0.2
+    m_NearPlane: 10
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -921,7 +921,7 @@ Light:
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
-  m_ShadowAngle: 0
+  m_ShadowAngle: 90
 --- !u!4 &1321069853
 Transform:
   m_ObjectHideFlags: 0
@@ -24988,6 +24988,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3997969472901408627, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
+      propertyPath: hookRange
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 3997969472901408627, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
       propertyPath: hookJumpForce
       value: 0.75
