@@ -428,8 +428,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 075dbc1b1f358034ea5d14436fb28ad6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  p1: {fileID: 360483313}
-  p2: {fileID: 1454338170}
 --- !u!135 &223605367
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -790,6 +788,23 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 857820132}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1172160710 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7785044104078928792, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
+  m_PrefabInstance: {fileID: 3997969472751488388}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1172160723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1172160710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 075dbc1b1f358034ea5d14436fb28ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1306217682
 GameObject:
   m_ObjectHideFlags: 0
@@ -25327,6 +25342,26 @@ PrefabInstance:
       propertyPath: tst
       value: 
       objectReference: {fileID: 2076872140}
+    - target: {fileID: 1172160721, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
+      propertyPath: curveHitMat
+      value: 
+      objectReference: {fileID: 2100000, guid: a0937681bda08eb4c94ccb19f5c32695, type: 2}
+    - target: {fileID: 1172160721, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
+      propertyPath: curveNoHitMat
+      value: 
+      objectReference: {fileID: 2100000, guid: 93599b45c01d3d049a4d729a3a4b34b4, type: 2}
+    - target: {fileID: 2516924943142709739, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a0937681bda08eb4c94ccb19f5c32695, type: 2}
+    - target: {fileID: 2516924943142709739, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
+      propertyPath: m_Parameters.widthCurve.m_Curve.Array.data[0].value
+      value: 0.19999999
+      objectReference: {fileID: 0}
+    - target: {fileID: 7785044104078928796, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
+      propertyPath: damageValue
+      value: 75
+      objectReference: {fileID: 0}
     - target: {fileID: 7785044104742132807, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
       propertyPath: m_Name
       value: Player 2
