@@ -33,7 +33,7 @@ namespace MyBezier
                 RaycastHit hit;
                 if (Physics.Raycast(p, dir, out hit, magni, _layer))
                 {
-                    Debug.Log("HIT");
+                    
                     _hit = hit;
                     return true;
                 }

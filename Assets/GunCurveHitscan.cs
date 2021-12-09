@@ -31,6 +31,10 @@ public class GunCurveHitscan : GunFire
 
     private void Update()
     {
+        float distBetweenGunAndMagnet = (gunCurveAnchor.position - magnetCurveAnchor.position).magnitude;
+        Vector3 curveAnchorOffset = new Vector3(0, 0, distBetweenGunAndMagnet/2);
+        forwardCurveAnchor.localPosition = curveAnchorOffset;
+
         pointerLinePositions = new Vector3[curveGranularity];
 
         Vector3 prev = gunCurveAnchor.position;
@@ -82,7 +86,7 @@ public class GunCurveHitscan : GunFire
         RaycastHit hit;
         if (Bezier.CurveRaycast(gunCurveAnchor.position, forwardCurveAnchor.position, magnetCurveAnchor.position, curveGranularity, hittableMask, out hit))
         {
-            Debug.Log("SUCCESS");
+            
             //Instantiate(tst, hit.point, Quaternion.identity);
             IDamageable _stats = hit.transform.GetComponent<IDamageable>();
             Damage damage = new Damage(shotDamage.damageValue, camTransform.forward);
