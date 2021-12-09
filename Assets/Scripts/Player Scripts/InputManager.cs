@@ -23,12 +23,14 @@ public class InputManager : MonoBehaviour
     public bool crouchHold;
 
     public bool fireDown;
+    public bool altFireDown;
 
     public Vector3 inputVector;
 
     public void Update()
     {
         fireDown = Input.GetKeyDown(KeyCode.Mouse0);
+        altFireDown = Input.GetKeyDown(KeyCode.Mouse1);
 
         horizontalInputAxis = Input.GetAxisRaw("Horizontal") * Time.deltaTime;
         verticalInputAxis = Input.GetAxisRaw("Vertical") * Time.deltaTime;
