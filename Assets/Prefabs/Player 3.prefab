@@ -16006,9 +16006,9 @@ MonoBehaviour:
   cooldown: 1
   pullStrength: 2
   swingBoost: 1.75
-  hookRange: 400
+  hookRange: 200
   velocityReduction: 0.6
-  hookJumpForce: 0.5
+  hookJumpForce: 0.75
   turnUntilBreak: 0.4
   grappleableMask:
     serializedVersion: 2
@@ -31734,7 +31734,7 @@ GameObject:
   - component: {fileID: 7785044104078928798}
   - component: {fileID: 3115212734673985135}
   m_Layer: 3
-  m_Name: BRTGun
+  m_Name: CRVGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31796,7 +31796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canFire: 0
-  magazineSize: 35
+  magazineSize: 30
   slugReload: 0
   shotsInMag: 0
 --- !u!114 &7785044104078928797
@@ -31812,8 +31812,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canFire: 0
-  isAutomatic: 1
-  fireRate: 0.09
+  isAutomatic: 0
+  fireRate: 1
 --- !u!114 &7785044104078928796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31856,7 +31856,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poolPrefab: {fileID: 2114673111603504757, guid: 1ddb680a7efb67946bfb8694b5bd5d25, type: 3}
-  poolStartSize: 40
+  poolStartSize: 10
 --- !u!114 &7785044104078928798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31870,17 +31870,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camTransform: {fileID: 7785044104146875782}
-  recoilPerShot: 0.3
+  recoilPerShot: 0.6
   patternRecoveryTime: 1.2
-  recoilRecoveryTime: 0.01
-  recoilReactionTime: 0.05
-  recoilPatternDuration: 2
+  recoilRecoveryTime: 0.11
+  recoilReactionTime: 0.06
+  recoilPatternDuration: 1.5
   horizontalRecoilPattern:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: -0.00002670288
-      value: 0.2
+      time: -0.03980255
+      value: 0.9720337
       inSlope: 3.3243535
       outSlope: 3.3243535
       tangentMode: 0
@@ -31906,36 +31906,18 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.16435191
     - serializedVersion: 3
-      time: 1.5075684
-      value: 0.4208107
-      inSlope: -4.2631683
-      outSlope: -4.2631683
+      time: 1.5075378
+      value: 0.42082596
+      inSlope: 0.113900475
+      outSlope: 0.113900475
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.21803476
-      outWeight: 0.09871167
-    - serializedVersion: 3
-      time: 1.9172363
-      value: 0.985184
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 2.5153873
-      value: -0.51905817
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
       outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  horizontalRecoilMultiplier: 300
+  horizontalRecoilMultiplier: 500
   randomHoriRecoil:
     serializedVersion: 2
     m_Curve:
@@ -31949,18 +31931,18 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 1.5091608
-      value: 1.0897563
-      inSlope: 1.8378804
-      outSlope: 1.8378804
-      tangentMode: 0
+      time: 1.5001819
+      value: 0.002399981
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 136
       weightedMode: 0
-      inWeight: 0.023534378
+      inWeight: 0.33333334
       outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  randomHoriRecoilMultiplier: 150
+  randomHoriRecoilMultiplier: 400
   verticalRecoilPattern:
     serializedVersion: 2
     m_Curve:
@@ -31974,8 +31956,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0.028795553
     - serializedVersion: 3
-      time: 0.31903505
-      value: 0.87110484
+      time: -0.00034666434
+      value: 1.2271076
       inSlope: 0.01998247
       outSlope: 0.01998247
       tangentMode: 0
@@ -31992,8 +31974,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.33333334
     - serializedVersion: 3
-      time: 2.5396943
-      value: 2.7245686
+      time: 1.5176277
+      value: 1.1253209
       inSlope: -0.15333791
       outSlope: -0.15333791
       tangentMode: 0
@@ -32003,7 +31985,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  verticalRecoilMultiplier: 300
+  verticalRecoilMultiplier: 500
   patternTime: 0
 --- !u!114 &3115212734673985135
 MonoBehaviour:
@@ -37595,8 +37577,11 @@ MonoBehaviour:
   reloadDown: 0
   switchDown: 0
   ability1Down: 0
+  ability1Hold: 0
   ability2Down: 0
+  ability2Hold: 0
   crouchHold: 0
+  fireDown: 0
   inputVector: {x: 0, y: 0, z: 0}
 --- !u!114 &7785044104742132813
 MonoBehaviour:
@@ -37683,6 +37668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34e458f8f79514b47bc954fc49967842, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  abilityFolder: {fileID: 3997969473588074100}
 --- !u!1 &7785044104848950011
 GameObject:
   m_ObjectHideFlags: 0

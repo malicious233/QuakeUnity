@@ -36,7 +36,7 @@ public class BulletMovement : MonoBehaviour
     private void EndBullet()
     //Destroys the bullet. Might fit more advanced behavior in the future
     {
-        Debug.Log("*vineboom*");
+        
         Destroy(gameObject);
     }
 

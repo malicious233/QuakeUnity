@@ -58,6 +58,9 @@ public class CharacterInventory : MonoBehaviour
     #endregion
 
     #region Custom Methods
+    /// <summary>
+    /// Updates list of equipped weapons. Might be poorly performant method
+    /// </summary>
     public void UpdateWeaponList()
     {
         int childCount = weaponFolder.childCount;
@@ -72,27 +75,48 @@ public class CharacterInventory : MonoBehaviour
         animManager.UpdateAnimators(weaponList);
     }
 
+    /// <summary>
+    /// Changes weapon to specified index
+    /// </summary>
+    /// <param name="_index"></param>
     public void SwitchWeapon(int _index)
     {
         if (_index < weaponList.Count)
         {
-            for (int i = 0; i < weaponList.Count; i++)
-            {
-                weaponList[i].gameObject.SetActive(false);
-            }
-            weaponList[_index].gameObject.SetActive(true);
-            animManager.SwitchAnimator(_index);
-            rigAnimEvents.SwitchGun(weaponList[_index].gameObject);
-
-            GunClip clip = weaponList[_index].GetComponent<GunClip>();
-            //events.Invoke_OnWeaponSwitch(clip.magazineSize);
-            events.OnWeaponSwitch(clip.magazineSize);
-            //events.Invoke_OnMagazineChange(clip.ShotsInMag);
-            events.OnMagazineChange(clip.ShotsInMag);
-            PlayWeaponEquipAnimation();
+            EnableWeapon(_index);
             
         }
         weaponIndex = _index;
+    }
+
+    /// <summary>
+    /// Disables all weapons
+    /// </summary>
+    public void DisableWeapons()
+    {
+        for (int i = 0; i < weaponList.Count; i++)
+        {
+            weaponList[i].gameObject.SetActive(false);
+        }
+    }
+
+    /// <summary>
+    /// Enables given weapon. Wait how is this not redundant with Switch Weapon? I am too tired to bother
+    /// </summary>
+    /// <param name="_index"></param>
+    public void EnableWeapon(int _index)
+    {
+        DisableWeapons();
+        weaponList[_index].gameObject.SetActive(true);
+        animManager.SwitchAnimator(_index);
+        rigAnimEvents.SwitchGun(weaponList[_index].gameObject);
+
+        GunClip clip = weaponList[_index].GetComponent<GunClip>();
+        //events.Invoke_OnWeaponSwitch(clip.magazineSize);
+        events.OnWeaponSwitch(clip.magazineSize);
+        //events.Invoke_OnMagazineChange(clip.ShotsInMag);
+        events.OnMagazineChange(clip.ShotsInMag);
+        PlayWeaponEquipAnimation();
     }
 
     private void PlayWeaponEquipAnimation()

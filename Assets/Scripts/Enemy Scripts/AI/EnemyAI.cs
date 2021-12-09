@@ -54,7 +54,7 @@ public class EnemyAI : MonoBehaviour
         Collider[] cols = Physics.OverlapSphere(transform.position, _range, enemyMask);
         if (cols.Length != 0)
         {
-            Debug.Log("Bruh");
+            
             SetTarget(cols[0].GetComponent<Transform>());
             ChangeState(_gotoState);
         }

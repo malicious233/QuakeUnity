@@ -5907,6 +5907,7 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 8
+  lookFrom: {fileID: 0}
 --- !u!114 &1386845289513503201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5921,7 +5922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 0}
   inputVector: {x: 0, y: 0, z: 0}
-  gravity: 20
+  gravity: 60
   movementSpeed: 300
   deaccelSpeed: 5
 --- !u!114 &8805442318624630456

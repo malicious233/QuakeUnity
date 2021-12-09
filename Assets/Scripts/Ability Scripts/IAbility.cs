@@ -4,5 +4,6 @@ using UnityEngine;
 
 public interface IAbility
 {
-    public void DoAbility();
+    public void UnholsterAbility();
+    public void HolsterAbility();
 }

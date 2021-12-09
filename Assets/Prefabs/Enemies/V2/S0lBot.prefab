@@ -10466,7 +10466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   velocity: {x: 0, y: 0, z: 0}
   inputVector: {x: 0, y: 0, z: 0}
-  gravity: 20
+  gravity: 60
   movementSpeed: 250
   deaccelSpeed: 7
 --- !u!114 &7781095942314994537

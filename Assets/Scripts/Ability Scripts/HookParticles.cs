@@ -13,7 +13,7 @@ public class HookParticles : MonoBehaviour
     {
         hookHitParticle.Play();
         //hookHitParticle.
-        Debug.Log("Hi");
+        
     }
 
     private void Awake()

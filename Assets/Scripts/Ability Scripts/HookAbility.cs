@@ -35,8 +35,16 @@ public class HookAbility : MonoBehaviour, IAbility
 
     public Action grappleHit;
 
-    
-    public void DoAbility()
+    public void UnholsterAbility()
+    {
+
+    }
+
+    public void HolsterAbility()
+    {
+
+    }
+    public void FireGrapple()
     {
         //Debug.Log("GrappleHit");
         RaycastHit hit;
@@ -110,7 +118,7 @@ public class HookAbility : MonoBehaviour, IAbility
     {
         if (input.ability1Down)
         {
-            DoAbility();
+            FireGrapple();
             
         }
 
