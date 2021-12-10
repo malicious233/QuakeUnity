@@ -54,6 +54,7 @@ public class GunCurveHitscan : GunFire
         }
         line.positionCount = curveGranularity;
         line.SetPositions(pointerLinePositions);
+        //Cut it up so the line renderer is on a different component than the hitscan 
 
         RaycastHit hit;
         if (Bezier.CurveRaycast(gunCurveAnchor.position, forwardCurveAnchor.position, magnetCurveAnchor.position, curveGranularity, StaticVariables.hurtboxMask, out hit))
