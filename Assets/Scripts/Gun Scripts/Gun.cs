@@ -4,25 +4,27 @@ using UnityEngine;
 
 public class Gun : MonoBehaviour
 {
-    GunFire fire;
-    GunClip clip;
-    GunFireRate fireRateComp;
+    protected GunFire fire;
+    protected GunClip clip;
+    protected GunFireRate fireRateComp;
+    protected InputManager input;
 
-    public Animator animator;
+    //public Animator animator;
 
     private void Awake()
     {
         fire = GetComponent<GunFire>();
         clip = GetComponent<GunClip>();
         fireRateComp = GetComponent<GunFireRate>();
-        animator = GetComponentInChildren<Animator>();
+        //animator = GetComponentInChildren<Animator>();
+        input = GetComponentInParent<InputManager>();
     }
 
-    public void Update()
+    public virtual void Update()
     {
         if (!fireRateComp.isAutomatic)
         {
-            if (Input.GetKeyDown(KeyCode.Mouse0)) 
+            if (input.fireDown) 
             {
                 if (fireRateComp.canFire && clip.canFire)
                 {
@@ -33,7 +35,7 @@ public class Gun : MonoBehaviour
         }
         else
         {
-            if (Input.GetKey(KeyCode.Mouse0))
+            if (input.fireHold)
             {
                 if (fireRateComp.canFire && clip.canFire)
                 {

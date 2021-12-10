@@ -28,6 +28,7 @@ public class BulletDamager : MonoBehaviour
             IDamageable dmgble = cols[0].GetComponent<IDamageable>();
             dmgble.InflictDamage(damageClass);
             Destroy(gameObject);
+            
         }
     }
 

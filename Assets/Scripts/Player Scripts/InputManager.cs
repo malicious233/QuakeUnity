@@ -23,17 +23,24 @@ public class InputManager : MonoBehaviour
     public bool crouchHold;
 
     public bool fireDown;
+    public bool fireHold;
+    public bool fireRelease;
     public bool altFireDown;
 
     public Vector3 inputVector;
 
     public void Update()
     {
-        fireDown = Input.GetKeyDown(KeyCode.Mouse0);
+        KeyCode fire = KeyCode.Mouse0;
+        fireDown = Input.GetKeyDown(fire);
+        fireHold = Input.GetKey(fire);
+        fireRelease = Input.GetKeyUp(fire);
+
         altFireDown = Input.GetKeyDown(KeyCode.Mouse1);
 
         horizontalInputAxis = Input.GetAxisRaw("Horizontal") * Time.deltaTime;
         verticalInputAxis = Input.GetAxisRaw("Vertical") * Time.deltaTime;
+
         jumpDown = Input.GetKeyDown(KeyCode.Space);
         reloadDown = Input.GetKeyDown(KeyCode.R);
         switchDown = Input.GetKeyDown(KeyCode.F);
@@ -42,6 +49,7 @@ public class InputManager : MonoBehaviour
         ability2Down = Input.GetKeyDown(KeyCode.E);
         ability2Hold = Input.GetKey(KeyCode.E);
         crouchHold = Input.GetKey(KeyCode.LeftControl);
+
         mouseHorizontalInputAxis = Input.GetAxis("Mouse X");
         mouseVerticalInputAxis = Input.GetAxis("Mouse Y");
 

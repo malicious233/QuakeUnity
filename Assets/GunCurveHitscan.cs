@@ -6,6 +6,7 @@ using MyBezier;
 public class GunCurveHitscan : GunFire
 {
     LineRenderer line;
+    InputManager input;
     Material mat;
 
     [SerializeField] GunDamage shotDamage;
@@ -16,9 +17,10 @@ public class GunCurveHitscan : GunFire
     [SerializeField] Transform magnetCurveAnchor;
     [SerializeField] int curveGranularity = 30;
 
-    [Header("MATERIAL PROPERTIES:")]
+    [Header("VISUAL CURVE PROPERTIES:")]
     [SerializeField] Material curveHitMat;
     [SerializeField] Material curveNoHitMat;
+    public bool lineVisible;
 
     Vector3[] pointerLinePositions;
 
@@ -26,6 +28,8 @@ public class GunCurveHitscan : GunFire
     {
         base.Awake();
         line = GetComponent<LineRenderer>();
+        input = GetComponentInParent<InputManager>();//So ugly, please do better, Alfons.
+        
 
     }
 
@@ -61,6 +65,17 @@ public class GunCurveHitscan : GunFire
             line.material = curveNoHitMat;
         }
 
+        if (input.fireHold)
+        {
+            ToggleLine(true);
+        }
+        else
+        {
+            ToggleLine(false);
+        }
+
+
+
 
     }
 
@@ -95,6 +110,11 @@ public class GunCurveHitscan : GunFire
                 _stats.InflictDamage(damage);
             }
         }
+    }
+
+    public void ToggleLine(bool _trueOrFalse)
+    {
+        line.enabled = _trueOrFalse;
     }
 
     

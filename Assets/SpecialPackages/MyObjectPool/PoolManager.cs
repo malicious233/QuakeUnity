@@ -13,7 +13,6 @@ public class PoolManager : MonoBehaviour
 
         for (int i = 0; i < poolStartSize; i++)
         {
-            Debug.Log("boop");
             GameObject poolObject = Instantiate(poolPrefab);
             objectPool.Enqueue(poolObject);
 
