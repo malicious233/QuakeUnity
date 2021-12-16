@@ -14,7 +14,8 @@ public class GunCurveHitscan : GunFire
     [Header("CURVE PROPERTIES:")]
     [SerializeField] Transform gunCurveAnchor;
     [SerializeField] Transform forwardCurveAnchor;
-    [SerializeField] Transform magnetCurveAnchor;
+    //[SerializeField] Transform magnetCurveAnchor;
+    [SerializeField] MagnetTransformReference magnetTransformReference;
     [SerializeField] int curveGranularity = 30;
 
     [Header("VISUAL CURVE PROPERTIES:")]
@@ -35,7 +36,9 @@ public class GunCurveHitscan : GunFire
 
     private void Update()
     {
-        float distBetweenGunAndMagnet = (gunCurveAnchor.position - magnetCurveAnchor.position).magnitude;
+        Vector3 magnetAnchor_ = magnetTransformReference.magnetTransform.position;
+
+        float distBetweenGunAndMagnet = (gunCurveAnchor.position - magnetAnchor_).magnitude;
         Vector3 curveAnchorOffset = new Vector3(0, 0, distBetweenGunAndMagnet/2);
         forwardCurveAnchor.localPosition = curveAnchorOffset;
 
@@ -45,7 +48,7 @@ public class GunCurveHitscan : GunFire
         for (int i = 0; i < curveGranularity; i++)
         {
             float v = i / (curveGranularity - 1f);
-            Vector3 p = Bezier.CalculateQuadraticBezierPoint(v, gunCurveAnchor.position, forwardCurveAnchor.position, magnetCurveAnchor.position);
+            Vector3 p = Bezier.CalculateQuadraticBezierPoint(v, gunCurveAnchor.position, forwardCurveAnchor.position, magnetAnchor_);
 
             //Gizmos.DrawLine(prev, p);
             pointerLinePositions[i] = p;
@@ -57,7 +60,7 @@ public class GunCurveHitscan : GunFire
         //Cut it up so the line renderer is on a different component than the hitscan 
 
         RaycastHit hit;
-        if (Bezier.CurveRaycast(gunCurveAnchor.position, forwardCurveAnchor.position, magnetCurveAnchor.position, curveGranularity, StaticVariables.hurtboxMask, out hit))
+        if (Bezier.CurveRaycast(gunCurveAnchor.position, forwardCurveAnchor.position, magnetAnchor_, curveGranularity, StaticVariables.hurtboxMask, out hit))
         {
             line.material = curveHitMat;
         }
@@ -80,6 +83,7 @@ public class GunCurveHitscan : GunFire
 
     }
 
+    /*
     public void OnDrawGizmos()
     {
         
@@ -95,12 +99,16 @@ public class GunCurveHitscan : GunFire
 
         }
     }
+    */
 
     public override void Shoot()
     {
         base.Shoot();
+
+        Vector3 magnetAnchor_ = magnetTransformReference.magnetTransform.position;
+
         RaycastHit hit;
-        if (Bezier.CurveRaycast(gunCurveAnchor.position, forwardCurveAnchor.position, magnetCurveAnchor.position, curveGranularity, hittableMask, out hit))
+        if (Bezier.CurveRaycast(gunCurveAnchor.position, forwardCurveAnchor.position, magnetAnchor_, curveGranularity, hittableMask, out hit))
         {
             
             //Instantiate(tst, hit.point, Quaternion.identity);

@@ -23,7 +23,7 @@ public class GunHold : Gun
     public override void Update()
     {
         currIntervalBetweenShot = currIntervalBetweenShot - Time.deltaTime;
-        Debug.Log(currIntervalBetweenBurst);
+        //Debug.Log(currIntervalBetweenBurst);
         currIntervalBetweenBurst = currIntervalBetweenBurst - Time.deltaTime;
 
         if (input.fireRelease)
