@@ -6,9 +6,21 @@ using UnityEngine;
 public class HookAbility : MonoBehaviour, IAbility
 {
     public Transform camTransform;
-    PlayerController movement;
     InputManager input;
     HookRopeRenderer rope;
+
+    [SerializeField] Vector3Var playerVelocityVar;
+    public Vector3 Velocity
+    {
+        get
+        {
+            return playerVelocityVar.Value;
+        }
+        set
+        {
+            playerVelocityVar.Value = value;
+        }
+    }
 
     [Header("ATTRIBUTES:")]
     [SerializeField] float cooldown;
@@ -89,15 +101,15 @@ public class HookAbility : MonoBehaviour, IAbility
     private void CancelGrappleJump()
         ///Cancels grapple with a jump
     {
-        movement.velocity.y += hookJumpForce;
+        Velocity += new Vector3(0, hookJumpForce, 0);
         StopGrapple();
     }
 
     private void GrappleHit()
     {
         grappleState = GrappleState.Pulling;
-        movement.velocity = movement.velocity * velocityReduction;
-        movement.velocity.y = hookJumpForce;
+        Velocity = playerVelocityVar.Value * velocityReduction;
+        Velocity += new Vector3(0, hookJumpForce, 0);
         grappleHit.Invoke();
     }
 
@@ -108,7 +120,6 @@ public class HookAbility : MonoBehaviour, IAbility
         rope = GetComponent<HookRopeRenderer>();
 
         input = GetComponentInParent<InputManager>();
-        movement = GetComponentInParent<PlayerController>();
         
     }
 
@@ -142,8 +153,8 @@ public class HookAbility : MonoBehaviour, IAbility
 
             Vector3 grapplePullForce = grappleVector * pullStrength;
 
-            movement.velocity += grapplePullForce * Time.deltaTime;
-            movement.velocity += grappleSwingBoostExtra * Time.deltaTime;
+            Velocity += grapplePullForce * Time.deltaTime;
+            Velocity += grappleSwingBoostExtra * Time.deltaTime;
 
             if (grapplePullForceMod < turnUntilBreak)
             {

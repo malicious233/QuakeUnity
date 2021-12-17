@@ -5063,7 +5063,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2099382475}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: CurveAnchor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5078,7 +5078,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2099382474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 19.26}
+  m_LocalPosition: {x: 0, y: 0.24, z: 7.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7785044105410370548}
@@ -16033,6 +16033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   camTransform: {fileID: 7785044104146875782}
+  playerVelocityVar: {fileID: 11400000, guid: a0a3e84aaba466340b3e907e08a8fa90, type: 2}
   cooldown: 1
   pullStrength: 2
   swingBoost: 1.75
@@ -31754,7 +31755,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7785044104078928793}
-  - component: {fileID: 7785044104078928768}
   - component: {fileID: 7785044104078928770}
   - component: {fileID: 7785044104078928797}
   - component: {fileID: 7785044104078928799}
@@ -31765,6 +31765,8 @@ GameObject:
   - component: {fileID: 1172160719}
   - component: {fileID: 1172160721}
   - component: {fileID: 2516924943142709739}
+  - component: {fileID: 1172160722}
+  - component: {fileID: 1172160723}
   m_Layer: 3
   m_Name: CRVGun
   m_TagString: Untagged
@@ -31787,18 +31789,6 @@ Transform:
   m_Father: {fileID: 7785044105406399580}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7785044104078928768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7785044104078928792}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37fa2fcb88ba646438a1417773edf818, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7785044104078928770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31812,7 +31802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canFire: 0
-  magazineSize: 30
+  magazineSize: 100
   slugReload: 0
   shotsInMag: 0
 --- !u!114 &7785044104078928797
@@ -31828,8 +31818,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canFire: 0
-  isAutomatic: 0
-  fireRate: 1
+  isAutomatic: 1
+  fireRate: 0.2
 --- !u!114 &7785044104078928799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31872,7 +31862,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7c482e59a4329b46bb9c0ea76ab0834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageValue: 4
+  damageValue: 15
 --- !u!114 &7785044104078928798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32028,11 +32018,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 242bc325a1bca514bb979425cad43790, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  magnetPrefab: {fileID: 0}
-  magnetTransformReference: {fileID: 0}
+  magnetPrefab: {fileID: 7033908559390392329, guid: b806a016b53a304428024e9aa16855fe, type: 3}
+  magnetTransformReference: {fileID: 11400000, guid: 0b10b7c66a0e61d42ae925c5b0bdfc0d, type: 2}
   magnetFireDistance: 200
-  throwVelocity: 0
-  magnetGravity: 0
+  magnetThrowStrength:
+    _useSimpleValue: 0
+    _variable: {fileID: 11400000, guid: 2c22dc4e1a041e3418a5b626de52c322, type: 2}
+    _simpleValue: 0
   isMagnetOut: 0
 --- !u!114 &1172160721
 MonoBehaviour:
@@ -32049,11 +32041,10 @@ MonoBehaviour:
   shotDamage: {fileID: 7785044104078928796}
   gunCurveAnchor: {fileID: 7785044105410370548}
   forwardCurveAnchor: {fileID: 2099382475}
-  magnetCurveAnchor: {fileID: 0}
-  magnetTransformReference: {fileID: 0}
-  curveGranularity: 30
-  curveHitMat: {fileID: 0}
-  curveNoHitMat: {fileID: 0}
+  magnetTransformReference: {fileID: 11400000, guid: 0b10b7c66a0e61d42ae925c5b0bdfc0d, type: 2}
+  curveGranularity: 50
+  curveHitMat: {fileID: 2100000, guid: a0937681bda08eb4c94ccb19f5c32695, type: 2}
+  curveNoHitMat: {fileID: 2100000, guid: 93599b45c01d3d049a4d729a3a4b34b4, type: 2}
   lineVisible: 0
 --- !u!120 &2516924943142709739
 LineRenderer:
@@ -32074,7 +32065,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: a0937681bda08eb4c94ccb19f5c32695, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32106,7 +32097,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.19999999
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -32153,6 +32144,33 @@ LineRenderer:
     generateLightingData: 0
   m_UseWorldSpace: 1
   m_Loop: 0
+--- !u!114 &1172160722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7785044104078928792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f35f964954425c246aa629d7514fb953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  intervalBetweenShot: 0.04
+  intervalBetweenBurst: 0.3
+  burstAmount: 5
+--- !u!114 &1172160723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7785044104078928792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 075dbc1b1f358034ea5d14436fb28ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7785044104136049515
 GameObject:
   m_ObjectHideFlags: 0
@@ -37596,7 +37614,7 @@ GameObject:
   - component: {fileID: 3997969473432834196}
   m_Layer: 3
   m_Name: Player 3
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37697,7 +37715,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eyePoint: {fileID: 7785044105405704198}
-  velocity: {x: 0, y: 0, z: 0}
+  velocityVar: {fileID: 11400000, guid: a0a3e84aaba466340b3e907e08a8fa90, type: 2}
   current_Speed: 0
   maxGroundSpeed: 30
   moveSpeed: 20

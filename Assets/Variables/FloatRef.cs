@@ -1,7 +1,19 @@
 ﻿using System;
 using UnityEngine;
+using UnityEditor;
 
 [Serializable]
+public class FloatRef : BaseRef<float, FloatVar>
+{
+
+}
+
+[CustomPropertyDrawer(typeof(FloatRef))]
+public class FloatRefDrawer : BaseRefDrawer<float>
+{
+
+}
+/*
 public class FloatRef
 {
     
@@ -18,9 +30,6 @@ public class FloatRef
     public static string SimpleValueName = nameof(_simpleValue);
     #endif
 }
+*/
 
-public class VarRefBase<T>
-{
-
-}
 

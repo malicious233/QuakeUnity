@@ -9,7 +9,8 @@ public class PlayerController : MonoBehaviour, IMoveable
     CharacterController charController;
     [SerializeField] Transform eyePoint;
 
-    public Vector3 velocity;
+    [SerializeField] Vector3Var velocityVar;
+    //public Vector3 velocity;
     public float current_Speed;
     private float xRotation;
     private float yRotation;
@@ -39,12 +40,11 @@ public class PlayerController : MonoBehaviour, IMoveable
     {
         get
         {
-            return velocity;
+            return velocityVar.Value;
         }
-    
         set
         {
-            value = velocity;
+            velocityVar.Value = value;
         }
     }
 
@@ -59,21 +59,22 @@ public class PlayerController : MonoBehaviour, IMoveable
         
         if (charController.isGrounded)
         {
-            velocity = UpdateVelocityGround(velocity);
+            //velocity = UpdateVelocityGround(velocity);
+            Velocity = UpdateVelocityGround(Velocity);
             if (Input.GetKey(KeyCode.Space))
             {
-                velocity.y = jumpHeight;
+                Velocity += new Vector3(0, jumpHeight, 0);
             }
         }
         else
         {
-            velocity = UpdateVelocityAir(velocity);
-            velocity.y -= gravity * Time.deltaTime;
+            Velocity = UpdateVelocityAir(Velocity);
+            Velocity -= new Vector3(0, gravity * Time.deltaTime, 0);
         }
 
         
         
-        charController.Move(velocity * Time.deltaTime * 60);
+        charController.Move(Velocity * Time.deltaTime * 60);
 
         
 
@@ -88,7 +89,7 @@ public class PlayerController : MonoBehaviour, IMoveable
     
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        velocity -= hit.normal * Vector3.Dot(velocity, hit.normal);
+        Velocity -= hit.normal * Vector3.Dot(Velocity, hit.normal);
     }
     
 
@@ -142,9 +143,9 @@ public class PlayerController : MonoBehaviour, IMoveable
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawLine(transform.position, transform.position + velocity);
+        Gizmos.DrawLine(transform.position, transform.position + Velocity);
 
         Gizmos.color = Color.blue;
-        Gizmos.DrawLine(transform.position, transform.position + new Vector3(0, 0, velocity.magnitude));
+        Gizmos.DrawLine(transform.position, transform.position + new Vector3(0, 0, Velocity.magnitude));
     }
 }

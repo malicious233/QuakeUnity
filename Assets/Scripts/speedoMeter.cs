@@ -5,7 +5,7 @@ using TMPro;
 
 public class speedoMeter : MonoBehaviour
 {
-    public PlayerController player;
+    [SerializeField] Vector3Var playerVelocityVar;
     TextMeshProUGUI text;
 
     public void Awake()
@@ -15,7 +15,7 @@ public class speedoMeter : MonoBehaviour
 
     public void Update()
     {
-        Vector3 newVector = new Vector3(player.velocity.x, 0, player.velocity.z);
+        Vector3 newVector = new Vector3(playerVelocityVar.Value.x, 0, playerVelocityVar.Value.z);
         float absVelocity;
         absVelocity = newVector.magnitude;
         absVelocity = Mathf.Abs(absVelocity);

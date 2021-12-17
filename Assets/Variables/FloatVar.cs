@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
 [CreateAssetMenu(fileName = "new FloatVar", menuName = "SOs/Float Var")]
 public class FloatVar : ScriptableObject
 {
@@ -20,4 +21,11 @@ public class FloatVar : ScriptableObject
     {
         _currentValue = _value;
     }
+}
+*/
+
+[CreateAssetMenu(fileName = "new FloatVar", menuName = "SOs/Float Var")]
+public class FloatVar : VarBase<float>
+{
+
 }
