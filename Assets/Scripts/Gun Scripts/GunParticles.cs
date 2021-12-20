@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MyBezier;
 
 public class GunParticles : MonoBehaviour
 {
@@ -16,8 +17,19 @@ public class GunParticles : MonoBehaviour
     {
         //Make this badboy be a pool
         var tracer = Instantiate(tracerEffect, bulletSpawnPoint.position, Quaternion.identity);
+        
         tracer.AddPosition(bulletSpawnPoint.position);
         tracer.transform.position = hitPosition;
+    }
+
+    public void CreateCurvedTracer(Vector3[] linePositions)
+    {
+        var tracer = Instantiate(tracerEffect, bulletSpawnPoint.position, Quaternion.identity);
+
+        
+        tracer.AddPositions(linePositions);
+        //tracer.transform.position = linePositions[0];
+        
     }
 
     public Transform CreateBulletHit(Vector3 hitPosition)
@@ -26,6 +38,8 @@ public class GunParticles : MonoBehaviour
         obj.transform.position = hitPosition;
         return obj.transform;
     }
+
+    
     public void Awake()
     {
         camTransform = Camera.main.transform;

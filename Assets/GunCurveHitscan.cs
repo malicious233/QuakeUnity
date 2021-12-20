@@ -5,6 +5,7 @@ using MyBezier;
 
 public class GunCurveHitscan : GunFire
 {
+    GunParticles particles;
     LineRenderer line;
     InputManager input;
     Material mat;
@@ -29,6 +30,7 @@ public class GunCurveHitscan : GunFire
     {
         base.Awake();
         line = GetComponent<LineRenderer>();
+        particles = GetComponent<GunParticles>();
         input = GetComponentInParent<InputManager>();//So ugly, please do better, Alfons.
         
 
@@ -108,10 +110,14 @@ public class GunCurveHitscan : GunFire
         Vector3 magnetAnchor_ = magnetTransformReference.magnetTransform.position;
 
         RaycastHit hit;
-        if (Bezier.CurveRaycast(gunCurveAnchor.position, forwardCurveAnchor.position, magnetAnchor_, curveGranularity, hittableMask, out hit))
+        Vector3[] curvePositions;
+        if (Bezier.CurveRaycast(gunCurveAnchor.position, forwardCurveAnchor.position, magnetAnchor_, curveGranularity, hittableMask, out hit, out curvePositions))
         {
-            
-            //Instantiate(tst, hit.point, Quaternion.identity);
+            //Particles
+            particles.CreateCurvedTracer(curvePositions);
+
+
+            //Inflict damage
             IDamageable _stats = hit.transform.GetComponent<IDamageable>();
             Damage damage = new Damage(shotDamage.damageValue, camTransform.forward);
             if (_stats != null)

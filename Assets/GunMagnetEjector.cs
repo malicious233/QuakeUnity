@@ -30,12 +30,6 @@ public class GunMagnetEjector : MonoBehaviour
     {
         if (input.altFireDown)
         {
-            
-            RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.forward, out hit, magnetFireDistance, StaticVariables.groundMask))
-            {
-                //PlaceMagnet(hit.point);
-            }
 
             if (magnetTransformReference.isMagnetOut)
             {

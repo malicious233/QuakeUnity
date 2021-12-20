@@ -29,9 +29,10 @@ public class MagnetMovement : MonoBehaviour, IMoveable
     {
         if (!isAttached)
         {
+            transform.position += velocity * Time.deltaTime;
             CheckAttach();
             AddGravity();
-            transform.position += velocity * Time.deltaTime;
+            
             
             
         }

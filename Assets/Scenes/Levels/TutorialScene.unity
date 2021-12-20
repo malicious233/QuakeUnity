@@ -1052,7 +1052,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22182
+  m_Name: pb_Mesh22176
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24564,7 +24564,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh22160
+  m_Name: pb_Mesh22152
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24729,6 +24729,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1172160722, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
+      propertyPath: intervalBetweenShot
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7785044104078928799, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
+      propertyPath: tracerEffect
+      value: 
+      objectReference: {fileID: 7541055312771969282, guid: 4ae7d8741a001e2449b88c377c6740ca, type: 3}
     - target: {fileID: 7785044104742132807, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
       propertyPath: m_Name
       value: Player 2
@@ -24776,6 +24784,18 @@ PrefabInstance:
     - target: {fileID: 7785044104742132814, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7785044105410370548, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.0229
+      objectReference: {fileID: 0}
+    - target: {fileID: 7785044105410370548, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.05802
+      objectReference: {fileID: 0}
+    - target: {fileID: 7785044105410370548, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1216
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}

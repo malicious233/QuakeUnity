@@ -27,10 +27,13 @@ public class MagnetScript : MonoBehaviour
         movement = GetComponent<MagnetMovement>();
     }
 
+    /*
     private void OnCollisionEnter(Collision collision)
     {
         Attach(collision.transform);
+        //Magnet quite often phases through ground. Why is that
     }
+    */
 
     
 
