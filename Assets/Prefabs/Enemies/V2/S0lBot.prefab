@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 889377459831059698}
   - component: {fileID: 889377459831059696}
   - component: {fileID: 889377459831059699}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: HitEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4935,7 +4935,7 @@ GameObject:
   - component: {fileID: 2043720202671510489}
   - component: {fileID: 2043720202671510491}
   - component: {fileID: 2043720202671510488}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: CritEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10248,7 +10248,7 @@ GameObject:
   - component: {fileID: 4545149519003168020}
   m_Layer: 7
   m_Name: S0lBot
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

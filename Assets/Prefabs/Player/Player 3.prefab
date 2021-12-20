@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8971016}
   - component: {fileID: 8971015}
   - component: {fileID: 8971014}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -107,7 +107,7 @@ GameObject:
   - component: {fileID: 1309594319}
   - component: {fileID: 1309594318}
   - component: {fileID: 1309594317}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -201,7 +201,7 @@ GameObject:
   - component: {fileID: 1728716961}
   - component: {fileID: 1728716963}
   - component: {fileID: 1728716962}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Hook
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5093,7 +5093,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2130573359}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: HookSpot
   m_TagString: Untagged
   m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
@@ -15900,7 +15900,7 @@ GameObject:
   - component: {fileID: 3997969472588279083}
   - component: {fileID: 3997969472588279082}
   - component: {fileID: 3997969472588279081}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: HookMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15996,7 +15996,7 @@ GameObject:
   - component: {fileID: 1846950996}
   - component: {fileID: 1846950994}
   - component: {fileID: 1846950995}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: HookAbility
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16180,7 +16180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3997969473588074100}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: AbilityFolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26894,7 +26894,7 @@ GameObject:
   - component: {fileID: 7785044103974505906}
   - component: {fileID: 7785044103974505904}
   - component: {fileID: 7785044103974505907}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: HitEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31767,7 +31767,7 @@ GameObject:
   - component: {fileID: 2516924943142709739}
   - component: {fileID: 1172160722}
   - component: {fileID: 1172160723}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: CRVGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32189,7 +32189,7 @@ GameObject:
   - component: {fileID: 300817876425709296}
   - component: {fileID: 7785044104136049491}
   - component: {fileID: 5538980276135214764}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: EMGGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32476,7 +32476,7 @@ GameObject:
   - component: {fileID: 7785044104146875777}
   - component: {fileID: 7785044104146875776}
   - component: {fileID: 7785044104146875783}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -32708,7 +32708,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7785044104407952523}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: RigMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37614,7 +37614,7 @@ GameObject:
   - component: {fileID: 3997969473432834196}
   m_Layer: 3
   m_Name: Player 3
-  m_TagString: Player
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47640,7 +47640,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7785044105405704198}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: EyePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47671,7 +47671,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7785044105406399580}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: WeaponFolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -47776,7 +47776,7 @@ GameObject:
   - component: {fileID: 431436537386670021}
   - component: {fileID: 7785044105533149462}
   - component: {fileID: 3115212735369961582}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: BLSTGun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48303,6 +48303,10 @@ PrefabInstance:
     - target: {fileID: 2606750531375911472, guid: 337f9072f87d25245a9284060f8a32ca, type: 3}
       propertyPath: m_Name
       value: EagleGun
+      objectReference: {fileID: 0}
+    - target: {fileID: 2606750531375911472, guid: 337f9072f87d25245a9284060f8a32ca, type: 3}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2606750531375911473, guid: 337f9072f87d25245a9284060f8a32ca, type: 3}
       propertyPath: m_RootOrder

@@ -700,7 +700,7 @@ GameObject:
   - component: {fileID: 2132598168788089123}
   - component: {fileID: 2132598168788089121}
   - component: {fileID: 2132598168788089122}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: HitEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5722,7 +5722,7 @@ GameObject:
   - component: {fileID: 3376762670937252037}
   m_Layer: 7
   m_Name: D0G
-  m_TagString: Untagged
+  m_TagString: Character
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
