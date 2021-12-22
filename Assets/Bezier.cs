@@ -62,6 +62,7 @@ namespace MyBezier
                 Vector3 dir = p - prev;
                 float magni = (p - prev).magnitude;
                 dir.Normalize();
+
                 RaycastHit hit;
                 if (Physics.Raycast(p, dir, out hit, magni, _layer))
                 {

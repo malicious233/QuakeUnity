@@ -24731,7 +24731,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1172160722, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
       propertyPath: intervalBetweenShot
-      value: 0.2
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 7785044104078928799, guid: 26e4a667c045f3743914f2b7ee8c2f17, type: 3}
       propertyPath: tracerEffect

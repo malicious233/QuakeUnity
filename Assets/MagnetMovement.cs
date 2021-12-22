@@ -33,12 +33,9 @@ public class MagnetMovement : MonoBehaviour, IMoveable
             CheckAttach();
             AddGravity();
             
-            
-            
         }
         else
         {
-            
 
             if (isAttachedToCharacter)
             {
