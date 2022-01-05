@@ -81,7 +81,7 @@ public class PlayerController : MonoBehaviour, IMoveable
         
     }
 
-    public void Update()
+    public void LateUpdate()
     {
         RotateCamera();
     }

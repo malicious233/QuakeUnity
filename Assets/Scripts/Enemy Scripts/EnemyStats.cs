@@ -2,9 +2,16 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using ScriptableEvents;
 
 public class EnemyStats : MonoBehaviour, IDamageable
 {
+    [SerializeField] ScriptableEventFloat onHitlagEvent;
+
+    [Header("VARIABLE REFERENCES:")]
+    [SerializeField] FloatRef headshotHitlagRef;
+    [SerializeField] FloatRef killHitlagRef;
+
     CharacterParticles particles;
     EnemyEvents events;
 
@@ -55,17 +62,37 @@ public class EnemyStats : MonoBehaviour, IDamageable
 
     public void CauseHitEffects(float _damageMultiplier)
     {
-        particles.EmitHitEffect();
-        events.OnHit?.Invoke();
-        if (_damageMultiplier != 1)
+        void PostHitlag()
         {
             events.OnCrit?.Invoke(_damageMultiplier);
             particles.CritParticle(_damageMultiplier);
         }
+
+        particles.EmitHitEffect();
+        events.OnHit?.Invoke();
         if (health <= 0)
         {
-            Die();
+            onHitlagEvent.Raise(killHitlagRef.Value);
+            StartCoroutine(WaitForHitlagEnd(Die));
         }
+        if (_damageMultiplier != 1)
+        {
+            onHitlagEvent.Raise(headshotHitlagRef.Value);
+            StartCoroutine(WaitForHitlagEnd(PostHitlag));
+
+        }
+        
+        
+    }
+
+
+    public delegate void PostHitlag();
+
+    IEnumerator WaitForHitlagEnd(PostHitlag _method)
+    {
+        while (Time.timeScale != 1.0f)
+            yield return null;
+        _method();
     }
 
     private void Die()

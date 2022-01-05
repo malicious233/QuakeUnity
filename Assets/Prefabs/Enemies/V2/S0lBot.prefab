@@ -10481,6 +10481,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4a1e47a474f54a428c7c41ffae7af9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  onHitlagEvent: {fileID: 11400000, guid: 198fddd1c85df9940ab961ea0e4164c5, type: 2}
+  headshotHitlagRef:
+    _useSimpleValue: 0
+    _variable: {fileID: 11400000, guid: 292cec0159c596d4cb72902c95572f93, type: 2}
+    _simpleValue: 0
+  killHitlagRef:
+    _useSimpleValue: 0
+    _variable: {fileID: 11400000, guid: 48f8780a92b724f45960066cfa4999c3, type: 2}
+    _simpleValue: 0
   team: 1
   maxHealth: 45
   health: 0

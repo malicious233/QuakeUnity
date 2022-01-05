@@ -71,7 +71,7 @@ public class GunRecoil : MonoBehaviour
 
 
 
-    public void FixedUpdate()
+    public void LateUpdate()
     {
         
         patternTime -= patternRecoveryTime * Time.deltaTime;
