@@ -9,6 +9,9 @@ ModelImporter:
   - first:
       74: 4232266645364149778
     second: Rig_CRV_Shoot_Baked
+  - first:
+      74: 3810736090037643543
+    second: Rig_CRV_Reload_Baked
   externalObjects: {}
   materials:
     materialImportMode: 2

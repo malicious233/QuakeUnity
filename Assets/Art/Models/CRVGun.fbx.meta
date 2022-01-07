@@ -9,6 +9,9 @@ ModelImporter:
   - first:
       74: 7410736740197567349
     second: CRV_Shoot_Baked
+  - first:
+      74: -4118102180946869524
+    second: CRV_Reload_Baked
   externalObjects: {}
   materials:
     materialImportMode: 2
