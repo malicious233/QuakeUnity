@@ -21,7 +21,7 @@ public class GunHitscan : GunFire
 
 
         //particles.muzzleFlash.Emit(1);
-        particles.muzzleFlash.Play();
+        particles.PlayMuzzleflash(); //This should not be here
         SpawnShot(camTransform.forward);
         foreach (var item in pelletSpread)
         {

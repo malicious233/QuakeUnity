@@ -32,6 +32,11 @@ public class GunParticles : MonoBehaviour
         
     }
 
+    public void PlayMuzzleflash()
+    {
+        muzzleFlash.Play();
+    }
+
     public Transform CreateBulletHit(Vector3 hitPosition)
     {
         GameObject obj = bulletHitPool.GetObject();

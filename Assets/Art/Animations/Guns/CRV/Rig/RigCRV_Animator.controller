@@ -184,7 +184,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Reload
-  m_Speed: 1.4
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: -8905789182938191428}
@@ -197,7 +197,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 0}
+  m_Motion: {fileID: 7400000, guid: 91b413db694d5ce42a1f0ae04e0ca9a9, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

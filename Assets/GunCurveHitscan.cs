@@ -105,7 +105,8 @@ public class GunCurveHitscan : GunFire
 
     public override void Shoot()
     {
-        base.Shoot();
+        base.Shoot();//The structure with Gun, Gunfire, GunParticles, CharacterEvents and so on is so utterly stupid, I hope to god nobody sees this code.
+        particles.PlayMuzzleflash();
 
         Vector3 magnetAnchor_ = magnetTransformReference.magnetTransform.position;
 
